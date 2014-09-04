@@ -8,16 +8,30 @@
  * Controller of the igapakApp
  */
 
-(function(){
+(function () {
 
-    var app = angular.module('igapakApp');
-
-    app.controller('MainCtrl', ['$scope','$log', '$cookieStore', 'Groups',function($scope, $log, $cookieStore, Groups) {
+    angular.module('igapakApp').controller('MainCtrl', ['$scope','$log','$cookieStore', 'FacilityData', 'OrgData', function ($scope, $log, $cookieStore, FacilityData, OrgData) {
 
         this.menudisplayed = '';
         this.pagetitle = 'Menu';
         $scope.$log = $log;
-        $scope.groups = Groups;
+
+        $scope.getFacilityData = function(facilities) {
+            $log.info("called Async service");
+            var promise =
+                FacilityData.getFacilities();
+            promise.then(
+                function(payload) {
+                    $scope.facilities = payload.data;
+                },
+                function(errorPayload) {
+                    $log.error('failure loading Group data', errorPayload);
+                });
+        };
+
+        //Get data from server at startup
+        $scope.getFacilityData();
+
         $scope.userActions = [
             { id: 0, name: 'Grid View', image: 'images/icons/keypad.png', route: '/gridView' },
             { id: 1, name: 'Menu Sections', image: 'images/icons/note.png', route: '/menu'},
@@ -47,11 +61,13 @@
         ];
 
         //method to toggle display the left and right menu
-        this.selectMenu = function(setMenu) {
-            if((this.menudisplayed !== setMenu))
-            {this.menudisplayed = setMenu;}
-            else
-            {this.menudisplayed = '';}
+        this.selectMenu = function (setMenu) {
+            if ((this.menudisplayed !== setMenu)) {
+                this.menudisplayed = setMenu;
+            }
+            else {
+                this.menudisplayed = '';
+            }
             //console.log("menudisplayed = " + this.menudisplayed);
         };
 

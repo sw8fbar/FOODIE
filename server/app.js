@@ -4,15 +4,19 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var mongoose = require('mongoose');
 var app = express();
 
+var orgRoutes = require("./routes/orgs");
+var facilityRoutes = require("./routes/facilities");
+
+const DevelopmentDB = 'mongodb://localhost/IgapakDB';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json({limit: '500kb'}));
+app.use(bodyParser.urlencoded({ limit: '500kb',extended: false }));
 app.use(cookieParser());
 
 
@@ -26,10 +30,13 @@ if (app.get('env') === 'development') {
     app.use(express.static(path.join(__dirname, '../client/.tmp')));
     app.use(express.static(path.join(__dirname, '../client/app')));
 
+    //connect to development db
+    mongoose.connect(DevelopmentDB);
+
     // Error Handling
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
-        res.render('error', {
+        res.send('error', {
             message: err.message,
             error: err
         });
@@ -55,5 +62,6 @@ if (app.get('env') === 'production') {
     });
 }
 
-
+app.use('/api',orgRoutes);
+app.use('/api',facilityRoutes);
 module.exports = app;

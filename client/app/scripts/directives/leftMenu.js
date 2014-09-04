@@ -15,7 +15,7 @@
                 '<div class="scrollable scrollable-content">' +
                 '<!-- Blank DIVs to push actual menu down -->' +
                 '<div class="menuFiller">&nbsp;</div>' +
-                '<div class="rightMenu"><div class="rightMenuOption"><h4 class="menuHeading">Group List</h4></div></div>'+
+                '<div class="rightMenu"><div class="menuOption"><h4 class="menuHeading">Group List</h4></div></div>'+
                 '</div>' +
                 '</div>'
         };

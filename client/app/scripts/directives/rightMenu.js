@@ -15,7 +15,7 @@
                 '<!-- Blank DIVs to push actual menu down -->' +
                 '<div class="menuFiller">&nbsp;</div>' +
                 '<div class="rightMenu" ng-repeat="action in userActions">' +
-                '<div class="rightMenuOption">' +
+                '<div class="menuOption">' +
                 '<div>' +
                 '<h4 class="menuHeading">' +
                 '&nbsp; &nbsp; <img ng-src="{{action.image}}"/> &nbsp; &nbsp; {{action.name}}' +

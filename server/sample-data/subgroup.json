@@ -1,0 +1,66 @@
+{"subgroups": [
+    {
+        "groupId": "",
+        "name": [
+            {
+                "langId": "1",
+                "label": "Portuguese - Dinner"
+            },
+            {
+                "langId": "2",
+                "label": "Dinner"
+            },
+            {
+                "langId": "3",
+                "label": "Spanish - Dinner"
+            },
+            {
+                "langId": "4",
+                "label": "Essen"
+            },
+            {
+                "langId": "5",
+                "label": "French - Dinner"
+            },
+            {
+                "langId": "6",
+                "label": "Italian - Dinner"
+            }
+        ],
+        "products": [
+            {
+                "productId": "1",
+                "description": "I describe the product",
+                "servingSize": "2",
+                "name": [
+                    {
+                        "langId": "1",
+                        "label": "Portuguese - Dinner"
+                    },
+                    {
+                        "langId": "2",
+                        "label": "Dinner"
+                    },
+                    {
+                        "langId": "3",
+                        "label": "Spanish - Dinner"
+                    },
+                    {
+                        "langId": "4",
+                        "label": "Essen"
+                    },
+                    {
+                        "langId": "5",
+                        "label": "French - Dinner"
+                    },
+                    {
+                        "langId": "6",
+                        "label": "Italian - Dinner"
+                    }
+                ],
+                "price": "24:99",
+                "currencyId": "1"
+            }
+        ]
+    }
+]}

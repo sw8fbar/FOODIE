@@ -1,5 +1,12 @@
 <div ng-controller="MainCtrl as mainctrl">
     <navigation-bar></navigation-bar>
+    <!-- display group - subgroup - product -->
+    <div class="product-display scrollable scrollable-content">
+        <div class="menuFiller">&nbsp;</div>
+        <group ng-repeat="group in facilities[0].articles[0].groups" showProducts></group>
+        <div class="menuFiller">&nbsp;</div>
+    </div>
+
     <right-menu></right-menu>
     <left-menu></left-menu>
     <banner-footer></banner-footer>

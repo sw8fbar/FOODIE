@@ -8,6 +8,10 @@
     padding-top: 10px;
 }
 
+.navbar-brand-center h3{
+    font-family: "Helvetica Neue Light";
+}
+
 .navbar-app {
     color: #ffffff;
     background:#e38802;
@@ -22,13 +26,13 @@
     min-height:51px;
 }
 
-.rightMenuOption {
-    background: #f3f3f3;
+.menuOption {
+    background: #ffffff;
     margin: 1px;
     padding: 1px;
 }
 
-.rightMenuOption img {
+.menuOption img {
     height: 20px;
     width: 20px;
 }
@@ -43,4 +47,8 @@
 .menuSubItem img{
     height: 30px;
     width: 45px;
+}
+
+.product-display {
+    background: #c0c0c0;
 }
