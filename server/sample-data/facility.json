@@ -381,64 +381,6 @@
                                 ],
                                 "price": "24.99",
                                 "currencyId": "1"
-                            },
-                            {
-                                "productId": "1",
-                                "description": [
-                                    {
-                                        "langId": "1",
-                                        "label": "Portuguese - Dinner"
-                                    },
-                                    {
-                                        "langId": "2",
-                                        "label": "Pickles, salami, eggs, butter and toast bread"
-                                    },
-                                    {
-                                        "langId": "3",
-                                        "label": "Spanish - Dinner"
-                                    },
-                                    {
-                                        "langId": "4",
-                                        "label": "Essen"
-                                    },
-                                    {
-                                        "langId": "5",
-                                        "label": "French - Dinner"
-                                    },
-                                    {
-                                        "langId": "6",
-                                        "label": "Italian - Dinner"
-                                    }
-                                ],
-                                "servingSize": "2",
-                                "name": [
-                                    {
-                                        "langId": "1",
-                                        "label": "Portuguese - Dinner"
-                                    },
-                                    {
-                                        "langId": "2",
-                                        "label": "Pickles, salami, eggs, butter and toast bread"
-                                    },
-                                    {
-                                        "langId": "3",
-                                        "label": "Spanish - Dinner"
-                                    },
-                                    {
-                                        "langId": "4",
-                                        "label": "Essen"
-                                    },
-                                    {
-                                        "langId": "5",
-                                        "label": "French - Dinner"
-                                    },
-                                    {
-                                        "langId": "6",
-                                        "label": "Italian - Dinner"
-                                    }
-                                ],
-                                "price": "24.99",
-                                "currencyId": "1"
                             }
                         ]
                     },
@@ -596,7 +538,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Mixed Salad (ham, cheese, tomato, onion, lettuce, pea, beet, cucumber, heart of palm and mayonnaise potato salad)"
+                                        "label": "ham, cheese, tomato, onion, lettuce, pea, beet, cucumber, heart of palm and mayonnaise potato salad"
                                     },
                                     {
                                         "langId": "3",
@@ -623,7 +565,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Mixed Salad (ham, cheese, tomato, onion, lettuce, pea, beet, cucumber, heart of palm and mayonnaise potato salad)"
+                                        "label": "Mixed Salad"
                                     },
                                     {
                                         "langId": "3",
@@ -685,7 +627,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Fish 'Garota' Style, small pieces of Sea Bass fish mixed in brocolli rice"
+                                        "label": "Small pieces of Sea Bass fish mixed in Broccoli rice"
                                     },
                                     {
                                         "langId": "3",
@@ -712,7 +654,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Fish 'Garota' Style, small pieces of Sea Bass fish mixed in brocolli rice"
+                                        "label": "Fish 'Garota' Style"
                                     },
                                     {
                                         "langId": "3",
@@ -743,7 +685,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Sea bass 'Belle Meuniére' Style, Grilled Whiting served with baked potatoes, carpers, mushrooms and shrimps."
+                                        "label": "Grilled Whiting served with baked potatoes, carpers, mushrooms and shrimps."
                                     },
                                     {
                                         "langId": "3",
@@ -770,7 +712,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Sea bass 'Belle Meuniére' Style, Grilled Whiting served with baked potatoes, carpers, mushrooms and shrimps."
+                                        "label": "Sea bass 'Belle Meuniére' Style"
                                     },
                                     {
                                         "langId": "3",
@@ -979,7 +921,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Rib Beef 'Oswaldo Aranha' style, Grilled Sirloin with garlic served with rice, manioc flour and chips"
+                                        "label": "Grilled Sirloin with garlic served with rice, manioc flour and chips"
                                     },
                                     {
                                         "langId": "3",
@@ -1006,7 +948,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Rib Beef 'Oswaldo Aranha' style, Grilled Sirloin with garlic served with rice, manioc flour and chips"
+                                        "label": "Rib Beef 'Oswaldo Aranha' style"
                                     },
                                     {
                                         "langId": "3",
@@ -1037,7 +979,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Rib Beef 'Campanha' style, Grilled Sirloin with with french fries, rice and vinagrette."
+                                        "label": "Grilled Sirloin with with french fries, rice and vinagrette."
                                     },
                                     {
                                         "langId": "3",
@@ -1064,7 +1006,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Rib Beef 'Campanha' style, Grilled Sirloin with with french fries, rice and vinagrette."
+                                        "label": "Rib Beef 'Campanha' style"
                                     },
                                     {
                                         "langId": "3",
@@ -1126,7 +1068,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Chicken 'French' Style, Grilled chicken served with straw potato, ham, peas and onions"
+                                        "label": "Grilled chicken served with straw potato, ham, peas and onions"
                                     },
                                     {
                                         "langId": "3",
@@ -1153,7 +1095,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Chicken 'French' Style, Grilled chicken served with straw potato, ham, peas and onions"
+                                        "label": "Chicken 'French' Style"
                                     },
                                     {
                                         "langId": "3",
@@ -1184,7 +1126,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Chicken with Green Salad, Chicken with brocolli, letttuce, peas and tomato salad"
+                                        "label": "Chicken with brocolli, letttuce, peas and tomato salad"
                                     },
                                     {
                                         "langId": "3",
@@ -1211,7 +1153,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Chicken with Green Salad, Chicken with brocolli, letttuce, peas and tomato salad"
+                                        "label": "Chicken with Green Salad"
                                     },
                                     {
                                         "langId": "3",
@@ -1617,211 +1559,6 @@
                                 ]
                             },
                             {
-                                "groupId": "15",
-                                "name": [
-                                    {
-                                        "langId": "1",
-                                        "label": "Napolitana"
-                                    },
-                                    {
-                                        "langId": "2",
-                                        "label": "Napoletano - Cheese, sliced tomatoes and sauce"
-                                    },
-                                    {
-                                        "langId": "3",
-                                        "label": "Queso, rodajas de tomate y salsa"
-                                    },
-                                    {
-                                        "langId": "4",
-                                        "label": "Käse, in Scheiben geschnittenen Tomaten und Sauce"
-                                    },
-                                    {
-                                        "langId": "5",
-                                        "label": "Fromage , des tranches de tomates et sauce"
-                                    },
-                                    {
-                                        "langId": "6",
-                                        "label": "Formaggio, pomodori a fette e salsa"
-                                    }
-                                ],
-                                "products": [
-                                    {
-                                        "productId": "1",
-                                        "description": [
-                                            {
-                                                "langId": "1",
-                                                "label": "Muzzarela"
-                                            },
-                                            {
-                                                "langId": "2",
-                                                "label": "Small"
-                                            },
-                                            {
-                                                "langId": "3",
-                                                "label": "Queso"
-                                            },
-                                            {
-                                                "langId": "4",
-                                                "label": "Kliene"
-                                            },
-                                            {
-                                                "langId": "5",
-                                                "label": "Fromage"
-                                            },
-                                            {
-                                                "langId": "6",
-                                                "label": "Formaggio"
-                                            }
-                                        ],
-                                        "servingSize": "2",
-                                        "name": [
-                                            {
-                                                "langId": "1",
-                                                "label": "Muzzarela"
-                                            },
-                                            {
-                                                "langId": "2",
-                                                "label": "Small"
-                                            },
-                                            {
-                                                "langId": "3",
-                                                "label": "Queso"
-                                            },
-                                            {
-                                                "langId": "4",
-                                                "label": "Kliene"
-                                            },
-                                            {
-                                                "langId": "5",
-                                                "label": "Fromage"
-                                            },
-                                            {
-                                                "langId": "6",
-                                                "label": "Formaggio"
-                                            }
-                                        ],
-                                        "price": "24.99",
-                                        "currencyId": "1"
-                                    },
-                                    {
-                                        "productId": "1",
-                                        "description": [
-                                            {
-                                                "langId": "1",
-                                                "label": "Muzzarela"
-                                            },
-                                            {
-                                                "langId": "2",
-                                                "label": "Medium"
-                                            },
-                                            {
-                                                "langId": "3",
-                                                "label": "Queso"
-                                            },
-                                            {
-                                                "langId": "4",
-                                                "label": "Kliene"
-                                            },
-                                            {
-                                                "langId": "5",
-                                                "label": "Fromage"
-                                            },
-                                            {
-                                                "langId": "6",
-                                                "label": "Formaggio"
-                                            }
-                                        ],
-                                        "servingSize": "2",
-                                        "name": [
-                                            {
-                                                "langId": "1",
-                                                "label": "Muzzarela"
-                                            },
-                                            {
-                                                "langId": "2",
-                                                "label": "Medium"
-                                            },
-                                            {
-                                                "langId": "3",
-                                                "label": "Queso"
-                                            },
-                                            {
-                                                "langId": "4",
-                                                "label": "Kliene"
-                                            },
-                                            {
-                                                "langId": "5",
-                                                "label": "Fromage"
-                                            },
-                                            {
-                                                "langId": "6",
-                                                "label": "Formaggio"
-                                            }
-                                        ],
-                                        "price": "24.99",
-                                        "currencyId": "1"
-                                    },
-                                    {
-                                        "productId": "1",
-                                        "description": [
-                                            {
-                                                "langId": "1",
-                                                "label": "Muzzarela"
-                                            },
-                                            {
-                                                "langId": "2",
-                                                "label": "Large"
-                                            },
-                                            {
-                                                "langId": "3",
-                                                "label": "Queso"
-                                            },
-                                            {
-                                                "langId": "4",
-                                                "label": "Kliene"
-                                            },
-                                            {
-                                                "langId": "5",
-                                                "label": "Fromage"
-                                            },
-                                            {
-                                                "langId": "6",
-                                                "label": "Formaggio"
-                                            }
-                                        ],
-                                        "servingSize": "2",
-                                        "name": [
-                                            {
-                                                "langId": "1",
-                                                "label": "Muzzarela"
-                                            },
-                                            {
-                                                "langId": "2",
-                                                "label": "Large"
-                                            },
-                                            {
-                                                "langId": "3",
-                                                "label": "Queso"
-                                            },
-                                            {
-                                                "langId": "4",
-                                                "label": "Kliene"
-                                            },
-                                            {
-                                                "langId": "5",
-                                                "label": "Fromage"
-                                            },
-                                            {
-                                                "langId": "6",
-                                                "label": "Formaggio"
-                                            }
-                                        ],
-                                        "price": "24.99",
-                                        "currencyId": "1"
-                                    }
-                                ]
-                            },
-                            {
                                 "groupId": "16",
                                 "name": [
                                     {
@@ -1847,211 +1584,6 @@
                                     {
                                         "langId": "6",
                                         "label": "Formaggi , banana e ananas"
-                                    }
-                                ],
-                                "products": [
-                                    {
-                                        "productId": "1",
-                                        "description": [
-                                            {
-                                                "langId": "1",
-                                                "label": "Muzzarela"
-                                            },
-                                            {
-                                                "langId": "2",
-                                                "label": "Small"
-                                            },
-                                            {
-                                                "langId": "3",
-                                                "label": "Queso"
-                                            },
-                                            {
-                                                "langId": "4",
-                                                "label": "Kliene"
-                                            },
-                                            {
-                                                "langId": "5",
-                                                "label": "Fromage"
-                                            },
-                                            {
-                                                "langId": "6",
-                                                "label": "Formaggio"
-                                            }
-                                        ],
-                                        "servingSize": "2",
-                                        "name": [
-                                            {
-                                                "langId": "1",
-                                                "label": "Muzzarela"
-                                            },
-                                            {
-                                                "langId": "2",
-                                                "label": "Small"
-                                            },
-                                            {
-                                                "langId": "3",
-                                                "label": "Queso"
-                                            },
-                                            {
-                                                "langId": "4",
-                                                "label": "Kliene"
-                                            },
-                                            {
-                                                "langId": "5",
-                                                "label": "Fromage"
-                                            },
-                                            {
-                                                "langId": "6",
-                                                "label": "Formaggio"
-                                            }
-                                        ],
-                                        "price": "24.99",
-                                        "currencyId": "1"
-                                    },
-                                    {
-                                        "productId": "1",
-                                        "description": [
-                                            {
-                                                "langId": "1",
-                                                "label": "Muzzarela"
-                                            },
-                                            {
-                                                "langId": "2",
-                                                "label": "Medium"
-                                            },
-                                            {
-                                                "langId": "3",
-                                                "label": "Queso"
-                                            },
-                                            {
-                                                "langId": "4",
-                                                "label": "Kliene"
-                                            },
-                                            {
-                                                "langId": "5",
-                                                "label": "Fromage"
-                                            },
-                                            {
-                                                "langId": "6",
-                                                "label": "Formaggio"
-                                            }
-                                        ],
-                                        "servingSize": "2",
-                                        "name": [
-                                            {
-                                                "langId": "1",
-                                                "label": "Muzzarela"
-                                            },
-                                            {
-                                                "langId": "2",
-                                                "label": "Medium"
-                                            },
-                                            {
-                                                "langId": "3",
-                                                "label": "Queso"
-                                            },
-                                            {
-                                                "langId": "4",
-                                                "label": "Kliene"
-                                            },
-                                            {
-                                                "langId": "5",
-                                                "label": "Fromage"
-                                            },
-                                            {
-                                                "langId": "6",
-                                                "label": "Formaggio"
-                                            }
-                                        ],
-                                        "price": "24.99",
-                                        "currencyId": "1"
-                                    },
-                                    {
-                                        "productId": "1",
-                                        "description": [
-                                            {
-                                                "langId": "1",
-                                                "label": "Muzzarela"
-                                            },
-                                            {
-                                                "langId": "2",
-                                                "label": "Large"
-                                            },
-                                            {
-                                                "langId": "3",
-                                                "label": "Queso"
-                                            },
-                                            {
-                                                "langId": "4",
-                                                "label": "Kliene"
-                                            },
-                                            {
-                                                "langId": "5",
-                                                "label": "Fromage"
-                                            },
-                                            {
-                                                "langId": "6",
-                                                "label": "Formaggio"
-                                            }
-                                        ],
-                                        "servingSize": "2",
-                                        "name": [
-                                            {
-                                                "langId": "1",
-                                                "label": "Muzzarela"
-                                            },
-                                            {
-                                                "langId": "2",
-                                                "label": "Large"
-                                            },
-                                            {
-                                                "langId": "3",
-                                                "label": "Queso"
-                                            },
-                                            {
-                                                "langId": "4",
-                                                "label": "Kliene"
-                                            },
-                                            {
-                                                "langId": "5",
-                                                "label": "Fromage"
-                                            },
-                                            {
-                                                "langId": "6",
-                                                "label": "Formaggio"
-                                            }
-                                        ],
-                                        "price": "24.99",
-                                        "currencyId": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "groupId": "17",
-                                "name": [
-                                    {
-                                        "langId": "1",
-                                        "label": "Portuguesa"
-                                    },
-                                    {
-                                        "langId": "2",
-                                        "label": "Cheese, onion, tomato, olives, egg, fish, sausage, ham, tomato sauce and green pepper"
-                                    },
-                                    {
-                                        "langId": "3",
-                                        "label": "Queso, cebolla, tomate, aceitunas, huevo, pescado, salchichas, jamon, salsa de tomate y pimiento verde"
-                                    },
-                                    {
-                                        "langId": "4",
-                                        "label": "Käse, Zwiebeln, Tomaten, Oliven, Ei , Fisch, Wurst , Schinken, Tomatensauce und grünem Pfeffer"
-                                    },
-                                    {
-                                        "langId": "5",
-                                        "label": "Fromage, oignon, tomate , olives , œufs , poissons , saucisses, jambon , sauce tomate et le poivron vert"
-                                    },
-                                    {
-                                        "langId": "6",
-                                        "label": "Formaggio, cipolla , pomodoro, olive , uova, pesce , salsiccia, prosciutto , salsa di pomodoro e pepe verde"
                                     }
                                 ],
                                 "products": [
@@ -2329,7 +1861,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Rice with ham, vegetables and raisins"
+                                        "label": "Self-explanatory"
                                     },
                                     {
                                         "langId": "3",
@@ -2712,7 +2244,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Caipirinha, Tradinal Brazilian drink with cachaça"
+                                        "label": "Traditional Brazilian drink with cachaça"
                                     },
                                     {
                                         "langId": "3",
@@ -2739,7 +2271,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Caipirinha, Tradinal Brazilian drink with cachaça"
+                                        "label": "Caipirinha"
                                     },
                                     {
                                         "langId": "3",
@@ -2770,7 +2302,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Caipiríssima, Traditional Brazilian drink with rum"
+                                        "label": "Traditional Brazilian drink with rum"
                                     },
                                     {
                                         "langId": "3",
@@ -2797,7 +2329,7 @@
                                     },
                                     {
                                         "langId": "2",
-                                        "label": "Caipiríssima, Traditional Brazilian drink with rum"
+                                        "label": "Caipiríssima"
                                     },
                                     {
                                         "langId": "3",

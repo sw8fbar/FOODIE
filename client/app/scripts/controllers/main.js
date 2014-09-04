@@ -16,6 +16,12 @@
         this.pagetitle = 'Menu';
         $scope.$log = $log;
 
+        $scope.isExpanded = function(id){
+           //TODO: implement logic
+           if(id==1) return true;
+           return false;
+        };
+
         $scope.getFacilityData = function(facilities) {
             $log.info("called Async service");
             var promise =
