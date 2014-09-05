@@ -8,10 +8,12 @@
     angular.module('igapakApp').directive('product', function () {
         return {
             restrict: 'E',
-            template: '<div class="product" id= "{{product.productId}}"><h4 class="menuHeading">{{product.productId}} - {{product.name[1].label}}</h4>'
-                      +'<div class="itemDescription" class="pull-left">{{product.description[1].label}}</div>'
-                      +'<div class="itemPrice" class="pull-right">{{product.price}}</div>'
-                      +'</div>'
+            templateUrl: 'partials/product.html'
+            /*template: '<div class="product" id= "{{product.productId}}">'
+                       +'<div id="productId"> {{product.productId}} - {{product.name[1].label}}<div class="itemDescription">{{product.description[1].label}}</div></div>'
+                       +'<div id="itemPrice">{{product.price}}</div>'
+                       +'<div id="userOptions" class="pull-right"><img src="../../images/icons/arrow_down.png"></div>'
+                      +'</div>' */
 
         };
 

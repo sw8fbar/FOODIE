@@ -1,3 +1,30 @@
+/* Begin - animate the menus*/
+.animate-show {
+    line-height:20px;
+    opacity:1;
+    padding:10px;
+    border:1px solid black;
+    background:white;
+}
+
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+    line-height:0;
+    opacity:0;
+    padding:0 10px;
+}
+/* End - animate the menus*/
+
+.product-display {
+    padding-top: 53px;
+    padding-bottom: 55px;
+}
+
 .navbar-absolute-bottom img {
     display: block;
     margin-left: auto;
@@ -20,6 +47,16 @@
 .sidebar-left,
 .sidebar-right{
     background: #b8bcc0;
+    width: 95%;
+}
+
+.sidebar-left p,
+.sidebar-right p{
+    font-size: 1.3em;
+}
+
+.sidebar.ng-show {
+    opacity:1;
 }
 
 .menuFiller{
@@ -60,11 +97,10 @@
 }
 
 .productGroup {
-    background:#ffffff;
     width: 100%;
     height: 3.6em;
-    margin-bottom: 0.1em;
-    padding: 0.2em;
+    padding-bottom: 0.03em;
+    background: #c0c0c0;
 }
 
 .productSubGroup {
@@ -73,6 +109,7 @@
     height: 3.4em;
 
 }
+
 .productSubGroup ul,
 .productGroup ul
 {
@@ -83,6 +120,11 @@
     padding-top: .5em;
     padding-left: 0.4em;
     padding-right: 0.2em;
+}
+
+.productGroup ul
+{
+    background:#ffffff;
 }
 
 .productSubGroup ul li,
@@ -102,6 +144,7 @@
 #search {
    border-left: 0.3em;
    border-left-color: #c0c0c0;
+   margin-left: 0.3em;
 }
 
 .productSubGroup ul li div p,
@@ -127,9 +170,3 @@
     width: 25px;
 }
 
-.product {
-    background: #f1f5f7;
-    margin-top: 0.08em;
-    margin-bottom: 0.08em;
-    padding: 0.9em;
-}

@@ -10,16 +10,31 @@
 
 (function () {
 
-    angular.module('igapakApp').controller('MainCtrl', ['$scope','$log','$cookieStore', 'FacilityData', 'OrgData', function ($scope, $log, $cookieStore, FacilityData, OrgData) {
+    angular.module('igapakApp').controller('MainCtrl', ['$scope','$log','$cookieStore', '$location', '$anchorScroll', 'FacilityData', 'OrgData', function ($scope, $log, $cookieStore, $location, $anchorScroll, FacilityData, OrgData) {
 
         this.menudisplayed = '';
         this.pagetitle = 'Menu';
         $scope.$log = $log;
+        $scope.expanded = [1];
+
+        $scope.expand = function(id) {
+            var index = $scope.expanded.indexOf(id);
+            if (index = -1) {
+                $scope.expanded.push(id);
+            }
+        };
+
+        $scope.collapse = function(id) {
+            var index = $scope.expanded.indexOf(id);
+            if (index != -1) {
+                $scope.expanded.splice(index,1);
+            }
+        };
 
         $scope.isExpanded = function(id){
-           //TODO: implement logic
-           if(id==1) return true;
+           if($scope.expanded.indexOf(id) != -1) return true;
            return false;
+
         };
 
         $scope.getFacilityData = function(facilities) {
@@ -33,6 +48,19 @@
                 function(errorPayload) {
                     $log.error('failure loading Group data', errorPayload);
                 });
+        };
+
+        $scope.displayGroup = function(id) {
+            // set the location.hash to the id of
+            // the element you wish to scroll to
+            $scope.selectMenu($scope.menudisplayed);
+            var old = $location.hash();
+            $location.hash('group'+id);
+            $anchorScroll();
+            //reset to old to keep any additional routing logic from kicking in
+            $location.hash(old);
+            $scope.expand(id);
+
         };
 
         //Get data from server at startup
@@ -67,12 +95,12 @@
         ];
 
         //method to toggle display the left and right menu
-        this.selectMenu = function (setMenu) {
-            if ((this.menudisplayed !== setMenu)) {
-                this.menudisplayed = setMenu;
+        $scope.selectMenu = function (setMenu) {
+            if (($scope.menudisplayed !== setMenu)) {
+                $scope.menudisplayed = setMenu;
             }
             else {
-                this.menudisplayed = '';
+                $scope.menudisplayed = '';
             }
             //console.log("menudisplayed = " + this.menudisplayed);
         };

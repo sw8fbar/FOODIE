@@ -1,0 +1,13 @@
+<div class="sidebar sidebar-left animate-show" parent-active-class="sidebar-left-in"
+     ng-show="menudisplayed==='L'">
+    <div class="scrollable scrollable-content">
+        <!-- Blank DIVs to push actual menu down -->
+        <div class="menuFiller">&nbsp;</div>
+        <div class="rightMenu">
+            <div class="menuOption" ng-repeat="group in facilities[0].articles[0].groups">
+                <p ng-click="displayGroup('{{group.groupId}}')">{{group.name[1].label}}<img class="pull-right" src="../images/icons/menuSectionArrow.png"/></p>
+            </div>
+        </div>
+        <div class="menuFiller">&nbsp;</div>
+    </div>
+</div>

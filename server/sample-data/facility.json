@@ -41,7 +41,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "BEVERAGES"
+                                "label": "Beverages"
                             },
                             {
                                 "langId": "3",
@@ -304,7 +304,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "STARTERS"
+                                "label": "Starters"
                             },
                             {
                                 "langId": "3",
@@ -393,7 +393,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "SALADS AND LIGHT DISHES"
+                                "label": "Salads and Light Dishes"
                             },
                             {
                                 "langId": "3",
@@ -598,7 +598,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "SEAFOODS AND CRUSTACEANS"
+                                "label": "Seafood and Crustaceans"
                             },
                             {
                                 "langId": "3",
@@ -745,7 +745,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "SANDWICHES"
+                                "label": "Sandwiches"
                             },
                             {
                                 "langId": "3",
@@ -892,7 +892,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "STEAK"
+                                "label": "Steak"
                             },
                             {
                                 "langId": "3",
@@ -1039,7 +1039,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "CHICKEN"
+                                "label": "Chicken"
                             },
                             {
                                 "langId": "3",
@@ -1186,7 +1186,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "PASTAS"
+                                "label": "Pasta"
                             },
                             {
                                 "langId": "3",
@@ -1333,7 +1333,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "PIZZAS"
+                                "label": "Pizza"
                             },
                             {
                                 "langId": "3",
@@ -1774,7 +1774,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "SIDE DISHES"
+                                "label": "Side Dishes"
                             },
                             {
                                 "langId": "3",
@@ -1921,7 +1921,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "SNACKS AND APPETIZERS"
+                                "label": "Snacks and Appetizers"
                             },
                             {
                                 "langId": "3",
@@ -2068,7 +2068,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "DESSERTS"
+                                "label": "Desserts"
                             },
                             {
                                 "langId": "3",
@@ -2215,7 +2215,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "BRAZILIAN DRINKS"
+                                "label": "Brazilian Drinks"
                             },
                             {
                                 "langId": "3",

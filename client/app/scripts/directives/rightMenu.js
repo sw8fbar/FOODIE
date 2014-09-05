@@ -10,16 +10,16 @@
     app.directive('rightMenu', function () {
         return {
             restrict: 'E',
-            template: '<div class="sidebar sidebar-right" parent-active-class="sidebar-right-in" ng-show="mainctrl.menudisplayed===\'R\'" >' +
+            template: '<div class="animate-show sidebar sidebar-right" parent-active-class="sidebar-right-in" ng-show="menudisplayed===\'R\'" >' +
                 '<div class="scrollable scrollable-content">' +
                 '<!-- Blank DIVs to push actual menu down -->' +
                 '<div class="menuFiller">&nbsp;</div>' +
                 '<div class="rightMenu" ng-repeat="action in userActions">' +
                 '<div class="menuOption">' +
                 '<div>' +
-                '<h4 class="menuHeading">' +
+                '<p>' +
                 '&nbsp; &nbsp; <img ng-src="{{action.image}}"/> &nbsp; &nbsp; {{action.name}}' +
-                '</h4>' +
+                '</p>' +
                 '</div>' +
                 '<div ng-show="action.languages" class="menuSubItem">' +
                 '<div ng-if="action.name === \'Change Language\'" ng-repeat="detail in action.languages" >' +
