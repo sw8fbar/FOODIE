@@ -1,23 +1,24 @@
 /* Begin - animate the menus*/
 .animate-show {
-    line-height:20px;
-    opacity:1;
-    padding:10px;
-    border:1px solid black;
-    background:white;
+    line-height: 20px;
+    opacity: 1;
+    padding: 10px;
+    border: 1px solid black;
+    background: white;
 }
 
 .animate-show.ng-hide-add.ng-hide-add-active,
 .animate-show.ng-hide-remove.ng-hide-remove-active {
-    -webkit-transition:all linear 0.5s;
-    transition:all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
 }
 
 .animate-show.ng-hide {
-    line-height:0;
-    opacity:0;
-    padding:0 10px;
+    line-height: 0;
+    opacity: 0;
+    padding: 0 10px;
 }
+
 /* End - animate the menus*/
 
 .product-display {
@@ -37,7 +38,7 @@
 
 .navbar-app {
     color: #ffffff;
-    background:#e38802;
+    background: #e38802;
 }
 
 .navbar-absolute-bottom {
@@ -45,28 +46,28 @@
 }
 
 .sidebar-left,
-.sidebar-right{
+.sidebar-right {
     background: #b8bcc0;
     width: 95%;
 }
 
 .sidebar-left p,
-.sidebar-right p{
+.sidebar-right p {
     font-size: 1.3em;
 }
 
 .sidebar.ng-show {
-    opacity:1;
+    opacity: 1;
 }
 
-.menuFiller{
+.menuFiller {
     background: #f3f3f3;
-    min-height:51px;
+    min-height: 50px;
 }
 
-.menuFillerBottom{
+.menuFillerBottom {
     background: #f3f3f3;
-    min-height:35px;
+    min-height: 50px;
 }
 
 .menuOption {
@@ -87,13 +88,13 @@
     background: #b8bcc0;
 }
 
-.menuSubItem img{
+.menuSubItem img {
     height: 30px;
     width: 45px;
 }
 
 .product-display {
-    background:#c0c0c0;
+    background: #c0c0c0;
 }
 
 .productGroup {
@@ -101,20 +102,21 @@
     height: 3.6em;
     padding-bottom: 0.03em;
     background: #c0c0c0;
+    position: relative;
+    top: 0;
 }
 
 .productSubGroup {
-    background:#f3f3f3;
+    background: #f3f3f3;
     width: 100%;
     height: 3.4em;
 
 }
 
 .productSubGroup ul,
-.productGroup ul
-{
-    overflow-x:hidden;
-    white-space:nowrap;
+.productGroup ul {
+    overflow-x: hidden;
+    white-space: nowrap;
     height: 95%;
     width: 100%;
     padding-top: .5em;
@@ -122,40 +124,35 @@
     padding-right: 0.2em;
 }
 
-.productGroup ul
-{
-    background:#ffffff;
+.productGroup ul {
+    background: #ffffff;
 }
 
 .productSubGroup ul li,
-.productGroup ul li
-{
-    display:inline;
+.productGroup ul li {
+    display: inline;
 }
 
 .productSubGroup ul li div,
-.productGroup ul li div
-{
+.productGroup ul li div {
     float: left;
     padding-right: 0.3em;
     padding-left: 0.3em;
 }
 
 #search {
-   border-left: 0.3em;
-   border-left-color: #c0c0c0;
-   margin-left: 0.3em;
+    border-left: 0.3em;
+    border-left-color: #c0c0c0;
+    margin-left: 0.3em;
 }
 
 .productSubGroup ul li div p,
-.productGroup ul li div p
-{
+.productGroup ul li div p {
     color: #3d5e85;
     font-size: 1.1em;
 }
 
-.productGroup ul li img
-{
+.productGroup ul li img {
     height: 25px;
     width: 25px;
 }
@@ -170,3 +167,25 @@
     width: 25px;
 }
 
+.userOptions {
+    background: #ffffff;
+}
+
+.userOptions ul {
+    overflow-x: hidden;
+    white-space: nowrap;
+    height: 95%;
+    width: 100%;
+}
+
+.userOptions ul li {
+    display: inline;
+    padding: 1.5em;
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+}

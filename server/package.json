@@ -1,10 +1,10 @@
 {
   "name": "server",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-      "start": "NODE_ENV=production nodemon ./bin/www",
-      "test": "NODE_ENV=development nodemon ./bin/www"
+    "start": "NODE_ENV=production nodemon ./bin/www",
+    "test": "NODE_ENV=development nodemon ./bin/www"
   },
   "dependencies": {
     "express": "~4.8.6",
@@ -13,6 +13,10 @@
     "morgan": "~1.2.3",
     "serve-favicon": "~2.0.1",
     "debug": "~1.0.4",
-    "mongoose":"latest"
+    "mongoose": "latest"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-ec2": "^0.9.0"
   }
 }

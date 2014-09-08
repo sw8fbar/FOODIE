@@ -1,0 +1,12 @@
+<a class="anchor" id="{{'group'+group.groupId}}"></a>
+<div class="productGroup pull-left">
+    <ul>
+       <li ng-if="expanded.indexOf(group.groupId) !== -1"><div class="pull-left" ><img src="images/icons/minus_orange.png" ng-click="selectMenu('L')"/></div></li>
+       <li><div ng-click="selectMenu('L')"><p>&nbsp;&nbsp;{{group.name[1].label}}&nbsp;&nbsp;</p></div></li>
+       <li><div ng-if="$index === 0" class="pull-right" id="search"><img src="images/icons/search.png"/></div></li>
+       <li><div class="pull-right"><img ng-click="collapse(group.groupId)" ng-if="expanded.indexOf(group.groupId) !== -1" src="images/icons/minus_orange.png"/><img ng-click="expand(group.groupId)" ng-if="expanded.indexOf(group.groupId) === -1" src="images/icons/plus_blue.png"/></div></li>
+    </ul>
+</div>
+
+<sub-group ng-show="isExpanded(group.groupId)" ng-repeat="group in group.subgroups" productSubGroup></sub-group>
+<product ng-show="isExpanded(group.groupId)" ng-repeat="product in group.products"></product>

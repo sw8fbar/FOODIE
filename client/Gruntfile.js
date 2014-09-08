@@ -24,6 +24,8 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
 
+    pkg: grunt.file.readJSON('package.json'),
+    ec2: 'path/to/whatever.json',
     // Project settings
     yeoman: appConfig,
 
@@ -271,7 +273,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: ['*.html', 'views/{,*/}*.html'],
+          src: ['*.html', 'views/{,*/}*.html','partials/{,*/}*.html'],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -311,6 +313,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
+            'partials/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/*'
           ]
@@ -321,9 +324,14 @@ module.exports = function (grunt) {
           src: ['generated/*']
         }, {
           expand: true,
-          cwd: 'bower_components/bootstrap/dist',
+          cwd: 'bower_components/mobile-angular-ui/dist',
           src: 'fonts/*',
           dest: '<%= yeoman.dist %>'
+        }, {
+            expand: true,
+            cwd: 'bower_components/bootstrap/dist',
+            src: 'fonts/*',
+            dest: '<%= yeoman.dist %>'
         }]
       },
       styles: {
@@ -409,4 +417,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+    grunt.loadNpmTasks('grunt-ec2');
 };

@@ -2,9 +2,18 @@
     <tr style="background:#f1f5f7 ">
         <td style="width: 75%; padding-left: 1em ;padding-top: 1.5em; padding-bottom: 1.5em">
             <h5>{{product.name[1].label}}</h5>
+
             <div>{{product.description[1].label}}</div>
         </td>
         <td style="width: 16%; padding-right: 0.5em">{{product.price | currency}}</td>
-        <td style="width: 9%;"><img src="../../images/icons/arrow_down.png"></td>
+        <td style="width: 9%;"><img ng-if="!isProductExpanded(product.productId)" ng-click="expandProduct(product.productId)" src="images/icons/arrow_down.png"><img ng-if="isProductExpanded(product.productId)" ng-click="collapseProduct(product.productId)" src="images/icons/arrow_up.png"></td>
     </tr>
 </table>
+<div class="userOptions" ng-show="isProductExpanded(product.productId)">
+    <ul>
+        <li><img src="images/icons/microphone_grey.png"></li>
+        <li><img src="images/icons/select.png"></li>
+        <li><img src="images/icons/heart.png"></li>
+        <li><img src="images/flags/usa.png"></li>
+    </ul>
+</div>

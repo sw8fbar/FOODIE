@@ -11,6 +11,7 @@ var orgRoutes = require("./routes/orgs");
 var facilityRoutes = require("./routes/facilities");
 
 const DevelopmentDB = 'mongodb://localhost/IgapakDB';
+const ProdDB = 'mongodb://localhost/IgapakDB';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -50,6 +51,9 @@ if (app.get('env') === 'production') {
 
     // changes it to use the optimized version for production
     app.use(express.static(path.join(__dirname, '/dist')));
+
+    //connect to development db
+    mongoose.connect(ProdDB);
 
     // production error handler
     // no stacktraces leaked to user
