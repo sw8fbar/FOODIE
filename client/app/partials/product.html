@@ -6,14 +6,29 @@
             <div>{{product.description[1].label}}</div>
         </td>
         <td style="width: 16%; padding-right: 0.5em">{{product.price | currency}}</td>
-        <td style="width: 9%;"><img ng-if="!isProductExpanded(product.productId)" ng-click="expandProduct(product.productId)" src="images/icons/arrow_down.png"><img ng-if="isProductExpanded(product.productId)" ng-click="collapseProduct(product.productId)" src="images/icons/arrow_up.png"></td>
+        <td style="width: 9%;"><img ng-if="!isProductExpanded(product.productId)"
+                                    ng-click="expandProduct(product.productId)" src="images/icons/arrow_down.png"><img
+                ng-if="isProductExpanded(product.productId)" ng-click="collapseProduct(product.productId)"
+                src="images/icons/arrow_up.png"></td>
+    </tr>
+    <tr class="userOptions" ng-show="isProductExpanded(product.productId)">
+        <td colspan="3" style="padding: 2em">
+            <table style="width: 100%;">
+                <tr style="width: 100%">
+                    <td><img src="images/icons/microphone_grey.png"><br>Listen</td>
+                    <td><img src="images/icons/select.png"><br>&nbsp;Order</td>
+                    <td><img src="images/icons/like_grey.png"><br>&nbsp;&nbsp;&nbsp;Like</td>
+                    <td><div class="wrapper"><img src="images/flags/usa.png"></div>&nbsp;&nbsp;</td>
+                </tr>
+            </table>
+        </td>
     </tr>
 </table>
-<div class="userOptions" ng-show="isProductExpanded(product.productId)">
-    <ul>
-        <li><img src="images/icons/microphone_grey.png"></li>
-        <li><img src="images/icons/select.png"></li>
-        <li><img src="images/icons/heart.png"></li>
-        <li><img src="images/flags/usa.png"></li>
-    </ul>
-</div>
+<!--<div class="userOptions">-->
+<!--<ul>-->
+<!--<li><img src="images/icons/microphone_grey.png"></li>-->
+<!--<li><img src="images/icons/select.png"></li>-->
+<!--<li><img src="images/icons/heart.png"></li>-->
+<!--<li><img src="images/flags/usa.png"></li>-->
+<!--</ul>-->
+<!--</div>-->

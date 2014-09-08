@@ -171,17 +171,37 @@
     background: #ffffff;
 }
 
-.userOptions ul {
-    overflow-x: hidden;
-    white-space: nowrap;
-    height: 95%;
-    width: 100%;
+.userOptions table tr td{
+    margin-left: .2em;
+    border-left: #c0c0c0;
 }
 
-.userOptions ul li {
-    display: inline;
-    padding: 1.5em;
+.wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border: 4px double #c0c0c0;
+
 }
+
+.wrapper img{
+    width: 50px;
+    height: 40px;
+}
+/*.userOptions ul {*/
+    /*overflow-x: hidden;*/
+    /*white-space: nowrap;*/
+    /*height: 95%;*/
+    /*width: 100%;*/
+/*}*/
+
+/*.userOptions ul li {*/
+    /*display: inline;*/
+    /*padding: 1.5em;*/
+/*}*/
 
 .anchor {
     display: block;
