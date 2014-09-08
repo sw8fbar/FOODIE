@@ -8,5 +8,7 @@
     </ul>
 </div>
 
+<div class="pull-left" style="width: 100%">
 <sub-group ng-show="isGroupExpanded(group.groupId)" ng-repeat="group in group.subgroups" productSubGroup></sub-group>
 <product ng-show="isGroupExpanded(group.groupId)" ng-repeat="product in group.products"></product>
+</div>
