@@ -15,7 +15,7 @@
         this.menudisplayed = '';
         this.pagetitle = 'Menu';
         $scope.$log = $log;
-        $scope.expanded = [1];
+        $scope.groupExpanded = [1];
         $scope.productExpanded = [];
 
         $scope.safeApply = function (fn) {
@@ -28,21 +28,21 @@
         };
 
         $scope.expand = function (id) {
-            var index = $scope.expanded.indexOf(id);
+            var index = $scope.groupExpanded.indexOf(id);
             if (index = -1) {
-                $scope.expanded.push(id);
+                $scope.groupExpanded.push(id);
             }
         };
 
         $scope.collapse = function (id) {
-            var index = $scope.expanded.indexOf(id);
+            var index = $scope.groupExpanded.indexOf(id);
             if (index != -1) {
-                $scope.expanded.splice(index, 1);
+                $scope.groupExpanded.splice(index, 1);
             }
         };
 
-        $scope.isExpanded = function (id) {
-            if ($scope.expanded.indexOf(id) != -1) return true;
+        $scope.isGroupExpanded = function (id) {
+            if ($scope.groupExpanded.indexOf(id) != -1) return true;
             return false;
 
         };
@@ -83,13 +83,14 @@
         $scope.displayGroup = function (id) {
             // set the location.hash to the id of
             // the element you wish to scroll to
+//            setTimeout(function(){
+//                $();
+//            },500);
+            $scope.expand(id);
             $scope.selectMenu($scope.menudisplayed);
             var old = $location.hash();
-            $location.hash('group' + id);
+            $location.hash('anchor' + id);
             $anchorScroll();
-            setTimeout(function(){
-                $window.scrollTo(window.pageXOffset, window.pageYOffset - 53);
-            },500);
             //reset to old to keep any additional routing logic from kicking in
             $location.hash(old);
         };
