@@ -94,6 +94,10 @@
     background: #c0c0c0;
 }
 
+.inactive {
+    opacity: 0.1;
+}
+
 .productGroup {
     width: 100%;
     border-style: solid;

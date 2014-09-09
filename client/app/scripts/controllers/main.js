@@ -17,6 +17,7 @@
         $scope.$log = $log;
         $scope.groupExpanded = [1];
         $scope.productExpanded = [];
+        $scope.inactive ='';
 
         $scope.safeApply = function (fn) {
             var phase = this.$root.$$phase;
@@ -106,7 +107,12 @@
             else {
                 $scope.menudisplayed = '';
             }
-            //console.log("menudisplayed = " + this.menudisplayed);
+            if($scope.menudisplayed !== ''){
+                $scope.inactive = 'inactive';
+            } else {
+                $scope.inactive = '';
+            }
+
         };
 
         //
