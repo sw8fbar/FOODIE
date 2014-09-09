@@ -4,8 +4,8 @@
         <!-- Blank DIVs to push actual menu down -->
         <div class="menuFiller">&nbsp;</div>
         <div class="rightMenu">
-            <div class="menuOption" ng-repeat="group in facilities[0].articles[0].groups">
-                <p ng-click="displayGroup('{{group.groupId}}')">{{group.name[1].label}}<img class="pull-right" src="images/icons/MenuSectionArrow.png"/></p>
+            <div class="menuOption" ng-repeat="group in facilities[0].articles[0].groups" ng-click="displayGroup('{{group.groupId}}')">
+                <p>{{group.name[1].label}}<img class="pull-right" src="images/icons/MenuSectionArrow.png"/></p>
             </div>
         </div>
         <div class="menuFiller">&nbsp;</div>

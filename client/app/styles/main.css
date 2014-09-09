@@ -85,7 +85,7 @@
     min-height: 30px;
     margin-top: 1px;
     padding: 2px;
-    background: #b8bcc0;
+    background: #f3f3f3;
 }
 
 .menuSubItem img {
@@ -169,6 +169,8 @@
 
 .userOptions {
     background: #ffffff;
+    border-style: solid;
+    border-width: 1px 0 0 0
 }
 
 .userOptions table tr td{
@@ -190,6 +192,27 @@
 .wrapper img{
     width: 50px;
     height: 40px;
+}
+
+.wrapperMenu {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border: 4px double #c0c0c0;
+    white-space: nowrap;
+
+}
+
+.wrapperMenu img{
+    width: 90px;
+    height: 50px;
+}
+
+.wrapperMenu{
+    text-align: center;
 }
 /*.userOptions ul {*/
     /*overflow-x: hidden;*/

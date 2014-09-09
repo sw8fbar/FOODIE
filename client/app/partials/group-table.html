@@ -1,0 +1,27 @@
+<table style="width: 100%">
+    <thead>
+    <a class="anchor" id="{{'anchor'+group.groupId}}"></a>
+        <tr style="width: 100%; border-style: solid; background: #ffffff; height: 45px; border-width: 0 0 1px 0">
+            <td style="width: 12%;padding-left: 3px;"><img src="images/icons/minus_orange.png" ng-click="selectMenu('L')"
+                                                           ng-show="isGroupExpanded(group.groupId)"/></td>
+            <td style="width: 76%"><p>&nbsp;&nbsp;{{group.name[1].label}}&nbsp;&nbsp;</p></td>
+            <td style="width: 12%;padding-right: 3px;"><img ng-click="collapse(group.groupId)"
+                                                            ng-show="isGroupExpanded(group.groupId)"
+                                                            src="images/icons/minus_orange.png"/><img
+                    ng-click="expand(group.groupId)" ng-show="!isGroupExpanded(group.groupId)"
+                    src="images/icons/plus_Blue.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+       <tr ng-repeat="group in group.subgroups">
+        <td colspan="3" style="width: 100%">
+            <sub-group ng-show="isGroupExpanded(group.groupId)"></sub-group>
+        </td>
+        </tr>
+       <tr ng-repeat="product in group.products">
+        <td colspan="3" style="width: 100%">
+            <product ng-show="isGroupExpanded(group.groupId)"></product>
+        </td>
+       </tr>
+    </tbody>
+</table>

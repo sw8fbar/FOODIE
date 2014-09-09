@@ -23,7 +23,8 @@
             link : function(scope, element, attr){
                 scope.divClass =attr.divClass;
             },
-            templateUrl: 'partials/sub-group.html'
+//            templateUrl: 'partials/sub-group-to_delete.html'
+            templateUrl: 'partials/subgroup-table.html'
 
         };
 

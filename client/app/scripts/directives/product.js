@@ -8,7 +8,8 @@
     angular.module('igapakApp').directive('product', function () {
         return {
             restrict: 'E',
-            templateUrl: 'partials/product.html'
+//            templateUrl: 'partials/product_to_delete.html'
+            templateUrl: 'partials/product-table.html'
 
         };
 
