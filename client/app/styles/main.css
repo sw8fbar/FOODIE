@@ -82,15 +82,12 @@
 }
 
 .menuSubItem {
-    min-height: 30px;
-    margin-top: 1px;
-    padding: 2px;
     background: #f3f3f3;
 }
 
-.menuSubItem img {
-    height: 30px;
-    width: 45px;
+.menuSubItem td div img {
+    height: 40px;
+    width: 68px;
 }
 
 .product-display {
