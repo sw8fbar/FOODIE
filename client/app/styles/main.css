@@ -113,6 +113,11 @@
     width: 25px;
 }
 
+.productGroup td {
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+
 .updownArrow{
     height: 22px;
     width: 12px;
