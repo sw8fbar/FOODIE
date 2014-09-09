@@ -393,7 +393,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "Salads and Light Dishes"
+                                "label": "Salads"
                             },
                             {
                                 "langId": "3",
@@ -598,7 +598,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "Seafood and Crustaceans"
+                                "label": "Seafood"
                             },
                             {
                                 "langId": "3",
@@ -1921,7 +1921,7 @@
                             },
                             {
                                 "langId": "2",
-                                "label": "Snacks and Appetizers"
+                                "label": "Appetizers"
                             },
                             {
                                 "langId": "3",

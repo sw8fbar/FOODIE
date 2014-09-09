@@ -48,7 +48,7 @@
 .sidebar-left,
 .sidebar-right {
     background: #b8bcc0;
-    width: 95%;
+    width: 70%;
 }
 
 .sidebar-left p,
@@ -96,45 +96,10 @@
 
 .productGroup {
     width: 100%;
-    height: 3.6em;
-    padding-bottom: 0.03em;
-    background: #c0c0c0;
-    position: relative;
-    top: 0;
-}
-
-.productSubGroup {
-    background: #f3f3f3;
-    width: 100%;
-    height: 3.4em;
-
-}
-
-.productSubGroup ul,
-.productGroup ul {
-    overflow-x: hidden;
-    white-space: nowrap;
-    height: 95%;
-    width: 100%;
-    padding-top: .5em;
-    padding-left: 0.4em;
-    padding-right: 0.2em;
-}
-
-.productGroup ul {
+    border-style: solid;
     background: #ffffff;
-}
-
-.productSubGroup ul li,
-.productGroup ul li {
-    display: inline;
-}
-
-.productSubGroup ul li div,
-.productGroup ul li div {
-    float: left;
-    padding-right: 0.3em;
-    padding-left: 0.3em;
+    height: 45px;
+    border-width: 0 0 1px 0
 }
 
 #search {
@@ -143,15 +108,14 @@
     margin-left: 0.3em;
 }
 
-.productSubGroup ul li div p,
-.productGroup ul li div p {
-    color: #3d5e85;
-    font-size: 1.1em;
-}
-
-.productGroup ul li img {
+.productGroup td img {
     height: 25px;
     width: 25px;
+}
+
+.updownArrow{
+    height: 22px;
+    width: 12px;
 }
 
 .productSubGroup ul li img {
@@ -170,7 +134,7 @@
     border-width: 1px 0 0 0
 }
 
-.userOptions table tr td{
+.userOptions table tr td {
     margin-left: .2em;
     border-left: #c0c0c0;
 }
@@ -186,7 +150,7 @@
 
 }
 
-.wrapper img{
+.wrapper img {
     width: 50px;
     height: 40px;
 }
@@ -203,24 +167,25 @@
 
 }
 
-.wrapperMenu img{
+.wrapperMenu img {
     width: 90px;
     height: 50px;
 }
 
-.wrapperMenu{
+.wrapperMenu {
     text-align: center;
 }
+
 /*.userOptions ul {*/
-    /*overflow-x: hidden;*/
-    /*white-space: nowrap;*/
-    /*height: 95%;*/
-    /*width: 100%;*/
+/*overflow-x: hidden;*/
+/*white-space: nowrap;*/
+/*height: 95%;*/
+/*width: 100%;*/
 /*}*/
 
 /*.userOptions ul li {*/
-    /*display: inline;*/
-    /*padding: 1.5em;*/
+/*display: inline;*/
+/*padding: 1.5em;*/
 /*}*/
 
 .anchor {
