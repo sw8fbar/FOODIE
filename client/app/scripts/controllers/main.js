@@ -125,9 +125,9 @@
                 this.ui.menudisplayed = '';
             }
             if(this.ui.menudisplayed !== ''){
-                this.inactive = 'inactive';
+                this.ui.groupdisplayInactive = 'inactive';
             } else {
-                this.inactive = '';
+                this.ui.groupdisplayInactive = '';
             }
 
         };
