@@ -2,19 +2,19 @@
   
   <!-- Left nav-bar button -->
   <div class="btn-group pull-left">
-    <div ng-click="selectMenu('L')" class="btn btn-navbar">
+    <div ng-click="mainctrl.selectMenu('L')" class="btn btn-navbar">
       <img src="images/icons/menu_arrow.png" height="20px" width="10px"> <img src="images/pfchangs_logo_rev.png" height="30px" width="70px" />
     </div>
   </div>
 
   <!-- Page title -->
-  <div ng-click="selectMenu('{{menudisplayed}}')" class="navbar-brand-center">
-    <h3>{{mainctrl.pagetitle}}</h3>
+  <div ng-click="mainctrl.selectMenu('{{mainctrl.ui.menudisplayed}}')" class="navbar-brand-center">
+    <h3>{{mainctrl.ui.pagetitle}}</h3>
   </div>
   
   <!-- Right nav-bar button -->
   <div class="btn-group pull-right">
-    <div ng-click="selectMenu('R')" class="btn btn-navbar">
+    <div ng-click="mainctrl.selectMenu('R')" class="btn btn-navbar">
       <img src="images/logo.png" height="30px"/>
     </div>
   </div>

@@ -10,107 +10,124 @@
 
 (function () {
 
+    function Node(type, Obj, parent) {
+        this.type = type;
+        this.parent = this;
+        if(parent != null)this.parent = parent;
+        this.expandedInMenu = false;
+        this.expandedInBody = false;
+        this.class = '';
+        this.children = [];
+        this.hasSubGroups = false;
+        this.data = Obj;
+    };
+
+    Node.prototype.expandInBody = function() {
+        this.expandedInBody = true;
+        this.class = " expanded";
+    };
+
+    Node.prototype.collapseInBody = function() {
+        this.expandedInBody = false;
+        this.class = '';
+        for (var i=0; i< this.children.length; i++){
+            this.children[i].collapseInBody();
+        }
+    };
+
     angular.module('igapakApp').controller('MainCtrl', ['$scope', '$log', '$cookieStore', '$location', '$anchorScroll', '$window', 'FacilityData', 'OrgData', function ($scope, $log, $cookieStore, $location, $anchorScroll, $window, FacilityData, OrgData) {
 
-        this.menudisplayed = '';
-        this.pagetitle = 'Menu';
+        this.ui={};
+        this.ui.menudisplayed = '';
+        this.ui.pagetitle = 'Menu';
+        this.ui.flatlist = [];
+        this.ui.nodes = [];
+        this.ui.groupdisplayInactive ='';
+
+
+        //app scope variables
         $scope.$log = $log;
-        $scope.groupExpanded = [1];
-        $scope.productExpanded = [];
-        $scope.inactive ='';
 
-        $scope.safeApply = function (fn) {
-            var phase = this.$root.$$phase;
-            if (phase == '$apply' || phase == '$digest') {
-                if (fn) fn();
-            } else {
-                this.$apply(fn);
+//        $scope.safeApply = function (fn) {
+//            var phase = this.$root.$$phase;
+//            if (phase == '$apply' || phase == '$digest') {
+//                if (fn) fn();
+//            } else {
+//                this.$apply(fn);
+//            }
+//        };
+
+        this.getNode = function(type, Obj, parent, flatList){
+            var node = new Node(type, Obj, parent);
+            flatList.push(node);
+            if (node.data.groups && node.data.groups.length > 0) {
+                //alert("subgroup found");
+                node.hasSubGroups = true;
+                for (var i = 0; i < node.data.groups.length; i++) {
+                    node.children.push(this.getNode('subgroup', node.data.groups[i], node, flatList));
+                }
             }
-        };
-
-        $scope.expand = function (id) {
-            var index = $scope.groupExpanded.indexOf(id);
-            if (index = -1) {
-                $scope.groupExpanded.push(id);
+            if (node.data.products && node.data.products.length > 0) {
+                //alert("products found");
+                for (var i = 0; i < node.data.products.length; i++) {
+                    node.children.push(this.getNode('product', node.data.products[i], node, flatList));
+                }
             }
+//          console.log(node.data.igapakId);
+            return node;
         };
 
-        $scope.collapse = function (id) {
-            var index = $scope.groupExpanded.indexOf(id);
-            if (index != -1) {
-                $scope.groupExpanded.splice(index, 1);
+        this.buildNodes = function (data, treeList,flatList) {
+            //alert(data);
+            for (var i=0; i<data.length;i++) {
+                treeList.push(this.getNode('group', data[i], null, flatList));
             }
-        };
-
-        $scope.isGroupExpanded = function (id) {
-            if ($scope.groupExpanded.indexOf(id) != -1) return true;
-            return false;
 
         };
 
-        $scope.expandProduct = function (id) {
-            var index = $scope.productExpanded.indexOf(id);
-            if (index = -1) {
-                $scope.productExpanded.push(id);
-            }
-        };
-
-        $scope.collapseProduct = function (id) {
-            var index = $scope.productExpanded.indexOf(id);
-            if (index != -1) {
-                $scope.productExpanded.splice(index, 1);
-            }
-        };
-
-        $scope.isProductExpanded = function (id) {
-            if ($scope.productExpanded.indexOf(id) != -1) return true;
-            return false;
-
-        };
-
-        $scope.getFacilityData = function (facilities) {
+        this.getFacilityData = function (facilities, obj) {
             $log.info("called Async service");
             var promise =
                 FacilityData.getFacilities();
             promise.then(
                 function (payload) {
-                    $scope.facilities = payload.data;
+                    //$scope.facilities = payload.data;
+                    obj.buildNodes(payload.data[0].articles[0].groups, obj.ui.nodes, obj.ui.flatlist);
+                    //Expand first node
+                    obj.ui.flatlist[0].expandInBody();
                 },
                 function (errorPayload) {
                     $log.error('failure loading Group data', errorPayload);
                 });
         };
 
-        $scope.displayGroup = function (id) {
+        this.displayGroup = function (Object) {
             // set the location.hash to the id of
             // the element you wish to scroll to
-//            setTimeout(function(){
-//                $();
-//            },500);
-            $scope.expand(id);
-            $scope.selectMenu($scope.menudisplayed);
+            this.selectMenu(this.ui.menudisplayed);
+            Object.expandedInBody = true;
             var old = $location.hash();
-            $location.hash('anchor' + id);
+            $location.hash('anchor' + Object.data.igapakId);
             $anchorScroll();
             //reset to old to keep any additional routing logic from kicking in
             $location.hash(old);
         };
 
         //Get data from server at startup
-        $scope.getFacilityData();
+        this.getFacilityData($scope.facilities, this);
 
         //method to toggle display the left and right menu
-        $scope.selectMenu = function (setMenu) {
-            if (($scope.menudisplayed !== setMenu)) {
-                $scope.menudisplayed = setMenu;
+        this.selectMenu = function (setMenu) {
+            if ((this.ui.menudisplayed !== setMenu)) {
+                this.ui.menudisplayed = setMenu;
             }
             else {
-                $scope.menudisplayed = '';
+                this.ui.menudisplayed = '';
             }
-            if($scope.menudisplayed !== ''){
-                $scope.inactive = 'inactive';
+            if(this.ui.menudisplayed !== ''){
+                this.inactive = 'inactive';
             } else {
-                $scope.inactive = '';
+                this.inactive = '';
             }
 
         };

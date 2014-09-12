@@ -20,6 +20,15 @@ app.use(bodyParser.json({limit: '500kb'}));
 app.use(bodyParser.urlencoded({ limit: '500kb',extended: false }));
 app.use(cookieParser());
 
+var router = express.Router();
+
+// middleware to use for all requests
+router.use(function(req, res, next) {
+    // do logging
+    console.log(req.headers);
+    console.log(req.body);
+    next(); // make sure we go to the next routes and don't stop here
+});
 
 /**
  * Development Settings
@@ -66,6 +75,7 @@ if (app.get('env') === 'production' || app.get('env') === 'prod') {
     });
 }
 
+app.use('/',router);
 app.use('/api',orgRoutes);
 app.use('/api',facilityRoutes);
 module.exports = app;

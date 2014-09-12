@@ -1,11 +1,96 @@
 <div ng-controller="MainCtrl as mainctrl">
     <navigation-bar></navigation-bar>
     <!-- display group - subgroup - product -->
-    <div class="product-display scrollable scrollable-content {{inactive}}">
-        <group ng-repeat="group in facilities[0].articles[0].groups"></group>
-        <div class="productGroup pull-left">&nbsp</div>
-    </div>
+    <div class="product-display scrollable scrollable-content {{ui.groupdisplayInactive}}">
 
+        <table style="width: 100%;">
+
+            <!-- Anchor for anchorscroll-->
+            <tr id="anchornode" ng-repeat-start="node in mainctrl.ui.flatlist">
+                <td>
+                    <a ng-if="node.type !== 'product'"
+                       class="anchor"
+                       id="{{'anchor'+node.data.igapakId}}"></a>
+                </td>
+            </tr>
+
+            <!-- Group Display-->
+            <tr ng-if="node.type === 'group'" class="{{node.type}}" ng-class="node.class">
+                <td style="width: 12%;padding-left: 3px;"><img src="images/icons/exit-door-icon.png"
+                                                               ng-click="mainctrl.selectMenu('L')"
+                                                               ng-show="node.expandedInBody"/>
+
+                </td>
+                <td style="width: 76%"><p>&nbsp;&nbsp;{{node.data.name[1].label}}&nbsp;&nbsp;</p></td>
+                <td ng-if="!node.hasSubGroups" style="width: 12%;padding-right: 3px;"><img class="colland" ng-click="node.collapseInBody()"
+                                                                ng-show="node.expandedInBody"
+                                                                src="images/icons/MenuSectionArrow_blue.png"/>
+                    <img class="colland"
+                         ng-click="node.expandInBody()" ng-show="!node.expandedInBody"
+                         src="images/icons/MenuSectionArrow.png"/></td>
+                <td ng-if="node.hasSubGroups" style="width: 12%;padding-right: 3px;"><img class="colland" ng-click="node.collapseInBody()"
+                                                                ng-show="node.expandedInBody"
+                                                                src="images/icons/minus_blue.png"/>
+                    <img class="colland"
+                         ng-click="node.expandInBody()" ng-show="!node.expandedInBody"
+                         src="images/icons/plus_grey.png"/></td>
+            </tr>
+
+            <!-- Sub-group display-->
+            <tr ng-if="node.type === 'subgroup'" class="{{node.type}}" ng-show="node.parent.expandedInBody">
+                <td><img id="separator" src="images/icons/dot.png"/></td>
+                <td><p>&nbsp;&nbsp;{{node.data.name[1].label}}&nbsp;&nbsp;</p></td>
+                <td><img ng-show="node.expandedInBody" src="images/icons/MenuSectionArrow_blue.png"
+                         ng-click="node.collapseInBody()"/><img
+                        ng-show="!node.expandedInBody" src="images/icons/MenuSectionArrow.png"
+                        ng-click="node.expandInBody()"/></td>
+            </tr>
+
+
+            <!-- Product display-->
+            <tr ng-if="node.type === 'product'" class="{{node.type}}" ng-class="node.class" ng-show="node.parent.expandedInBody" ng-repeat-end>
+                <td style="width: 100%" colspan="3">
+                    <table width="100%">
+                        <tr>
+                            <td style="width: 76%; padding-left: 1em ;padding-top: 1.5em; padding-bottom: 1.5em" class="prodDescription">
+                                <p class="productTitle">{{node.data.igapakId}}. {{node.data.name[1].label}}</p>
+
+                                <div>{{node.data.description[1].label}}</div>
+                                <div class="productNotification">{{node.data.notification}}</div>
+                            </td>
+                            <td style="width: 18%; padding-right: 0.5em">{{node.data.price | currency}}</td>
+                            <td style="width: 6%;"><img class="updownArrow" ng-show="!node.expandedInBody"
+                                                        ng-click="node.expandInBody()"
+                                                        src="images/icons/arrow_down.png"><img
+                                    ng-show="node.expandedInBody" ng-click="node.collapseInBody()"
+                                    src="images/icons/arrow_up.png" class="updownArrow"></td>
+                        </tr>
+                        <tr class="userOptions" ng-show="node.expandedInBody">
+                            <td colspan="3" style="padding: 1em">
+                                <table style="width: 100%">
+                                    <tr style="width: 100%">
+                                        <td style="padding-left:1em ;padding-right:1em ;text-align: center;border-style: solid; border-width: 0 1px 0 0">
+                                            <img src="images/icons/microphone_grey.png"><br>Listen
+                                        </td>
+                                        <td style="padding-left:1em ;padding-right:1em ;text-align: center;border-style: solid; border-width: 0 1px 0 0">
+                                            <img src="images/icons/select.png"><br>Order
+                                        </td>
+                                        <td style="padding-left:1em ;padding-right:1em ;text-align: center;border-style: solid; border-width: 0 1px 0 0">
+                                            <img src="images/icons/like_grey.png"><br>Like
+                                        </td>
+                                        <td style="padding-left:1em ;padding-right:1em ;text-align: center">
+                                            <div class="wrapper"><img src="images/Flags/usa.png"></div>
+                                            &nbsp;&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="group"></tr>
+        </table>
+    </div>
     <right-menu></right-menu>
     <left-menu></left-menu>
     <banner-footer></banner-footer>

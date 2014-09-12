@@ -20,7 +20,7 @@ router.route('/orgs')
         var org = new Org();
         org._id = new mongoose.Types.ObjectId;
         org.name = req.body.org.name;
-        org.orgId = req.body.org.orgId;
+        org.aId = req.body.org.orgId;
         org.facilities = req.body.org.facilities;
         org.save(function (err) {
             if (err) console.log(err);

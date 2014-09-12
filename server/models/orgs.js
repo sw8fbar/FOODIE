@@ -14,8 +14,8 @@ var mongoose = require("mongoose"),
 // selecting facility will get all articles corresponding to that facility
 
 var orgSchema = new mongoose.Schema({
-    _id: { type: Schema.ObjectId },
-    orgId: {type: Number},
+    _aID: { type: Schema.ObjectId },
+    igapakId: {type: Number},
     name: {type: String},
     facilities: [facilitySchema],
     logo: {type: String}

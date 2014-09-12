@@ -20,7 +20,7 @@ router.route('/facilities')
         var facility = new Facility();
         facility._id = new mongoose.Types.ObjectId;
         facility.name = req.body.facility.name;
-        facility.facilityId = req.body.facility.facilityId;
+        facility.igapakId = req.body.facility.igapakId;
         facility.articles = req.body.facility.articles;
         facility.save(function (err) {
             if (err) console.log(err);
