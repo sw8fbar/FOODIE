@@ -1,7 +1,7 @@
 [
     {
         "org": {
-            "orgId": "1",
+            "igapakId": "1",
             "logo": "pfchangs_logo_rev.png",
             "name": "P. F. Chang",
             "facilities": [
@@ -25,7 +25,7 @@
 
     {
         "org": {
-            "orgId": "2",
+            "igapakId": "2",
             "logo": "bistro.png",
             "name": "Bistro",
             "facilities": [

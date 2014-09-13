@@ -42,7 +42,7 @@
             this.expandInBody();
     };
 
-    angular.module('igapakApp').controller('MainCtrl', ['$scope', '$log', '$cookieStore', '$location', '$anchorScroll', '$window', 'FacilityData', 'OrgData', function ($scope, $log, $cookieStore, $location, $anchorScroll, $window, FacilityData, OrgData) {
+    angular.module('igapakApp').controller('MainCtrl', ['$scope', '$routeParams', '$log', '$cookieStore', '$location', '$anchorScroll', '$window', 'FacilityData', 'OrgData', function ($scope, $routeParams, $log, $cookieStore, $location, $anchorScroll, $window, FacilityData, OrgData) {
 
         this.ui={};
         this.ui.menudisplayed = '';
@@ -55,6 +55,7 @@
 
         //app scope variables
         $scope.$log = $log;
+        $scope.org = {};
 
 //        $scope.safeApply = function (fn) {
 //            var phase = this.$root.$$phase;
@@ -64,6 +65,7 @@
 //                this.$apply(fn);
 //            }
 //        };
+
 
         this.getNode = function(type, Obj, parent, flatList){
             var node = new Node(type, Obj, parent);
@@ -93,16 +95,38 @@
 
         };
 
+        this.getOrgData = function () {
+            $log.info("called Async service");
+            var promise =
+                OrgData.getOrgs($routeParams.orgId);
+            promise.then(
+                function (payload) {
+                    $scope.org = payload.data;
+                    //alert(JSON.stringify(orgs));
+                },
+                function (errorPayload) {
+                    alert(JSON.stringify(errorPayload));
+                    $log.error('failure loading Group data', errorPayload);
+                });
+        };
+
         this.getFacilityData = function (facilities, obj) {
             $log.info("called Async service");
             var promise =
-                FacilityData.getFacilities();
+                FacilityData.getFacilities($routeParams.facilityId,$routeParams.articleId);
             promise.then(
                 function (payload) {
                     //$scope.facilities = payload.data;
-                    obj.buildNodes(payload.data[0].articles[0].groups, obj.ui.nodes, obj.ui.flatlist);
-                    //Expand first node
-                    obj.ui.flatlist[0].expandInBody();
+                    //alert(JSON.stringify(payload));
+                    var articles = payload.data.articles;
+                    for (var i=0; i<articles.length; i++) {
+                        if (articles[i].igapakId == $routeParams.articleId) {
+                            //alert(JSON.stringify(articles[i]));
+                            obj.buildNodes(articles[i].groups, obj.ui.nodes, obj.ui.flatlist);
+                            //Expand first node
+                            obj.ui.flatlist[0].expandInBody();
+                        }
+                    }
                 },
                 function (errorPayload) {
                     $log.error('failure loading Group data', errorPayload);
@@ -122,6 +146,8 @@
         };
 
         //Get data from server at startup
+        this.getOrgData();
+        alert(JSON.stringify($scope.org));
         this.getFacilityData($scope.facilities, this);
 
         //method to toggle display the left and right menu
@@ -149,6 +175,10 @@
             this.userLanguage = LanguageId;
             this.toggleMenu();
         }
+
+        this.getLogo = function(){
+            return 'images/logos/' + $scope.org.logo;
+        };
     }]);
 
 })();

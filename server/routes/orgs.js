@@ -8,19 +8,21 @@ var mongoose = require('mongoose');
 var orgSchema = require('../models/orgs');
 var Org = mongoose.model('Org', orgSchema);
 
-router.route('/orgs')
+router.route('/orgs/:orgId')
     .get(function (req, res) {
-        Org.find(function (err, orgs) {
+        var query  = Org.where({ "igapakId": req.params.orgId});
+        query.findOne(function (err, orgs) {
             if (err) return console.error(err);
-            //console.log(groups);
-            res.json(orgs);
+            if (orgs) res.json(orgs);
+            else console.error({"message":"No facilities found"});
         })
     })
     .post(function (req, res) {
         var org = new Org();
         org._id = new mongoose.Types.ObjectId;
         org.name = req.body.org.name;
-        org.aId = req.body.org.orgId;
+        org.logo = req.body.org.logo;
+        org.igapakId = req.body.org.igapakId;
         org.facilities = req.body.org.facilities;
         org.save(function (err) {
             if (err) console.log(err);

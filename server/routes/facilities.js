@@ -8,12 +8,13 @@ var mongoose = require('mongoose');
 var facilitySchema = require('../models/facilities');
 var Facility = mongoose.model('Facility', facilitySchema);
 
-router.route('/facilities')
+router.route('/facilities/:facilityId')
     .get(function (req, res) {
+        //var query  = Facility.where({ "igapakId": '1', "articles.igapakId": '1'});
         Facility.find(function (err, facilities) {
             if (err) return console.error(err);
-            //console.log(groups);
-            res.json(facilities);
+            if (facilities) res.json(facilities);
+            else console.error({"message":"No facilities found"});
         })
     })
     .post(function (req, res) {
@@ -32,7 +33,26 @@ router.route('/facilities')
 
     })
     .delete(function (req, res) {
+        var query  = Facility.where({ "igapakId": req.params.facilityId });
+        query.findOneAndRemove(function (err, facilities) {
+            if (err) return console.error(err);
+            if (facilities) res.json(facilities);
+            else console.error({"message":"facility "+req.params.facilityId+"not found"});
+        })
 
     });
+
+router.route('/facilities/:facilityId/articles/:articleId')
+    .get(function (req, res) {
+        var query  = Facility.where({ "igapakId": req.params.facilityId, "articles.igapakId": req.params.articleId});
+        query.findOne(function (err, facilities) {
+            if (err) return console.error(err);
+            if (facilities) {
+                //console.log(JSON.stringify(facilities));
+                res.json(facilities);
+            }
+            else console.error({"message":"No facilities found"});
+        })
+    })
 
 module.exports = router;

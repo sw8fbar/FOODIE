@@ -10,18 +10,18 @@
         var urlBase = '/api/orgs';
         var OrgData = {};
         return {
-            getOrgs: function () {
-                return $http.get(urlBase);
+            getOrgs: function (orgID) {
+                return $http.get(urlBase+'/'+orgID);
             }
         }
     });
 
     app.factory('FacilityData', function ($http) {
-        var urlBase = '/api/facilities';
+        var urlBase = '/api/facilities/' ;
         var FacilityData = {};
         return {
-            getFacilities: function () {
-                return $http.get(urlBase);
+            getFacilities: function (facilityId,articleId) {
+                return $http.get(urlBase+facilityId+'/articles/'+articleId);
             }
         }
     });

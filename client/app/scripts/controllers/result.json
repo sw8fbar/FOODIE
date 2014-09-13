@@ -1,0 +1,106 @@
+{"data": {
+    "_id": "541497986ed8ca561b0c2134",
+    "igapakId": 1,
+    "name": "Libertyville",
+    "__v": 0,
+    "articles": [
+        {
+            "igapakId": 1,
+            "_id": "541497986ed8ca561b0c22e9",
+            "groups": [
+                {
+                    "igapakId": 2,
+                    "_id": "541497986ed8ca561b0c2448",
+                    "products": [
+                        {
+                            "igapakId": 5,
+                            "servingSize": 2,
+                            "price": 24.99,
+                            "_id": "541497986ed8ca561b0c2449",
+                            "description": [
+                                {
+                                    "igapakId": 1,
+                                    "label": "Portuguese - Dinner",
+                                    "_id": "541497986ed8ca561b0c2455"
+                                },
+                                {
+                                    "igapakId": 2,
+                                    "label": "Garlic Bread (2 units)",
+                                    "_id": "541497986ed8ca561b0c2454"
+                                },
+                                {
+                                    "igapakId": 3,
+                                    "label": "Spanish - Dinner",
+                                    "_id": "541497986ed8ca561b0c2453"
+                                },
+                                {
+                                    "igapakId": 4,
+                                    "label": "Essen",
+                                    "_id": "541497986ed8ca561b0c2452"
+                                },
+                                {
+                                    "igapakId": 5,
+                                    "label": "French - Dinner",
+                                    "_id": "541497986ed8ca561b0c2451"
+                                },
+                                {
+                                    "igapakId": 6,
+                                    "label": "Italian - Dinner",
+                                    "_id": "541497986ed8ca561b0c2450"
+                                }
+                            ],
+                            "name": [
+                                {
+                                    "igapakId": 1,
+                                    "label": "Portuguese - Dinner",
+                                    "_id": "541497986ed8ca561b0c244f"
+                                },
+                                {
+                                    "igapakId": 2,
+                                    "label": "Garlic Bread (2 units)",
+                                    "_id": "541497986ed8ca561b0c244e"
+                                },
+                                {
+                                    "igapakId": 3,
+                                    "label": "Spanish - Dinner",
+                                    "_id": "541497986ed8ca561b0c244d"
+                                },
+                                {
+                                    "igapakId": 4,
+                                    "label": "Essen",
+                                    "_id": "541497986ed8ca561b0c244c"
+                                },
+                                {
+                                    "igapakId": 5,
+                                    "label": "French - Dinner",
+                                    "_id": "541497986ed8ca561b0c244b"
+                                },
+                                {
+                                    "igapakId": 6,
+                                    "label": "Italian - Dinner",
+                                    "_id": "541497986ed8ca561b0c244a"
+                                }
+                            ]
+                        }
+                    ],
+                    "groups": [],
+                    "name": [
+                        {
+                            "igapakId": 1,
+                            "label": "ENTRADAS",
+                            "_id": "541497986ed8ca561b0c245b"
+                        },
+                        {
+                            "igapakId": 2,
+                            "label": "Starters",
+                            "_id": "541497986ed8ca561b0c245a"
+                        },
+                        {
+                            "igapakId": 3,
+                            "label": "ENTRADAS",
+                            "_id": "541497986ed8ca561b0c2459"
+                        },
+                        {
+                            "igapakId": 4,
+                            "label": "VORSPEISEN",
+                            "_id": "541497986ed8ca561b0c2458"ese - Dinner","_id":"541497986ed8ca561b0c213d"},{"igapakId":2,"label":"Caipiríssima","_id":"541497986ed8ca561b0c213c"},{"igapakId":3,"label":"Spanish - Dinner","_id":"541497986ed8ca561b0c213b"},{"igapakId":4,"label":"Essen","_id":"541497986ed8ca561b0c213a"},{"igapakId":5,"label":"French - Dinner","_id":"541497986ed8ca561b0c2139"},{"igapakId":6,"label":"Italian - Dinner","_id":"541497986ed8ca561b0c2138"}]}],"groups":[],"name":[{"igapakId":1,"label":"DRINKS…
