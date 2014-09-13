@@ -36,11 +36,10 @@
     };
 
     Node.prototype.toggleExpand = function() {
-        this.expandedInBody = !this.expandedInBody;
         if(this.expandedInBody)
-            this.class = " expanded";
+            this.collapseInBody();
         else
-            this.class ='';
+            this.expandInBody();
     };
 
     angular.module('igapakApp').controller('MainCtrl', ['$scope', '$log', '$cookieStore', '$location', '$anchorScroll', '$window', 'FacilityData', 'OrgData', function ($scope, $log, $cookieStore, $location, $anchorScroll, $window, FacilityData, OrgData) {
