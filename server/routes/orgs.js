@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 var orgSchema = require('../models/orgs');
 var Org = mongoose.model('Org', orgSchema);
 
-router.route('/orgs/:orgId')
+router.route('/orgs')
     .get(function (req, res) {
         var query  = Org.where({ "igapakId": req.params.orgId});
         query.findOne(function (err, orgs) {
