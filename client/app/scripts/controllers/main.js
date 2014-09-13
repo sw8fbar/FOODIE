@@ -105,7 +105,7 @@
                     //alert(JSON.stringify(orgs));
                 },
                 function (errorPayload) {
-                    alert(JSON.stringify(errorPayload));
+                    //alert(JSON.stringify(errorPayload));
                     $log.error('failure loading Group data', errorPayload);
                 });
         };
@@ -147,7 +147,7 @@
 
         //Get data from server at startup
         this.getOrgData();
-        alert(JSON.stringify($scope.org));
+        //alert(JSON.stringify($scope.org));
         this.getFacilityData($scope.facilities, this);
 
         //method to toggle display the left and right menu
