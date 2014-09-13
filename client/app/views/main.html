@@ -21,7 +21,7 @@
                                                                ng-show="node.expandedInBody"/>
 
                 </td>
-                <td style="width: 76%"><p>&nbsp;&nbsp;{{node.data.name[1].label}}&nbsp;&nbsp;</p></td>
+                <td ng-click="node.toggleExpand()" style="width: 76%"><p>&nbsp;&nbsp;{{node.data.name[1].label}}&nbsp;&nbsp;</p></td>
                 <td ng-if="!node.hasSubGroups" style="width: 12%;padding-right: 3px;"><img class="colland" ng-click="node.collapseInBody()"
                                                                 ng-show="node.expandedInBody"
                                                                 src="images/icons/MenuSectionArrow_blue.png"/>
@@ -39,7 +39,7 @@
             <!-- Sub-group display-->
             <tr ng-if="node.type === 'subgroup'" class="{{node.type}}" ng-show="node.parent.expandedInBody">
                 <td><img id="separator" src="images/icons/dot.png"/></td>
-                <td><p>&nbsp;&nbsp;{{node.data.name[1].label}}&nbsp;&nbsp;</p></td>
+                <td ng-click="node.toggleExpand()"><p>&nbsp;&nbsp;{{node.data.name[1].label}}&nbsp;&nbsp;</p></td>
                 <td><img ng-show="node.expandedInBody" src="images/icons/MenuSectionArrow_blue.png"
                          ng-click="node.collapseInBody()"/><img
                         ng-show="!node.expandedInBody" src="images/icons/MenuSectionArrow.png"
@@ -51,7 +51,7 @@
             <tr ng-if="node.type === 'product'" class="{{node.type}}" ng-class="node.class" ng-show="node.parent.expandedInBody" ng-repeat-end>
                 <td style="width: 100%" colspan="3">
                     <table width="100%">
-                        <tr>
+                        <tr ng-click="node.toggleExpand()">
                             <td style="width: 76%; padding-left: 1em ;padding-top: 1.5em; padding-bottom: 1.5em" class="prodDescription">
                                 <p class="productTitle">{{node.data.igapakId}}. {{node.data.name[1].label}}</p>
 
