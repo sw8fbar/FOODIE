@@ -36,20 +36,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facility-1.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/sample-data/facility-1.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="150">
-              <caret line="4449" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="4449" selection-end-column="5" />
-              <folding>
-                <element signature="e#28#231702#0" expanded="false" />
-                <element signature="e#137#108888#0" expanded="false" />
-                <element signature="e#108906#231678#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="navigation-bar.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/partials/navigation-bar.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -63,8 +49,18 @@
       <file leaf-file-name="org.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/sample-data/org.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="855">
-              <caret line="22" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="22" selection-end-column="5" />
+            <state vertical-scroll-proportion="-20.208334" vertical-offset="265" max-vertical-offset="855">
+              <caret line="50" column="5" selection-start-line="25" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="facility-6.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/sample-data/facility-6.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2781.25" vertical-offset="0" max-vertical-offset="66840">
+              <caret line="4450" column="1" selection-start-line="4450" selection-start-column="1" selection-end-line="4450" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -83,8 +79,8 @@
       <file leaf-file-name="orgs.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/routes/orgs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17597292" vertical-offset="46" max-vertical-offset="660">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.035532996" vertical-offset="204" max-vertical-offset="795">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -96,18 +92,6 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="945">
               <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="result.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/routes/result.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="36960">
-              <caret line="14" column="36" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="36" />
-              <folding>
-                <element signature="e#106441#227195#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -729,46 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/sample-data/facility-2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10398614" vertical-offset="0" max-vertical-offset="66840">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/sample-data/facility-3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10830325" vertical-offset="0" max-vertical-offset="66840">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/sample-data/facility-4.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10830325" vertical-offset="0" max-vertical-offset="66840">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/sample-data/facility-5.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10830325" vertical-offset="0" max-vertical-offset="66840">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/sample-data/facility-6.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10398614" vertical-offset="0" max-vertical-offset="66840">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/services/dataServices.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
@@ -821,14 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/sample-data/org.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="855">
-          <caret line="22" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="22" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/models/orgs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
@@ -837,10 +773,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/sample-data/facility-2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="120">
+          <caret line="4449" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="4449" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#231705#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/sample-data/facility-3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="120">
+          <caret line="4449" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="4449" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#231704#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/sample-data/facility-4.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="120">
+          <caret line="4449" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="4449" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#231702#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/sample-data/facility-5.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026455026" vertical-offset="0" max-vertical-offset="567">
+          <caret line="4449" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="4449" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#231710#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/sample-data/org.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.208334" vertical-offset="265" max-vertical-offset="855">
+          <caret line="50" column="5" selection-start-line="25" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/sample-data/facility-6.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2781.25" vertical-offset="0" max-vertical-offset="66840">
+          <caret line="4450" column="1" selection-start-line="4450" selection-start-column="1" selection-end-line="4450" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/orgs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17597292" vertical-offset="46" max-vertical-offset="660">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.035532996" vertical-offset="204" max-vertical-offset="795">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding />
         </state>
       </provider>

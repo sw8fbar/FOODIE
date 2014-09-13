@@ -10,11 +10,10 @@ var Org = mongoose.model('Org', orgSchema);
 
 router.route('/orgs')
     .get(function (req, res) {
-        var query  = Org.where({ "igapakId": req.params.orgId});
-        query.findOne(function (err, orgs) {
+        //var query  = Org.where({ "igapakId": req.params.orgId});
+        Org.find(function (err, orgs) {
             if (err) return console.error(err);
-            if (orgs) res.json(orgs);
-            else console.error({"message":"No facilities found"});
+            res.json(orgs);
         })
     })
     .post(function (req, res) {
@@ -34,6 +33,16 @@ router.route('/orgs')
     })
     .delete(function (req, res) {
 
+    });
+
+router.route('/orgs/:orgId')
+    .get(function (req, res) {
+        var query  = Org.where({ "igapakId": req.params.orgId});
+        query.findOne(function (err, orgs) {
+            if (err) return console.error(err);
+            if (orgs) res.json(orgs);
+            else console.error({"message":"No facilities found"});
+        })
     });
 
 module.exports = router;
