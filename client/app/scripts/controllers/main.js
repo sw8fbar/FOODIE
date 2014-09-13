@@ -50,6 +50,7 @@
         this.ui.flatlist = [];
         this.ui.nodes = [];
         this.ui.groupdisplayInactive ='';
+        this.userLanguage = 1;
 
 
         //app scope variables
@@ -139,7 +140,15 @@
 
         };
 
-        //
+        this.toggleMenu = function() {
+            this.selectMenu(this.ui.menudisplayed);
+        }
+
+        //method to switch languages
+        this.changeLanguage = function(LanguageId){
+            this.userLanguage = LanguageId;
+            this.toggleMenu();
+        }
     }]);
 
 })();

@@ -52,48 +52,7 @@
                     </p>
                 </div>
                 <table style="width: 100%">
-                    <tr class="menuSubItem">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/USA.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">English</td>
-                    </tr>
-                    <tr class="menuSubItem">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/korea.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">Korean</td>
-                    </tr>
-                    <tr class="menuSubItem">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/china.png"/>
-                            </div>
-
-                        </td>
-                        <td style="text-align: center">Chinese</td>
-                    </tr>
-                    <tr class="menuSubItem">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/japan.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">Japanese</td>
-                    </tr>
-                    <tr class="menuSubItem">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/france.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">French</td>
-                    </tr>
-                    <tr class="menuSubItem">
+                    <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(0)">
                         <td>
                             <div class="wrapperMenu">
                                 <img src="images/round-flags/portugal.png"/>
@@ -101,55 +60,15 @@
                         </td>
                         <td style="text-align: center">Portuguese</td>
                     </tr>
-                    <tr class="menuSubItem">
+                    <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(1)">
                         <td>
                             <div class="wrapperMenu">
-                                <img src="images/round-flags/germany.png"/>
+                                <img src="images/round-flags/USA.png"/>
                             </div>
                         </td>
-                        <td style="text-align: center">German</td>
+                        <td style="text-align: center">English</td>
                     </tr>
-                    <tr class="menuSubItem">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/russia.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">Russian</td>
-                    </tr>
-                    <tr class="menuSubItem">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/iran.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">Farsi</td>
-                    </tr>
-                    <tr class="menuSubItem">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/poland.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">Polish</td>
-                    </tr>
-                    <tr class="menuSubItem">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/saudi-arabia.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">Arabian</td>
-                    </tr>
-                    <tr class="menuSubItem">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/vietnam.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">Vietnamese</td>
-                    </tr>
-                    <tr class="menuSubItem">
+                    <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(2)">
                         <td>
                             <div class="wrapperMenu">
                                 <img src="images/round-flags/spain.png"/>
@@ -157,14 +76,103 @@
                         </td>
                         <td style="text-align: center">Spanish</td>
                     </tr>
-                    <tr class="menuSubItem">
+                    <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(3)">
                         <td>
                             <div class="wrapperMenu">
-                                <img src="images/round-flags/india.png"/>
+                                <img src="images/round-flags/germany.png"/>
                             </div>
                         </td>
-                        <td style="text-align: center">Hindi</td>
+                        <td style="text-align: center">German</td>
                     </tr>
+                    <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(4)">
+                        <td>
+                            <div class="wrapperMenu">
+                                <img src="images/round-flags/france.png"/>
+                            </div>
+                        </td>
+                        <td style="text-align: center">French</td>
+                    </tr>
+                    <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(5)">
+                        <td>
+                            <div class="wrapperMenu">
+                                <img src="images/round-flags/italy.png"/>
+                            </div>
+                        </td>
+                        <td style="text-align: center">Italian</td>
+                    </tr>
+                    <!--<tr class="menuSubItem">-->
+                        <!--<td>-->
+                            <!--<div class="wrapperMenu">-->
+                                <!--<img src="images/round-flags/korea.png"/>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                        <!--<td style="text-align: center">Korean</td>-->
+                    <!--</tr>-->
+                    <!--<tr class="menuSubItem">-->
+                        <!--<td>-->
+                            <!--<div class="wrapperMenu">-->
+                                <!--<img src="images/round-flags/china.png"/>-->
+                            <!--</div>-->
+
+                        <!--</td>-->
+                        <!--<td style="text-align: center">Chinese</td>-->
+                    <!--</tr>-->
+                    <!--<tr class="menuSubItem">-->
+                        <!--<td>-->
+                            <!--<div class="wrapperMenu">-->
+                                <!--<img src="images/round-flags/japan.png"/>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                        <!--<td style="text-align: center">Japanese</td>-->
+                    <!--</tr>-->
+                    <!--<tr class="menuSubItem">-->
+                        <!--<td>-->
+                            <!--<div class="wrapperMenu">-->
+                                <!--<img src="images/round-flags/russia.png"/>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                        <!--<td style="text-align: center">Russian</td>-->
+                    <!--</tr>-->
+                    <!--<tr class="menuSubItem">-->
+                        <!--<td>-->
+                            <!--<div class="wrapperMenu">-->
+                                <!--<img src="images/round-flags/iran.png"/>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                        <!--<td style="text-align: center">Farsi</td>-->
+                    <!--</tr>-->
+                    <!--<tr class="menuSubItem">-->
+                        <!--<td>-->
+                            <!--<div class="wrapperMenu">-->
+                                <!--<img src="images/round-flags/poland.png"/>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                        <!--<td style="text-align: center">Polish</td>-->
+                    <!--</tr>-->
+                    <!--<tr class="menuSubItem">-->
+                        <!--<td>-->
+                            <!--<div class="wrapperMenu">-->
+                                <!--<img src="images/round-flags/saudi-arabia.png"/>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                        <!--<td style="text-align: center">Arabian</td>-->
+                    <!--</tr>-->
+                    <!--<tr class="menuSubItem">-->
+                        <!--<td>-->
+                            <!--<div class="wrapperMenu">-->
+                                <!--<img src="images/round-flags/vietnam.png"/>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                        <!--<td style="text-align: center">Vietnamese</td>-->
+                    <!--</tr>-->
+                    <!--<tr class="menuSubItem">-->
+                        <!--<td>-->
+                            <!--<div class="wrapperMenu">-->
+                                <!--<img src="images/round-flags/india.png"/>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                        <!--<td style="text-align: center">Hindi</td>-->
+                    <!--</tr>-->
                 </table>
             </div>
         </div>
