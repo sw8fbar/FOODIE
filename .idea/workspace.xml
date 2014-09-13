@@ -26,12 +26,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50083196" vertical-offset="1304" max-vertical-offset="2850">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1304" max-vertical-offset="2850">
               <caret line="107" column="22" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="facility-1.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/sample-data/facility-1.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="150">
+              <caret line="4449" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="4449" selection-end-column="5" />
+              <folding>
+                <element signature="e#28#231702#0" expanded="false" />
+                <element signature="e#137#108888#0" expanded="false" />
+                <element signature="e#108906#231678#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facilities.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="facilities.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/routes/facilities.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="945">
-              <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.10380623" vertical-offset="90" max-vertical-offset="945">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -147,7 +161,6 @@
         <option value="$PROJECT_DIR$/client/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/result.json" />
         <option value="$PROJECT_DIR$/server/routes/result.json" />
-        <option value="$PROJECT_DIR$/server/routes/facilities.js" />
         <option value="$PROJECT_DIR$/server/sample-data/facility.json" />
         <option value="$PROJECT_DIR$/server/sample-data/facility-2.json" />
         <option value="$PROJECT_DIR$/server/sample-data/facility-3.json" />
@@ -159,6 +172,7 @@
         <option value="$PROJECT_DIR$/server/routes/orgs.js" />
         <option value="$PROJECT_DIR$/client/app/partials/navigation-bar.html" />
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/main.js" />
+        <option value="$PROJECT_DIR$/server/routes/facilities.js" />
       </list>
     </option>
   </component>
@@ -679,14 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78013027" vertical-offset="691" max-vertical-offset="1305">
-          <caret line="78" column="13" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
@@ -709,26 +715,6 @@
           <caret line="14" column="36" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="36" />
           <folding>
             <element signature="e#106441#227195#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/facilities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="945">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/sample-data/facility-1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.076271184" vertical-offset="0" max-vertical-offset="590">
-          <caret line="4449" column="5" selection-start-line="4449" selection-start-column="5" selection-end-line="4449" selection-end-column="5" />
-          <folding>
-            <element signature="e#28#231702#0" expanded="false" />
-            <element signature="e#137#108888#0" expanded="false" />
-            <element signature="e#108906#231678#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -813,10 +799,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/sample-data/facility-1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="150">
+          <caret line="4449" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="4449" selection-end-column="5" />
+          <folding>
+            <element signature="e#28#231702#0" expanded="false" />
+            <element signature="e#137#108888#0" expanded="false" />
+            <element signature="e#108906#231678#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50083196" vertical-offset="1304" max-vertical-offset="2850">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1304" max-vertical-offset="2850">
           <caret line="107" column="22" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7461929" vertical-offset="714" max-vertical-offset="1305">
+          <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/facilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10380623" vertical-offset="90" max-vertical-offset="945">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding />
         </state>
       </provider>

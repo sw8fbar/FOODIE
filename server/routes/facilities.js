@@ -8,13 +8,13 @@ var mongoose = require('mongoose');
 var facilitySchema = require('../models/facilities');
 var Facility = mongoose.model('Facility', facilitySchema);
 
-router.route('/facilities/:facilityId')
+router.route('/facilities')
     .get(function (req, res) {
         //var query  = Facility.where({ "igapakId": '1', "articles.igapakId": '1'});
         Facility.find(function (err, facilities) {
             if (err) return console.error(err);
-            if (facilities) res.json(facilities);
-            else console.error({"message":"No facilities found"});
+            res.json(facilities);
+
         })
     })
     .post(function (req, res) {
