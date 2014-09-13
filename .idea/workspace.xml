@@ -56,21 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/styles/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.3846154" vertical-offset="2099" max-vertical-offset="3855">
-              <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8469388" vertical-offset="3327" max-vertical-offset="3930">
+              <caret line="255" column="14" selection-start-line="255" selection-start-column="14" selection-end-line="255" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/views/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36395147" vertical-offset="600" max-vertical-offset="1455">
-              <caret line="60" column="87" selection-start-line="60" selection-start-column="87" selection-end-line="60" selection-end-column="87" />
+            <state vertical-scroll-proportion="-16.541666" vertical-offset="893" max-vertical-offset="1470">
+              <caret line="92" column="103" selection-start-line="92" selection-start-column="89" selection-end-line="92" selection-end-column="103" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="tag#tr#0;tag#table#0;tag#div#0;tag#div#0" expanded="false" />
@@ -90,6 +90,16 @@
                 <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#td#0;n#tr#3;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#td#0;n#tr#3;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navigation-bar.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/partials/navigation-bar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="405">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="70" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,8 +163,8 @@
         <option value="$PROJECT_DIR$/client/app/index.html" />
         <option value="$PROJECT_DIR$/client/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/main.js" />
-        <option value="$PROJECT_DIR$/client/app/styles/main.css" />
         <option value="$PROJECT_DIR$/client/app/views/main.html" />
+        <option value="$PROJECT_DIR$/client/app/styles/main.css" />
       </list>
     </option>
   </component>
@@ -833,14 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/partials/navigation-bar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36395147" vertical-offset="0" max-vertical-offset="577">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/directives/group.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
@@ -857,18 +859,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/styles/main.css">
+    <entry file="file://$PROJECT_DIR$/client/app/partials/navigation-bar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.3846154" vertical-offset="2099" max-vertical-offset="3855">
-          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="405">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36395147" vertical-offset="600" max-vertical-offset="1455">
-          <caret line="60" column="87" selection-start-line="60" selection-start-column="87" selection-end-line="60" selection-end-column="87" />
+        <state vertical-scroll-proportion="-16.541666" vertical-offset="893" max-vertical-offset="1470">
+          <caret line="92" column="103" selection-start-line="92" selection-start-column="89" selection-end-line="92" selection-end-column="103" />
           <folding>
             <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="tag#tr#0;tag#table#0;tag#div#0;tag#div#0" expanded="false" />
@@ -888,6 +890,14 @@
             <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#td#0;n#tr#3;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#td#0;n#tr#3;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8469388" vertical-offset="3327" max-vertical-offset="3930">
+          <caret line="255" column="14" selection-start-line="255" selection-start-column="14" selection-end-line="255" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
