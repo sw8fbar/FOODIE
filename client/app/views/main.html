@@ -58,14 +58,14 @@
                                 <div>{{node.data.description[1].label}}</div>
                                 <div class="productNotification">{{node.data.notification}}</div>
                             </td>
-                            <td style="width: 18%; padding-right: 0.5em">{{node.data.price | currency}}</td>
+                            <td class="price" style="width: 18%; padding-right: 0.5em">{{node.data.price | currency}}</td>
                             <td style="width: 6%;"><img class="updownArrow" ng-show="!node.expandedInBody"
                                                         src="images/icons/arrow_down.png"><img
                                     ng-show="node.expandedInBody"
                                     src="images/icons/arrow_up.png" class="updownArrow"></td>
                         </tr>
                         <tr class="userOptions" ng-show="node.expandedInBody">
-                            <td colspan="3" style="padding: 1em">
+                            <td colspan="3" style="padding: 0.3em">
                                 <table style="width: 100%">
                                     <tr style="width: 100%">
                                         <td style="width:25%; text-align: center;border-style: solid; border-width: 0 1px 0 0">
