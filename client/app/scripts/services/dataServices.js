@@ -25,4 +25,14 @@
             }
         }
     });
+
+    app.factory('YelpData', function ($http) {
+        var urlBase = 'api/yelpbusiness/' ;
+        var YelpData = {};
+        return {
+            getYelpData: function (yelpBusinessId) {
+                return $http.get(urlBase+yelpBusinessId);
+            }
+        }
+    });
 })();

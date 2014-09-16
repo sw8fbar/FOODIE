@@ -43,6 +43,7 @@
 
 .navbar-absolute-bottom {
     background: #ffffff;
+    z-index: 1002;
 }
 
 .sidebar-left,
@@ -123,30 +124,30 @@
 }
 
 .group.expanded {
-   color: #3d5e85;
+    color: #3d5e85;
 }
 
 .product {
     background: #f1f5f7;
     color: #3d5e85;
-    width:100%;
+    width: 100%;
 }
 
 .product.expanded {
     background: #ffffff;
-    width:100%;
+    width: 100%;
 }
 
-.productTitle{
+.productTitle {
     font-weight: 400;
     font-size: 1.1em;
 }
 
-.prodDescription{
+.prodDescription {
     color: #000000;
 }
 
-.productNotification{
+.productNotification {
     color: #3d5e85;
 }
 
@@ -159,6 +160,7 @@
 .subgroup {
     background: #f3f3f3;
 }
+
 .subgroup td {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -173,11 +175,11 @@
 
 /*.subgroup td,*/
 /*.group td {*/
-    /*font-size: 1.3em;*/
-    /*vertical-align: middle;*/
+/*font-size: 1.3em;*/
+/*vertical-align: middle;*/
 /*}*/
 
-.updownArrow{
+.updownArrow {
     height: 22px;
     width: 12px;
 }
@@ -188,7 +190,7 @@
     border-width: 1px 0 0 0
 }
 
-.userOptions table tr{
+.userOptions table tr {
     background: #ffffff;
     border-style: none;
 }
@@ -233,7 +235,7 @@
 
 }
 
-.wrapperMenu img{
+.wrapperMenu img {
     height: 70px;
     width: 70px;
 }
@@ -246,11 +248,55 @@
 }
 
 #separator {
-    width:8px;
+    width: 8px;
     height: 8px;
     margin-left: 1em;
 }
 
 .menubackground {
-    opacity: 0;
+    opacity: 0.4;
+    background: #565656;
+}
+
+.Overlay {
+    z-index: 1001;
+    background: #565656;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.yelp table tr  {
+    width: 80%;
+    align-content: center;
+}
+
+.yelp table tr td {
+    padding: 1em;
+    align-content: center;
+}
+
+.reviews {
+    position: relative;
+    padding: 0.5em;
+    background: #b8bcc0;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.yelp-navbar {
+    background: #d80b00;
+}
+
+.logo {
+    text-align: center;
+    width: 80%;
+    padding-left: 15%;
+    border-bottom: 1px;
+}
+.logo img {
+    width: 60px;
+    height: 60px;
 }

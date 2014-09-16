@@ -18,7 +18,8 @@ var orgSchema = new mongoose.Schema({
     igapakId: {type: Number},
     name: {type: String},
     facilities: [facilitySchema],
-    logo: {type: String}
+    logo: {type: String},
+    yelpId: {type: String}
 });
 
 module.exports = orgSchema;

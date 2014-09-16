@@ -42,7 +42,7 @@
             this.expandInBody();
     };
 
-    angular.module('igapakApp').controller('MainCtrl', ['$scope', '$routeParams', '$log', '$cookieStore', '$location', '$anchorScroll', '$window', 'FacilityData', 'OrgData', function ($scope, $routeParams, $log, $cookieStore, $location, $anchorScroll, $window, FacilityData, OrgData) {
+    angular.module('igapakApp').controller('MainCtrl', ['$scope', '$routeParams', '$log', '$cookieStore', '$location', '$anchorScroll', '$window', 'FacilityData', 'OrgData', 'YelpData', function ($scope, $routeParams, $log, $cookieStore, $location, $anchorScroll, $window, FacilityData, OrgData, YelpData) {
 
         this.ui={};
         this.ui.menudisplayed = '';
@@ -50,12 +50,15 @@
         this.ui.flatlist = [];
         this.ui.nodes = [];
         this.ui.groupdisplayInactive ='';
+        this.ui.showSpecials = false;
+        this.ui.showYelp = false;
         this.userLanguage = 1;
 
 
         //app scope variables
         $scope.$log = $log;
         $scope.org = {};
+        $scope.yelp = {};
 
 //        $scope.safeApply = function (fn) {
 //            var phase = this.$root.$$phase;
@@ -96,13 +99,28 @@
         };
 
         this.getOrgData = function () {
-            $log.info("called Async service");
+            //get org data for orgId in request
+            $log.info("called Async ORG service");
             var promise =
                 OrgData.getOrgs($routeParams.orgId);
             promise.then(
                 function (payload) {
                     $scope.org = payload.data;
-                    //alert(JSON.stringify(orgs));
+
+                    if($scope.org.yelpId) {// get Yelp data for org
+                        $log.info("called Async Yelp service");
+                        var promise =
+                            YelpData.getYelpData($scope.org.yelpId);
+                        promise.then(
+                            function (payload) {
+                                $scope.yelp = payload.data;
+                                //alert(JSON.stringify($scope.yelp));
+                            },
+                            function (errorPayload) {
+                                //alert(JSON.stringify(errorPayload));
+                                $log.error('failure loading Group data', errorPayload);
+                            });
+                    }
                 },
                 function (errorPayload) {
                     //alert(JSON.stringify(errorPayload));
@@ -111,7 +129,7 @@
         };
 
         this.getFacilityData = function (facilities, obj) {
-            $log.info("called Async service");
+            $log.info("called Async Facility service");
             var promise =
                 FacilityData.getFacilities($routeParams.facilityId,$routeParams.articleId);
             promise.then(
@@ -133,6 +151,21 @@
                 });
         };
 
+//        this.getYelpData = function () {
+//            $log.info("called Async Yelp service");
+//            var promise =
+//                YelpData.getYelpData($scope.org.yelpId);
+//            promise.then(
+//                function (payload) {
+//                    $scope.yelp = payload.data;
+//                    alert(JSON.stringify($scope.yelp));
+//                },
+//                function (errorPayload) {
+//                    //alert(JSON.stringify(errorPayload));
+//                    $log.error('failure loading Group data', errorPayload);
+//                });
+//        };
+
         this.displayGroup = function (Object) {
             // set the location.hash to the id of
             // the element you wish to scroll to
@@ -147,8 +180,9 @@
 
         //Get data from server at startup
         this.getOrgData();
-        //alert(JSON.stringify($scope.org));
+
         this.getFacilityData($scope.facilities, this);
+
 
         //method to toggle display the left and right menu
         this.selectMenu = function (setMenu) {
@@ -178,6 +212,16 @@
 
         this.getLogo = function(){
             return 'images/logos/' + $scope.org.logo;
+        };
+
+        this.showSpecials = function() {
+            this.ui.showSpecials = true;
+            this.toggleMenu();
+        };
+
+        this.showYelp = function() {
+            this.ui.showYelp = true;
+            this.toggleMenu();
         };
     }]);
 

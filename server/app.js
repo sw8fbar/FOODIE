@@ -9,6 +9,7 @@ var app = express();
 
 var orgRoutes = require("./routes/orgs");
 var facilityRoutes = require("./routes/facilities");
+var yelpRoutes = require("./routes/yelp");
 
 const DevelopmentDB = 'mongodb://localhost/IgapakDB';
 const ProdDB = 'mongodb://localhost/IgapakDB';
@@ -78,4 +79,5 @@ if (app.get('env') === 'production' || app.get('env') === 'prod') {
 app.use('/',router);
 app.use('/api',orgRoutes);
 app.use('/api',facilityRoutes);
+app.use('/api',yelpRoutes);
 module.exports = app;

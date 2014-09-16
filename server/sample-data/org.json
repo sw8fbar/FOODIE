@@ -4,6 +4,7 @@
             "igapakId": "1",
             "logo": "pfchangs_logo_rev.png",
             "name": "P. F. Chang",
+            "yelpId":"s_F3_1bkg7EW7IqZJXtFqA",
             "facilities": [
                 {
                     "facilityId": "1",
@@ -28,6 +29,7 @@
             "igapakId": "2",
             "logo": "bistro.png",
             "name": "Bistro",
+            "yelpId":"khpg_lQPQFyaDMJHEF-Iww",
             "facilities": [
                 {
                     "facilityId": "4",
@@ -42,8 +44,36 @@
                     "name": "Chicago"
                 },
                 {
-                    "facilityId": "6",
+                    "facilityId": "7",
                     "name": "Milwaukee"
+                }
+            ]
+
+        }
+    },
+
+    {
+        "org": {
+            "igapakId": "3",
+            "logo": "bistro.png",
+            "name": "Cafe Rio",
+            "yelpId":"",
+            "facilities": [
+                {
+                    "facilityId": "8",
+                    "name": "Rio De Janeiro"
+                },
+                {
+                    "facilityId": "9",
+                    "name": "Copacabana"
+                },
+                {
+                    "facilityId": "10",
+                    "name": "Buenos Aires"
+                },
+                {
+                    "facilityId": "11",
+                    "name": "Lima"
                 }
             ]
 

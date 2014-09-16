@@ -4,6 +4,8 @@
         <!-- Blank DIVs to push actual menu down -->
         <div class="menuFiller">&nbsp;</div>
         <div class="rightMenu">
+            <div class="menuOption" ng-click="mainctrl.showSpecials()"><p>Specials</p></div>
+            <div class="menuOption" ng-click="mainctrl.showYelp()"><p>Yelp Ratings</p></div>
             <div class="menuOption" ng-repeat="group in mainctrl.ui.nodes" ng-click="mainctrl.displayGroup(group)">
                 <p>{{group.data.name[mainctrl.userLanguage].label}}<img class="pull-right" src="images/icons/MenuSectionArrow.png"/></p>
             </div>
