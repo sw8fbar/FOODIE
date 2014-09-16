@@ -109,11 +109,9 @@
     <left-menu></left-menu>
     <banner-footer></banner-footer>
     <div fullscreen ng-show="mainctrl.ui.showSpecials">
-        <table style="width:80%">
-            <tr>
-                <td>Month</td>
-            </tr>
-        </table>
+        <div class="btn-group pull-right" style="padding-top: 0.6em; padding-right: 0.5em;">
+            <img src="images/icons/close_lightgrey.png" ng-click="mainctrl.ui.showSpecials = false"/>
+        </div>
     </div>
     <div fullscreen background="#f1f5f7" ng-show="mainctrl.ui.showYelp">
         <div ng-if="yelp" class="navbar navbar-app navbar-absolute-top yelp-navbar" style="padding-left: 0.6em;">
