@@ -28,6 +28,6 @@ angular
             controller: 'MainCtrl'
         })
       .otherwise({
-        redirectTo: '/org/1/facilities/1/articles/1'
+        redirectTo: '/org/1/facilities/1/articles/2'
       });
   });
