@@ -290,6 +290,7 @@
     background: #d80b00;
 }
 
+
 .logo {
     text-align: center;
     width: 80%;
@@ -297,6 +298,5 @@
     border-bottom: 1px;
 }
 .logo img {
-    width: 60px;
     height: 60px;
 }
