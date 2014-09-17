@@ -2,7 +2,7 @@
     {
         "org": {
             "igapakId": "1",
-            "logo": "pfchangs_logo_rev.png",
+            "logo": "1.png",
             "name": "P. F. Chang",
             "yelpId":"s_F3_1bkg7EW7IqZJXtFqA",
             "facilities": [
@@ -27,7 +27,7 @@
     {
         "org": {
             "igapakId": "2",
-            "logo": "bistro.png",
+            "logo": "2.png",
             "name": "Bistro",
             "yelpId":"khpg_lQPQFyaDMJHEF-Iww",
             "facilities": [
@@ -55,7 +55,7 @@
     {
         "org": {
             "igapakId": "3",
-            "logo": "bistro.png",
+            "logo": "2.png",
             "name": "Cafe Rio",
             "yelpId":"",
             "facilities": [

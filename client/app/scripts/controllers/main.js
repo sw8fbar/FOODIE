@@ -13,6 +13,7 @@
     function Node(type, Obj, parent) {
         this.type = type;
         this.parent = this;
+        this.liked = false;
         if(parent != null)this.parent = parent;
         this.expandedInMenu = false;
         this.expandedInBody = false;
@@ -45,6 +46,7 @@
     angular.module('igapakApp').controller('MainCtrl', ['$scope', '$routeParams', '$log', '$cookieStore', '$location', '$anchorScroll', '$window', 'FacilityData', 'OrgData', 'YelpData', function ($scope, $routeParams, $log, $cookieStore, $location, $anchorScroll, $window, FacilityData, OrgData, YelpData) {
 
         this.ui={};
+        this.ui.loaded = false;
         this.ui.menudisplayed = '';
         this.ui.pagetitle = 'Menu';
         this.ui.flatlist = [];
@@ -53,6 +55,7 @@
         this.ui.groupdisplayInactive ='';
         this.ui.showSpecials = false;
         this.ui.showYelp = false;
+        this.ui.orgId = $routeParams.orgId;
         this.userLanguage = 1;
         this.langNode = null;
         this.langIndex = 0;
@@ -151,6 +154,7 @@
                             obj.ui.flatlist[0].expandInBody();
                         }
                     }
+                    obj.ui.loaded = true;
                 },
                 function (errorPayload) {
                     $log.error('failure loading Group data', errorPayload);
@@ -217,7 +221,7 @@
         }
 
         this.getLogo = function(){
-            return 'images/logos/' + $scope.org.logo;
+            return './images/logos/' + this.ui.orgId +".png";
         };
 
         this.showSpecials = function() {

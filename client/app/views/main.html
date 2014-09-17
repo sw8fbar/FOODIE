@@ -1,4 +1,12 @@
 <div ng-controller="MainCtrl as mainctrl">
+
+    <!-- Initial load screen-->
+    <div fullscreen background="#f3f3f3" ng-show="!mainctrl.ui.loaded" style="z-index: 1004;">
+        <div class="logo"><img src="mainctrl.getLogo()"></div>
+        <div class="navbar-absolute-bottom">
+            <img style="height: 70px" class="pull-left" src="images/LogoColorNoText.jpeg" />
+        </div>
+    </div>
     <navigation-bar></navigation-bar>
     <!-- display group - subgroup - product -->
     <div class="product-display scrollable scrollable-content {{mainctrl.ui.groupdisplayInactive}}">
@@ -88,7 +96,12 @@
                                             <img class="uoptionImg" src="images/icons/select.png"><br>Order
                                         </td>
                                         <td style="width:25%; text-align: center;border-style: solid; border-width: 0 1px 0 0">
-                                            <img class="uoptionImg" src="images/icons/like_grey.png"><br>Like
+                                            <div ng-show="!node.liked" ng-click="node.liked=true">
+                                                <img class="uoptionImg" src="images/icons/like_grey.png"><br>Like
+                                            </div>
+                                            <div ng-show="node.liked" ng-click="node.liked=false" >
+                                                <img class="uoptionImg" src="images/icons/like.png"><br>Un-like
+                                            </div>
                                         </td>
                                         <td style="width:25%; padding-left:1em; padding-top:1em;text-align: center" ng-click="mainctrl.displayInAltLanguage(node.data.igapakId)">
                                             <div class="wrapper"><img src="images/Flags/usa.png"></div>
