@@ -278,6 +278,10 @@ body {
     min-width: 100%;
 }
 
+.Overlay.ng-hide{
+    z-index:0;
+}
+
 .yelp table tr  {
     width: 80%;
     align-content: center;

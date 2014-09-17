@@ -154,6 +154,7 @@
                             obj.ui.flatlist[0].expandInBody();
                         }
                     }
+                    //for(var j=0;j<10000;j++);{i;//wait for data to load}
                     obj.ui.loaded = true;
                 },
                 function (errorPayload) {
@@ -220,9 +221,11 @@
             this.toggleMenu();
         }
 
-        this.getLogo = function(){
-            return './images/logos/' + this.ui.orgId +".png";
-        };
+//        this.getLogo = function(){
+//            var logoUrl = './images/logos/' + this.ui.orgId +".png";
+//            //alert(logoUrl);
+//            return logoUrl;
+//        };
 
         this.showSpecials = function() {
             this.ui.showSpecials = true;

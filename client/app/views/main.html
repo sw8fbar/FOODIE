@@ -1,8 +1,8 @@
 <div ng-controller="MainCtrl as mainctrl">
 
     <!-- Initial load screen-->
-    <div fullscreen background="#f3f3f3" ng-show="!mainctrl.ui.loaded" style="z-index: 1010;">
-        <div class="logo"><img src="mainctrl.getLogo()"></div>
+    <div fullscreen background="#f3f3f3" ng-show="!mainctrl.ui.loaded">
+        <div class="logo"><img src="images/logos/{{mainctrl.ui.orgId}}.png"></div>
         <div class="navbar-absolute-bottom">
             <img style="height: 70px" class="pull-left" src="images/LogoColorNoText.jpeg" />
         </div>
@@ -123,7 +123,7 @@
 
     <right-menu></right-menu>
     <left-menu></left-menu>
-    <banner-footer></banner-footer>
+    <banner-footer ng-show="mainctrl.ui.loaded"></banner-footer>
 
     <!-- Specials screen display-->
     <div fullscreen ng-show="mainctrl.ui.showSpecials">
@@ -155,8 +155,7 @@
         </div>
         <div class="menuFiller">&nbsp;</div>
         <div class="logo">
-            <img src="{{mainctrl.getLogo()}}"/>
-
+            <img src="images/logos/{{mainctrl.ui.orgId}}.png"/>
             <p>Lorem Ipsum whatever whatever and more whatever whatever!!</p>
         </div>
         <div>
