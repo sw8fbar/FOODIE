@@ -1,3 +1,8 @@
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
 /* Begin - animate the menus*/
 .animate-show {
     line-height: 20px;
@@ -335,7 +340,7 @@
     padding-top: 1.3em;
     padding-bottom: 1.3em;
     color: #3d5e85;
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 .prodPopCaption {
