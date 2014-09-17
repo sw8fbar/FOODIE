@@ -49,6 +49,7 @@
         this.ui.pagetitle = 'Menu';
         this.ui.flatlist = [];
         this.ui.nodes = [];
+        this.ui.productNodes = [];
         this.ui.groupdisplayInactive ='';
         this.ui.showSpecials = false;
         this.ui.showYelp = false;
@@ -72,30 +73,32 @@
 //        };
 
 
-        this.getNode = function(type, Obj, parent, flatList){
+        this.getNode = function(type, Obj, parent, flatList, productList){
             var node = new Node(type, Obj, parent);
             flatList.push(node);
             if (node.data.groups && node.data.groups.length > 0) {
                 //alert("subgroup found");
                 node.hasSubGroups = true;
                 for (var i = 0; i < node.data.groups.length; i++) {
-                    node.children.push(this.getNode('subgroup', node.data.groups[i], node, flatList));
+                    node.children.push(this.getNode('subgroup', node.data.groups[i], node, flatList, productList));
                 }
             }
             if (node.data.products && node.data.products.length > 0) {
                 //alert("products found");
                 for (var i = 0; i < node.data.products.length; i++) {
-                    node.children.push(this.getNode('product', node.data.products[i], node, flatList));
+                    var product = this.getNode('product', node.data.products[i], node, flatList, productList);
+                    productList.push(product);
+                    node.children.push(product);
                 }
             }
 //          console.log(node.data.igapakId);
             return node;
         };
 
-        this.buildNodes = function (data, treeList,flatList) {
+        this.buildNodes = function (data, treeList,flatList, productList) {
             //alert(data);
             for (var i=0; i<data.length;i++) {
-                treeList.push(this.getNode('group', data[i], null, flatList));
+                treeList.push(this.getNode('group', data[i], null, flatList, productList));
             }
 
         };
@@ -143,7 +146,7 @@
                     for (var i=0; i<articles.length; i++) {
                         if (articles[i].igapakId == $routeParams.articleId) {
                             //alert(JSON.stringify(articles[i]));
-                            obj.buildNodes(articles[i].groups, obj.ui.nodes, obj.ui.flatlist);
+                            obj.buildNodes(articles[i].groups, obj.ui.nodes, obj.ui.flatlist, obj.ui.productNodes);
                             //Expand first node
                             obj.ui.flatlist[0].expandInBody();
                         }

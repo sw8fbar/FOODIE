@@ -103,8 +103,11 @@
             <tr class="group"></tr>
         </table>
     </div>
+
+    <!-- Cloak for main body when either menu is displayed-->
     <div ng-show="mainctrl.ui.menudisplayed !== ''" class="scrollable scrollable-content menubackground"
          ng-click="mainctrl.selectMenu('{{mainctrl.ui.menudisplayed}}')"></div>
+
     <right-menu></right-menu>
     <left-menu></left-menu>
     <banner-footer></banner-footer>
@@ -153,13 +156,20 @@
         </div>
     </div>
 
-    <div fullscreen class="productPopup" style="z-index: 1001" ng-repeat="node in mainctrl.ui.flatlist" ng-show="mainctrl.langNode==node.data.igapakId" ng-if="node.type=='product'">
-        <table style="width: 100%">
-            <caption>{{node.data.igapakId}}</caption>
-            <tr><td>{{node.data.name[mainctrl.langIndex].label}}</td></tr>
-            <tr><td>{{node.data.description[mainctrl.langIndex].label}}</td></tr>
-        </table>
-        <div><img src="images/icons/close_lightgrey.png" ng-click="mainctrl.hideDisplayInAltLanguage()"/> </div>
+    <div fullscreen ng-repeat="node in mainctrl.ui.productNodes" ng-show="mainctrl.langNode==node.data.igapakId">
+        <div class="productPopup">
+            <div class="prodPopCaption">{{node.data.igapakId}}</div>
+            <div class="prodPopHeader"><b>{{node.data.name[mainctrl.langIndex].label}}</b></div>
+            <div class="prodPopDesc">{{node.data.description[mainctrl.langIndex].label}}</div>
+            <div class="prodPopPrice">{{node.data.price | currency}}</div>
+        </div>
+        <!--<table class="productPopup">-->
+            <!--<caption>{{node.data.igapakId}}</caption>-->
+            <!--<tr><td><b>{{node.data.name[mainctrl.langIndex].label}}</b></td></tr>-->
+            <!--<tr><td>{{node.data.description[mainctrl.langIndex].label}}</td></tr>-->
+            <!--<tr><td>{{node.data.price | currency}}</td></tr>-->
+        <!--</table>-->
+        <div style="margin-left: 45%; padding-top: 1.3em;"><img src="images/icons/close_lightgrey.png" ng-click="mainctrl.hideDisplayInAltLanguage()"/> </div>
     </div>
 </div>
 

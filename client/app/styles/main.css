@@ -307,9 +307,45 @@
 }
 
 .productPopup {
-    width: 80%;
-    margin-left: 10%;
+    min-width: 80%;
+    margin-top: 20%;
+    margin-right: 5%;
+    margin-left: 5%;
     min-height: 70%;
     background: #f1f5f7;
-    align-content: center;
+    caption-side: top;
+    border-radius: 5px;
+}
+
+.prodPopHeader{
+    font-size: 1.1em;
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+    text-align: center;
+
+}
+.prodPopDesc {
+    text-align: center;
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+}
+
+.prodPopPrice {
+    text-align: center;
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+    color: #3d5e85;
+    font-size: 1.5em;
+}
+
+.prodPopCaption {
+    background: #e38802;
+    width: 30%;
+    height: 3em;
+    margin-left: 35%;
+    vertical-align: middle;
+    padding-top: 0.5em;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.3em;
 }
