@@ -90,7 +90,7 @@
                                         <td style="width:25%; text-align: center;border-style: solid; border-width: 0 1px 0 0">
                                             <img class="uoptionImg" src="images/icons/like_grey.png"><br>Like
                                         </td>
-                                        <td style="width:25%; padding-left:1em; padding-top:1em;text-align: center">
+                                        <td style="width:25%; padding-left:1em; padding-top:1em;text-align: center" ng-click="mainctrl.displayInAltLanguage(node.data.igapakId)">
                                             <div class="wrapper"><img src="images/Flags/usa.png"></div>
                                             &nbsp;&nbsp;</td>
                                     </tr>
@@ -108,6 +108,8 @@
     <right-menu></right-menu>
     <left-menu></left-menu>
     <banner-footer></banner-footer>
+
+    <!-- Specials screen display-->
     <div fullscreen ng-show="mainctrl.ui.showSpecials">
         <div style="padding-top: 0.6em; padding-right: 0.5em;">
             <div>
@@ -120,12 +122,14 @@
             </div>
         </div>
     </div>
+
+    <!-- Yelp Rating screen display-->
     <div fullscreen background="#f1f5f7" ng-show="mainctrl.ui.showYelp">
-        <div ng-if="yelp" class="navbar navbar-app navbar-absolute-top yelp-navbar" style="padding-left: 0.6em;">
+        <div class="navbar navbar-app navbar-absolute-top yelp-navbar" style="padding-left: 0.6em;">
             <div class="btn-group pull-left" style="padding-top: 0.4em;">
                 <img src="images/icons/yelp.png" style="height: 40px;"/>
             </div>
-            <div class="navbar-brand-center">
+            <div ng-if="yelp" class="navbar-brand-center">
                 <img src="{{yelp.rating_img_url}}"/>
                 <p>{{yelp.review_count}} Ratings</p>
             </div>
@@ -143,10 +147,19 @@
             {{org.street}} <br> {{org.city}} {{org.postCode}}, {{org.country}}
         </div>
         <div class="scrollable scrollable-content reviews">
-            <div class="reviewItem" ng-repeat="review in yelp.reviews"> {{review.excerpt}}<br>
+            <div ng-if="yelp" class="reviewItem" ng-repeat="review in yelp.reviews"> {{review.excerpt}}<br>
                <b>{{review.user.name}}</b> <img src="{{review.rating_image_small_url}}"/>
             </div>
         </div>
+    </div>
+
+    <div fullscreen class="productPopup" style="z-index: 1001" ng-repeat="node in mainctrl.ui.flatlist" ng-show="mainctrl.langNode==node.data.igapakId" ng-if="node.type=='product'">
+        <table style="width: 100%">
+            <caption>{{node.data.igapakId}}</caption>
+            <tr><td>{{node.data.name[mainctrl.langIndex].label}}</td></tr>
+            <tr><td>{{node.data.description[mainctrl.langIndex].label}}</td></tr>
+        </table>
+        <div><img src="images/icons/close_lightgrey.png" ng-click="mainctrl.hideDisplayInAltLanguage()"/> </div>
     </div>
 </div>
 

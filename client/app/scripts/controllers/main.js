@@ -53,12 +53,14 @@
         this.ui.showSpecials = false;
         this.ui.showYelp = false;
         this.userLanguage = 1;
+        this.langNode = null;
+        this.langIndex = 0;
 
 
         //app scope variables
         $scope.$log = $log;
         $scope.org = {};
-        $scope.yelp = {};
+        $scope.yelp = null;
 
 //        $scope.safeApply = function (fn) {
 //            var phase = this.$root.$$phase;
@@ -107,7 +109,8 @@
                 function (payload) {
                     $scope.org = payload.data;
 
-                    if($scope.org.yelpId) {// get Yelp data for org
+                    if($scope.org.yelpId) {
+                        // get Yelp data for org
                         $log.info("called Async Yelp service");
                         var promise =
                             YelpData.getYelpData($scope.org.yelpId);
@@ -223,6 +226,15 @@
             this.ui.showYelp = true;
             this.toggleMenu();
         };
+
+        this.displayInAltLanguage = function(nodeId) {
+            //alert("called displayInAltLanguage");
+            this.langNode = nodeId;
+        };
+
+        this.hideDisplayInAltLanguage = function() {
+            this.langNode = null;
+        }
     }]);
 
 })();

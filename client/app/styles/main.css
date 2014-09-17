@@ -20,6 +20,11 @@
 }
 
 /* End - animate the menus*/
+.btn-navbar,
+.btn-group
+{
+    height: 100%;
+}
 
 .product-display {
     padding-top: 53px;
@@ -299,4 +304,12 @@
 }
 .logo img {
     height: 60px;
+}
+
+.productPopup {
+    width: 80%;
+    margin-left: 10%;
+    min-height: 70%;
+    background: #f1f5f7;
+    align-content: center;
 }
