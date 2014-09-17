@@ -96,10 +96,10 @@
                                             <img class="uoptionImg" src="images/icons/select.png"><br>Order
                                         </td>
                                         <td style="width:25%; text-align: center;border-style: solid; border-width: 0 1px 0 0">
-                                            <div ng-show="!node.liked" ng-click="node.liked=true">
+                                            <div ng-show="!node.liked" ng-click="node.toggleLike()">
                                                 <img class="uoptionImg" src="images/icons/like_grey.png"><br>Like
                                             </div>
-                                            <div ng-show="node.liked" ng-click="node.liked=false" >
+                                            <div ng-show="node.liked" ng-click="node.toggleLike()" >
                                                 <img class="uoptionImg" src="images/icons/like.png"><br>Un-like
                                             </div>
                                         </td>

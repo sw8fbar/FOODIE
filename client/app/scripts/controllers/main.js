@@ -43,6 +43,13 @@
             this.expandInBody();
     };
 
+    Node.prototype.toggleLike = function() {
+        this.liked = !this.liked;
+        if(this.parent != this) {
+            this.parent.toggleLike();
+        }
+    };
+
     angular.module('igapakApp').controller('MainCtrl', ['$scope', '$routeParams', '$log', '$cookieStore', '$location', '$anchorScroll', '$window', 'FacilityData', 'OrgData', 'YelpData', function ($scope, $routeParams, $log, $cookieStore, $location, $anchorScroll, $window, FacilityData, OrgData, YelpData) {
 
         this.ui={};
@@ -154,7 +161,7 @@
                             obj.ui.flatlist[0].expandInBody();
                         }
                     }
-                    //for(var j=0;j<10000;j++);{i;//wait for data to load}
+                    //for(var j=0;j<1000000;j++);{i;//simulate wait for data to load on local}
                     obj.ui.loaded = true;
                 },
                 function (errorPayload) {
