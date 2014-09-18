@@ -63,6 +63,7 @@
         this.ui.showSpecials = false;
         this.ui.showYelp = false;
         this.ui.orgId = $routeParams.orgId;
+
         this.userLanguage = 1;
         this.langNode = null;
         this.langIndex = 0;
@@ -70,8 +71,9 @@
 
         //app scope variables
         $scope.$log = $log;
-        $scope.org = {};
+        $scope.org = null;
         $scope.yelp = null;
+        $scope.err = null;
 
 //        $scope.safeApply = function (fn) {
 //            var phase = this.$root.$$phase;
@@ -113,7 +115,7 @@
 
         };
 
-        this.getOrgData = function () {
+        this.getOrgData = function (obj) {
             //get org data for orgId in request
             $log.info("called Async ORG service");
             var promise =
@@ -122,7 +124,9 @@
                 function (payload) {
                     $scope.org = payload.data;
 
+                    //if yelp Id present for Org
                     if($scope.org.yelpId) {
+                        obj.getFacilityData($scope.facilities, obj);
                         // get Yelp data for org
                         $log.info("called Async Yelp service");
                         var promise =
@@ -136,6 +140,8 @@
                                 //alert(JSON.stringify(errorPayload));
                                 $log.error('failure loading Group data', errorPayload);
                             });
+                    } else {
+                        $scope.err = "Business not found"
                     }
                 },
                 function (errorPayload) {
@@ -169,20 +175,8 @@
                 });
         };
 
-//        this.getYelpData = function () {
-//            $log.info("called Async Yelp service");
-//            var promise =
-//                YelpData.getYelpData($scope.org.yelpId);
-//            promise.then(
-//                function (payload) {
-//                    $scope.yelp = payload.data;
-//                    alert(JSON.stringify($scope.yelp));
-//                },
-//                function (errorPayload) {
-//                    //alert(JSON.stringify(errorPayload));
-//                    $log.error('failure loading Group data', errorPayload);
-//                });
-//        };
+        //Get data from server at startup
+        this.getOrgData(this);
 
         this.displayGroup = function (Object) {
             // set the location.hash to the id of
@@ -196,10 +190,7 @@
             $location.hash(old);
         };
 
-        //Get data from server at startup
-        this.getOrgData();
 
-        this.getFacilityData($scope.facilities, this);
 
 
         //method to toggle display the left and right menu

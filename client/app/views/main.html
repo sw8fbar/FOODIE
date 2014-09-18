@@ -2,7 +2,8 @@
 
     <!-- Initial load screen-->
     <div fullscreen background="#f3f3f3" ng-show="!mainctrl.ui.loaded">
-        <div class="logo"><img src="images/logos/{{mainctrl.ui.orgId}}.png"></div>
+        <div ng-if="err" class="logo"><p>{{err}}</p></div>
+        <div ng-if="!err" class="logo"><img src="images/logos/{{mainctrl.ui.orgId}}.png"></div>
         <div class="navbar-absolute-bottom">
             <img style="height: 70px" class="pull-left" src="images/LogoColorNoText.jpeg" />
         </div>
@@ -12,7 +13,6 @@
     <div class="product-display scrollable scrollable-content {{mainctrl.ui.groupdisplayInactive}}">
 
         <table style="width: 100%;">
-
             <!-- Anchor for anchorscroll-->
             <tr id="anchornode" ng-repeat-start="node in mainctrl.ui.flatlist">
                 <td>
