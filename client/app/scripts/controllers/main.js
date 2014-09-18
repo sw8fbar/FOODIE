@@ -146,7 +146,8 @@
                 },
                 function (errorPayload) {
                     //alert(JSON.stringify(errorPayload));
-                    $log.error('failure loading Group data', errorPayload);
+                    $scope.err = "Business not found"
+                    $log.error('failure loading org data', errorPayload);
                 });
         };
 
@@ -171,6 +172,7 @@
                     obj.ui.loaded = true;
                 },
                 function (errorPayload) {
+                    $scope.err = "Facility not found";
                     $log.error('failure loading Group data', errorPayload);
                 });
         };
