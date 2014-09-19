@@ -27,6 +27,10 @@ angular
             templateUrl: 'views/main.html',
             controller: 'MainCtrl'
         })
+        .when('/cart',{
+            templateUrl: 'views/cart.html',
+            controller: 'CartCtrl'
+        })
       .otherwise({
         redirectTo: '/org/1/facilities/1/articles/2'
       });

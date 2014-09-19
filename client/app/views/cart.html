@@ -1,0 +1,13 @@
+<div ng-controller="CartCtrl as cartctrl">
+    <div class="product-display scrollable scrollable-content">
+        <div>
+            {{cartctrl.total}}
+        </div>
+        <div ng-repeat="cartItem in cartctrl.cart">
+            {{cartItem.quantity}} - {{cartItem.item.data.name[1].label}}
+        </div>
+        <div class="btn " ng-click="go('/')">
+            Add more stuff
+        </div>
+    </div>
+</div>

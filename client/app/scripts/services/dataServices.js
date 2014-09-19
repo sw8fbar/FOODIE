@@ -6,33 +6,51 @@
 (function () {
     var app = angular.module('igapakApp');
 
-    app.factory('OrgData', function ($http) {
+    var OrgData = null;
+    var FacilityData = null;
+    var YelpData = null;
+
+    app.factory('OrgData', ['$http','$log',function ($http, $log) {
         var urlBase = '/api/orgs';
-        var OrgData = {};
+
         return {
             getOrgs: function (orgID) {
-                return $http.get(urlBase+'/'+orgID);
+
+                if (OrgData == null) {
+                    $log.info("called Async ORG service");
+                    OrgData = $http.get(urlBase + '/' + orgID);
+                }
+                return OrgData;
             }
         }
-    });
+    }]);
 
-    app.factory('FacilityData', function ($http) {
+    app.factory('FacilityData', ['$http','$log',function ($http, $log) {
         var urlBase = '/api/facilities/' ;
-        var FacilityData = {};
+
         return {
             getFacilities: function (facilityId,articleId) {
-                return $http.get(urlBase+facilityId+'/articles/'+articleId);
+                if (FacilityData == null) {
+                    $log.info("called Async Facility service");
+                    FacilityData = $http.get(urlBase + facilityId + '/articles/' + articleId);
+                }
+                return FacilityData;
             }
         }
-    });
+    }]);
 
-    app.factory('YelpData', function ($http) {
+    app.factory('YelpData', ['$http','$log',function ($http, $log) {
         var urlBase = 'api/yelpbusiness/' ;
-        var YelpData = {};
+
         return {
             getYelpData: function (yelpBusinessId) {
-                return $http.get(urlBase+yelpBusinessId);
+
+                if (YelpData == null) {
+                    $log.info("called Async Yelp service");
+                    YelpData = $http.get(urlBase + yelpBusinessId);
+                }
+                return YelpData;
             }
         }
-    });
+    }]);
 })();

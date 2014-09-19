@@ -2,10 +2,12 @@
 
     <!-- Initial load screen-->
     <div fullscreen background="#f3f3f3" ng-show="!mainctrl.ui.loaded">
-        <div ng-if="err" class="logo"><p>{{err}}</p></div>
-        <div ng-if="err != null" class="logo"><img src="images/logos/{{mainctrl.ui.orgId}}.png"></div>
+        <div class="logo">
+            <p ng-if="err">{{err}}</p>
+            <img src="images/logos/{{mainctrl.ui.orgId}}.png" ng-if="err != null">
+        </div>
         <div class="navbar-absolute-bottom">
-            <img style="height: 70px" class="pull-left" src="images/LogoColorNoText.jpeg" />
+            <img style="height: 70px" class="pull-left" src="images/LogoColorNoText.jpeg"/>
         </div>
     </div>
     <navigation-bar></navigation-bar>
@@ -93,17 +95,20 @@
                                             <img class="uoptionImg" src="images/icons/microphone_grey.png"><br>Listen
                                         </td>
                                         <td style="width:25%; text-align: center;border-style: solid; border-width: 0 1px 0 0">
-                                            <img class="uoptionImg" src="images/icons/select.png"><br>Order
+                                            <div ng-click="node.addToCart(1)">
+                                                <img class="uoptionImg" src="images/icons/select.png"><br>Order
+                                            </div>
                                         </td>
                                         <td style="width:25%; text-align: center;border-style: solid; border-width: 0 1px 0 0">
                                             <div ng-show="!node.liked" ng-click="node.toggleLike()">
                                                 <img class="uoptionImg" src="images/icons/like_grey.png"><br>Like
                                             </div>
-                                            <div ng-show="node.liked" ng-click="node.toggleLike()" >
+                                            <div ng-show="node.liked" ng-click="node.toggleLike()">
                                                 <img class="uoptionImg" src="images/icons/like.png"><br>Un-like
                                             </div>
                                         </td>
-                                        <td style="width:25%; padding-left:1em; padding-top:1em;text-align: center" ng-click="mainctrl.displayInAltLanguage(node.data.igapakId)">
+                                        <td style="width:25%; padding-left:1em; padding-top:1em;text-align: center"
+                                            ng-click="mainctrl.displayInAltLanguage(node.data.igapakId)">
                                             <div class="wrapper"><img src="images/Flags/usa.png"></div>
                                             &nbsp;&nbsp;</td>
                                     </tr>
@@ -147,15 +152,18 @@
             </div>
             <div ng-if="yelp" class="navbar-brand-center">
                 <img src="{{yelp.rating_img_url}}"/>
+
                 <p>{{yelp.review_count}} Ratings</p>
             </div>
             <div class="btn-group pull-right" style="padding-top: 0.6em; padding-right: 0.5em;">
-                <img src="images/icons/close_lightgrey.png" ng-click="mainctrl.ui.showYelp = false"  style="height: 35px;"/>
+                <img src="images/icons/close_lightgrey.png" ng-click="mainctrl.ui.showYelp = false"
+                     style="height: 35px;"/>
             </div>
         </div>
         <div class="menuFiller">&nbsp;</div>
         <div class="logo">
             <img src="images/logos/{{mainctrl.ui.orgId}}.png"/>
+
             <p>Lorem Ipsum whatever whatever and more whatever whatever!!</p>
         </div>
         <div>
@@ -163,7 +171,7 @@
         </div>
         <div class="scrollable scrollable-content reviews">
             <div ng-if="yelp" class="reviewItem" ng-repeat="review in yelp.reviews"> {{review.excerpt}}<br>
-               <b>{{review.user.name}}</b> <img src="{{review.rating_image_small_url}}"/>
+                <b>{{review.user.name}}</b> <img src="{{review.rating_image_small_url}}"/>
             </div>
         </div>
     </div>
@@ -176,12 +184,13 @@
             <div class="prodPopPrice">{{node.data.price | currency}}</div>
         </div>
         <!--<table class="productPopup">-->
-            <!--<caption>{{node.data.igapakId}}</caption>-->
-            <!--<tr><td><b>{{node.data.name[mainctrl.langIndex].label}}</b></td></tr>-->
-            <!--<tr><td>{{node.data.description[mainctrl.langIndex].label}}</td></tr>-->
-            <!--<tr><td>{{node.data.price | currency}}</td></tr>-->
+        <!--<caption>{{node.data.igapakId}}</caption>-->
+        <!--<tr><td><b>{{node.data.name[mainctrl.langIndex].label}}</b></td></tr>-->
+        <!--<tr><td>{{node.data.description[mainctrl.langIndex].label}}</td></tr>-->
+        <!--<tr><td>{{node.data.price | currency}}</td></tr>-->
         <!--</table>-->
-        <div style="margin-left: 45%; padding-top: 1.3em;"><img src="images/icons/close_lightgrey.png" ng-click="mainctrl.hideDisplayInAltLanguage()"/> </div>
+        <div style="margin-left: 45%; padding-top: 1.3em;"><img src="images/icons/close_lightgrey.png"
+                                                                ng-click="mainctrl.hideDisplayInAltLanguage()"/></div>
     </div>
 </div>
 

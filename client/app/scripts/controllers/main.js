@@ -10,47 +10,7 @@
 
 (function () {
 
-    function Node(type, Obj, parent) {
-        this.type = type;
-        this.parent = this;
-        this.liked = false;
-        if(parent != null)this.parent = parent;
-        this.expandedInMenu = false;
-        this.expandedInBody = false;
-        this.class = '';
-        this.children = [];
-        this.hasSubGroups = false;
-        this.data = Obj;
-    };
-
-    Node.prototype.expandInBody = function() {
-        this.expandedInBody = true;
-        this.class = " expanded";
-    };
-
-    Node.prototype.collapseInBody = function() {
-        this.expandedInBody = false;
-        this.class = '';
-        for (var i=0; i< this.children.length; i++){
-            this.children[i].collapseInBody();
-        }
-    };
-
-    Node.prototype.toggleExpand = function() {
-        if(this.expandedInBody)
-            this.collapseInBody();
-        else
-            this.expandInBody();
-    };
-
-    Node.prototype.toggleLike = function() {
-        this.liked = !this.liked;
-        if(this.parent != this) {
-            this.parent.toggleLike();
-        }
-    };
-
-    angular.module('igapakApp').controller('MainCtrl', ['$scope', '$routeParams', '$log', '$cookieStore', '$location', '$anchorScroll', '$window', 'FacilityData', 'OrgData', 'YelpData', function ($scope, $routeParams, $log, $cookieStore, $location, $anchorScroll, $window, FacilityData, OrgData, YelpData) {
+    angular.module('igapakApp').controller('MainCtrl', ['$scope', '$routeParams', '$log', '$cookieStore', '$location', '$anchorScroll', '$window', 'FacilityData', 'OrgData', 'YelpData', 'Node', 'CartItem', 'CartService', function ($scope, $routeParams, $log, $cookieStore, $location, $anchorScroll, $window, FacilityData, OrgData, YelpData, Node, CartItem, CartService) {
 
         this.ui={};
         this.ui.loaded = false;
@@ -74,6 +34,10 @@
         $scope.org = null;
         $scope.yelp = null;
         $scope.err = null;
+        //$scope.cart = new HashMap();
+        $scope.go = function ( path ) {
+            $location.path( path );
+        };
 
 //        $scope.safeApply = function (fn) {
 //            var phase = this.$root.$$phase;
@@ -85,20 +49,20 @@
 //        };
 
 
-        this.getNode = function(type, Obj, parent, flatList, productList){
-            var node = new Node(type, Obj, parent);
+        this.getNode = function(type, Obj, parent, flatList, productList, controller){
+            var node = new Node(type, Obj, parent, controller);
             flatList.push(node);
             if (node.data.groups && node.data.groups.length > 0) {
                 //alert("subgroup found");
                 node.hasSubGroups = true;
                 for (var i = 0; i < node.data.groups.length; i++) {
-                    node.children.push(this.getNode('subgroup', node.data.groups[i], node, flatList, productList));
+                    node.children.push(this.getNode('subgroup', node.data.groups[i], node, flatList, productList, controller));
                 }
             }
             if (node.data.products && node.data.products.length > 0) {
                 //alert("products found");
                 for (var i = 0; i < node.data.products.length; i++) {
-                    var product = this.getNode('product', node.data.products[i], node, flatList, productList);
+                    var product = this.getNode('product', node.data.products[i], node, flatList, productList, controller);
                     productList.push(product);
                     node.children.push(product);
                 }
@@ -107,17 +71,17 @@
             return node;
         };
 
-        this.buildNodes = function (data, treeList,flatList, productList) {
+        this.buildNodes = function (data, treeList,flatList, productList, controller) {
             //alert(data);
             for (var i=0; i<data.length;i++) {
-                treeList.push(this.getNode('group', data[i], null, flatList, productList));
+                treeList.push(this.getNode('group', data[i], null, flatList, productList, controller));
             }
 
         };
 
         this.getOrgData = function (obj) {
             //get org data for orgId in request
-            $log.info("called Async ORG service");
+
             var promise =
                 OrgData.getOrgs($routeParams.orgId);
             promise.then(
@@ -126,20 +90,10 @@
 
                     //if yelp Id present for Org
                     if($scope.org.yelpId) {
-                        obj.getFacilityData($scope.facilities, obj);
+                        //get facility and article data
+                        obj.getFacilityData($scope.facilities, obj, CartService);
                         // get Yelp data for org
-                        $log.info("called Async Yelp service");
-                        var promise =
-                            YelpData.getYelpData($scope.org.yelpId);
-                        promise.then(
-                            function (payload) {
-                                $scope.yelp = payload.data;
-                                //alert(JSON.stringify($scope.yelp));
-                            },
-                            function (errorPayload) {
-                                //alert(JSON.stringify(errorPayload));
-                                $log.error('failure loading Group data', errorPayload);
-                            });
+                        obj.getYelpData();
                     } else {
                         $scope.err = "Business not found"
                     }
@@ -151,8 +105,8 @@
                 });
         };
 
-        this.getFacilityData = function (facilities, obj) {
-            $log.info("called Async Facility service");
+        this.getFacilityData = function (facilities, obj, cartService) {
+
             var promise =
                 FacilityData.getFacilities($routeParams.facilityId,$routeParams.articleId);
             promise.then(
@@ -163,7 +117,7 @@
                     for (var i=0; i<articles.length; i++) {
                         if (articles[i].igapakId == $routeParams.articleId) {
                             //alert(JSON.stringify(articles[i]));
-                            obj.buildNodes(articles[i].groups, obj.ui.nodes, obj.ui.flatlist, obj.ui.productNodes);
+                            obj.buildNodes(articles[i].groups, obj.ui.nodes, obj.ui.flatlist, obj.ui.productNodes, cartService);
                             //Expand first node
                             obj.ui.flatlist[0].expandInBody();
                         }
@@ -173,6 +127,21 @@
                 },
                 function (errorPayload) {
                     $scope.err = "Facility not found";
+                    $log.error('failure loading Group data', errorPayload);
+                });
+        };
+
+        this.getYelpData = function() {
+
+            var promise =
+                YelpData.getYelpData($scope.org.yelpId);
+            promise.then(
+                function (payload) {
+                    $scope.yelp = payload.data;
+                    //alert(JSON.stringify($scope.yelp));
+                },
+                function (errorPayload) {
+                    //alert(JSON.stringify(errorPayload));
                     $log.error('failure loading Group data', errorPayload);
                 });
         };
@@ -245,6 +214,7 @@
         this.hideDisplayInAltLanguage = function() {
             this.langNode = null;
         }
+
     }]);
 
 })();
