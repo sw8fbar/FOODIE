@@ -9,17 +9,15 @@
 
     app.service('CartService', ['$http','Node', 'CartItem', function ($http, Node, CartItem) {
         var cart = new HashMap();
-        var total = 0;
         var count = 0;
 
         var addToCart = function(quantity, nodeObj) {
             if (cart.has(nodeObj.data.igapakId)) {
                 var cartItem = cart.get(nodeObj.data.igapakId);
-                cartItem.quantity += quantity;
+                cartItem.quantity = quantity;
             } else {
                 cart.set(nodeObj.data.igapakId, new CartItem(quantity, nodeObj));
             }
-            total += quantity*nodeObj.data.price;
             count = cart.count();
 
             //alert('count - '+count + "    Total - "+ total);
@@ -27,7 +25,6 @@
 
         var removeFromCart = function(nodeObj){
             var item = cart.get(nodeObj.data.igapakId);
-            total -= item.quantity * nodeObj.data.price;
 
             cart.remove(nodeObj.data.igapakId);
             count = cart.count();
@@ -36,10 +33,14 @@
         }
 
         var getCart = function() {
-            return cart.values();
+            return cart;
         }
 
         var getTotal = function() {
+            var total = 0;
+            cart.forEach(function(value, key){
+                total += value.quantity*value.item.data.price;
+            })
             return total;
         }
 

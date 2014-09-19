@@ -183,11 +183,6 @@ body {
     width: 25px;
 }
 
-/*.subgroup td,*/
-/*.group td {*/
-/*font-size: 1.3em;*/
-/*vertical-align: middle;*/
-/*}*/
 
 .updownArrow {
     height: 22px;
@@ -214,6 +209,11 @@ body {
 .uoptionImg {
     height: 2em;
     width: 2em;
+}
+
+
+.addCart.ng-click-active {
+   background: #c0c0c0;
 }
 
 .wrapper {
@@ -363,4 +363,49 @@ body {
     border-radius: 6px;
     text-align: center;
     font-size: 1.3em;
+}
+
+.cartItem {
+   background: #ffffff;
+   width: 100%;
+   padding: 0;
+}
+
+.cartItem ul {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0.5em;
+    padding-right: 0.7em;
+    float: left;
+    white-space: nowrap;
+    list-style-type: none;
+    width: 100%;
+}
+
+.cartItem ul li {
+    display: inline-block;
+}
+
+.cartItemSeq {
+    text-align: left;
+    padding-left: 0.1em;
+    width: 10%;
+}
+
+.cartItemLabel {
+    width: 60%;
+}
+
+.cartItemQty{
+    width: 20%;
+    align-content: center;
+}
+
+.cartItemRemove {
+    width: 10%;
+}
+
+.cartItemRemove img {
+    height:30px;
+    width: 30px;
 }

@@ -1,10 +1,15 @@
 <div ng-controller="CartCtrl as cartctrl">
-    <div class="product-display scrollable scrollable-content">
-        <div>
-            {{cartctrl.total}}
+    <div class="product-display scrollable scrollable-content" style="width: 100%">
+        <div style="width: 100%">
+            {{cartctrl.total | currency}}
         </div>
-        <div ng-repeat="cartItem in cartctrl.cart">
-            {{cartItem.quantity}} - {{cartItem.item.data.name[1].label}}
+        <div class="cartItem" ng-repeat="cartItem in cartctrl.cart.values()">
+            <ul style="width: 100%; background: inherit">
+                <li class="cartItemSeq"><div>{{cartItem.item.data.igapakId}}</div></li>
+                <li class="cartItemLabel"><div>{{cartItem.item.data.name[1].label}}</div></li>
+                <li class="cartItemQty"><div><input type="text" ng-model="cartItem.quantity" size="2" ng-change="cartctrl.getTotal()"/></div></li>
+                <li class="cartItemRemove" ng-click="cartItem.item.removeFromCart();cartctrl.getTotal();"><div><img src="images/icons/close_darkGrey.png"></div></li>
+            </ul>
         </div>
         <div class="btn " ng-click="go('/')">
             Add more stuff
