@@ -71,8 +71,8 @@
       <file leaf-file-name="cartServices.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/scripts/services/cartServices.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9137056" vertical-offset="0" max-vertical-offset="855">
-              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.8121827" vertical-offset="0" max-vertical-offset="855">
+              <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
               <folding>
                 <element signature="e#0#38#0" expanded="false" />
               </folding>
@@ -942,8 +942,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/services/cartServices.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9137056" vertical-offset="0" max-vertical-offset="855">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.8121827" vertical-offset="0" max-vertical-offset="855">
+          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
           </folding>

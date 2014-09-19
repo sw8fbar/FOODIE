@@ -22,7 +22,7 @@
             total += quantity*nodeObj.data.price;
             count = cart.count();
 
-            alert('count - '+count + "    Total - "+ total);
+            //alert('count - '+count + "    Total - "+ total);
         }
 
         var removeFromCart = function(nodeObj){
@@ -32,7 +32,7 @@
             cart.remove(nodeObj.data.igapakId);
             count = cart.count();
 
-            alert('count - '+count + "    Total - "+ total);
+            //alert('count - '+count + "    Total - "+ total);
         }
 
         var getCart = function() {
