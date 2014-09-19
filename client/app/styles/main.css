@@ -366,9 +366,13 @@ body {
 }
 
 .cartItem {
-   background: #ffffff;
-   width: 100%;
-   padding: 0;
+    background: #ffffff;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .cartItem ul {
@@ -376,10 +380,14 @@ body {
     margin-right: 0;
     padding-left: 0.5em;
     padding-right: 0.7em;
+    padding-top: 0.5em;
     float: left;
     white-space: nowrap;
     list-style-type: none;
-    width: 100%;
+    width: 90%;
+    min-height: 3.5em;
+    border-style: solid;
+    border-width: 0 0 1px 0;
 }
 
 .cartItem ul li {
@@ -394,18 +402,27 @@ body {
 
 .cartItemLabel {
     width: 60%;
+    text-align: left;
 }
 
 .cartItemQty{
-    width: 20%;
-    align-content: center;
+    width: 15%;
+    align-content: flex-end;
 }
 
 .cartItemRemove {
-    width: 10%;
+    width: 15%;
 }
 
 .cartItemRemove img {
-    height:30px;
-    width: 30px;
+    height:25px;
+    width: 25px;
+    align-self: center;
+}
+
+.cartItemSeq,
+.cartItemLabel,
+.cartItemQty {
+    border-width: 0 1px 0 0;
+    border-style: solid;
 }

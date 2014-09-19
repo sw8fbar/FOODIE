@@ -58,6 +58,11 @@
             this.cartService.removeFromCart(this);
         };
 
+        Node.prototype.updateCart = function (quantity) {
+            if(quantity < 1)
+                this.cartService.removeFromCart(this);
+        };
+
         return( Node );
     });
 

@@ -1,18 +1,34 @@
 <div ng-controller="CartCtrl as cartctrl">
     <div class="product-display scrollable scrollable-content" style="width: 100%">
-        <div style="width: 100%">
-            {{cartctrl.total | currency}}
-        </div>
-        <div class="cartItem" ng-repeat="cartItem in cartctrl.cart.values()">
-            <ul style="width: 100%; background: inherit">
-                <li class="cartItemSeq"><div>{{cartItem.item.data.igapakId}}</div></li>
-                <li class="cartItemLabel"><div>{{cartItem.item.data.name[1].label}}</div></li>
-                <li class="cartItemQty"><div><input type="text" ng-model="cartItem.quantity" size="2" ng-change="cartctrl.getTotal()"/></div></li>
-                <li class="cartItemRemove" ng-click="cartItem.item.removeFromCart();cartctrl.getTotal();"><div><img src="images/icons/close_darkGrey.png"></div></li>
-            </ul>
-        </div>
-        <div class="btn " ng-click="go('/')">
-            Add more stuff
+        <div style="margin: 0.5em; background: #ffffff">
+            <div style="width: 100%; min-height: 3em; vertical-align: middle">
+                {{cartctrl.total | currency}}
+            </div>
+            <div style="border-style: solid;border-width: 1px 0 1px 0; min-height: 3.5em; padding-bottom: 0.5em ">
+                <div class="btn pull-left" ng-click="go('/')" style="margin: 0.5em; vertical-align: middle;">
+                    <img src="images/icons/plus_grey.png" style="width: 25px;height: 25px"> Add more Items
+                </div>
+                <div class="btn pull-right" style="background: #e38802; margin: 0.5em" ng-click="">
+                    Send Order
+                </div>
+            </div>
+            <div class="cartItem" ng-repeat="cartItem in cartctrl.cart.values()">
+                <ul style="width: 100%; background: inherit">
+                    <li class="cartItemSeq">
+                        <div>{{cartItem.item.data.igapakId}}</div>
+                    </li>
+                    <li class="cartItemLabel">
+                        <div>{{cartItem.item.data.name[1].label}}</div>
+                    </li>
+                    <li class="cartItemQty">
+                        <div><input type="text" ng-model="cartItem.quantity" size="2"
+                                    ng-blur="cartItem.item.updateCart(cartItem.quantity);cartctrl.getTotal()"/></div>
+                    </li>
+                    <li class="cartItemRemove" ng-click="cartItem.item.removeFromCart();cartctrl.getTotal();">
+                        <div><img src="images/icons/close_darkGrey.png"></div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
