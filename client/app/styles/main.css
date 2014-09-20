@@ -368,40 +368,21 @@ body {
 .cartItem {
     background: #ffffff;
     width: 100%;
-    padding-top: 0;
-    padding-bottom: 0;
-    position: relative;
-    margin-bottom: 0;
-    margin-top: 0;
+    padding: 0.5em;
 }
 
-.cartItem ul {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0.5em;
-    padding-right: 0.7em;
-    padding-top: 0.5em;
-    float: left;
-    white-space: nowrap;
-    list-style-type: none;
-    width: 90%;
-    min-height: 3.5em;
-    border-style: solid;
-    border-width: 0 0 1px 0;
-}
-
-.cartItem ul li {
-    display: inline-block;
+.cartItem td{
+    padding: 0.5em;
 }
 
 .cartItemSeq {
     text-align: left;
     padding-left: 0.1em;
-    width: 10%;
+    width: 7%;
 }
 
 .cartItemLabel {
-    width: 60%;
+    width: 65%;
     text-align: left;
 }
 
@@ -411,7 +392,7 @@ body {
 }
 
 .cartItemRemove {
-    width: 15%;
+    width: 13%;
 }
 
 .cartItemRemove img {
@@ -423,6 +404,52 @@ body {
 .cartItemSeq,
 .cartItemLabel,
 .cartItemQty {
+    border-width: 0 1px 0 0;
+    border-style: solid;
+}
+
+
+.cart.ng-hide{
+    z-index: 0;
+}
+
+.cartHeader {
+    width: 100%;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    position: relative;
+    font-size: .8em;
+
+}
+
+.cartHeader ul {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    float: left;
+    white-space: nowrap;
+    list-style-type: none;
+}
+
+.cartHeader ul li {
+    display: inline-block;
+    text-align: right;
+}
+
+.cartHeader ul li div{
+    width: 100%;
+}
+
+.cartHeader ul li div img{
+    height: 25px;
+    width: 25px;
+    vertical-align: middle;
+
+}
+
+.border-right {
     border-width: 0 1px 0 0;
     border-style: solid;
 }

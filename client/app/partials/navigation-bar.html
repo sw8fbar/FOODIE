@@ -9,7 +9,8 @@
 
   <!-- Page title -->
   <div ng-click="mainctrl.selectMenu('{{mainctrl.ui.menudisplayed}}')" class="navbar-brand-center">
-    <h3>{{mainctrl.ui.pagetitle}}</h3>
+    <h3 ng-show="!mainctrl.ui.showCart">{{mainctrl.ui.pagetitle}}</h3>
+    <h3 ng-show="mainctrl.ui.showCart">{{mainctrl.ui.cartTitle}}</h3>
   </div>
   
   <!-- Right nav-bar button -->

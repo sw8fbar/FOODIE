@@ -11,8 +11,4 @@ angular.module('igapakApp').controller('CartCtrl', ['$scope', '$location', '$anc
         $location.path( path );
     };
 
-    this.getTotal = function(){
-        this.total = CartService.getTotal();
-    }
-
 }]);

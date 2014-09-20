@@ -16,6 +16,7 @@
         this.ui.loaded = false;
         this.ui.menudisplayed = '';
         this.ui.pagetitle = 'Menu';
+        this.ui.cartTitle = 'Cart';
         this.ui.flatlist = [];
         this.ui.nodes = [];
         this.ui.productNodes = [];
@@ -23,10 +24,13 @@
         this.ui.showSpecials = false;
         this.ui.showYelp = false;
         this.ui.orgId = $routeParams.orgId;
+        this.ui.showCart = false;
 
         this.userLanguage = 1;
         this.langNode = null;
         this.langIndex = 0;
+        this.total = 0;
+
 
 
         //app scope variables
@@ -34,6 +38,7 @@
         $scope.org = null;
         $scope.yelp = null;
         $scope.err = null;
+
         //$scope.cart = new HashMap();
         $scope.go = function ( path ) {
             $location.path( path );
@@ -152,6 +157,7 @@
         this.displayGroup = function (Object) {
             // set the location.hash to the id of
             // the element you wish to scroll to
+            this.ui.showCart=false;
             this.selectMenu(this.ui.menudisplayed);
             Object.expandedInBody = true;
             var old = $location.hash();
@@ -213,6 +219,16 @@
 
         this.hideDisplayInAltLanguage = function() {
             this.langNode = null;
+        }
+
+        this.showCartDetails = function() {
+            this.ui.showCart = true;
+            this.getTotal();
+
+        }
+
+        this.getTotal = function(){
+            this.total = CartService.getTotal();
         }
 
     }]);

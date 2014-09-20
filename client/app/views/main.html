@@ -1,196 +1,259 @@
 <div ng-controller="MainCtrl as mainctrl">
 
-    <!-- Initial load screen-->
-    <div fullscreen background="#f3f3f3" ng-show="!mainctrl.ui.loaded">
-        <div class="logo">
-            <p ng-if="err">{{err}}</p>
-            <img src="images/logos/{{mainctrl.ui.orgId}}.png" ng-if="err != null">
-        </div>
-        <div class="navbar-absolute-bottom">
-            <img style="height: 70px" class="pull-left" src="images/LogoColorNoText.jpeg"/>
-        </div>
+<!-- Initial load screen-->
+<div fullscreen background="#f3f3f3" ng-show="!mainctrl.ui.loaded">
+    <div class="logo">
+        <p ng-if="err">{{err}}</p>
+        <img src="images/logos/{{mainctrl.ui.orgId}}.png" ng-if="err != null">
     </div>
-    <navigation-bar></navigation-bar>
-    <!-- display group - subgroup - product -->
-    <div class="product-display scrollable scrollable-content {{mainctrl.ui.groupdisplayInactive}}">
-
-        <table style="width: 100%;">
-            <!-- Anchor for anchorscroll-->
-            <tr id="anchornode" ng-repeat-start="node in mainctrl.ui.flatlist">
-                <td>
-                    <a ng-if="node.type !== 'product'"
-                       class="anchor"
-                       id="{{'anchor'+node.data.igapakId}}"></a>
-                </td>
-            </tr>
-
-            <!-- Group Display-->
-            <tr ng-if="node.type === 'group'" class="{{node.type}}" ng-class="node.class">
-                <!--<td style="width: 12%;padding-left: 3px;"><img src="images/icons/exit-door-icon.png"-->
-                <!--ng-click="mainctrl.selectMenu('L')"-->
-                <!--ng-show="node.expandedInBody"/>-->
-
-                <!--</td>-->
-                <td ng-click="node.toggleExpand()" style="width: 76%"><p>&nbsp;&nbsp;{{node.data.name[mainctrl.userLanguage].label}}&nbsp;&nbsp;</p>
-                </td>
-                <td style="width: 12%;padding-left: 3px;">&nbsp;</td>
-
-                <!-- if group with sub groups-->
-                <td ng-if="!node.hasSubGroups" style="width: 12%;padding-right: 3px;"><img class="colland"
-                                                                                           ng-click="node.collapseInBody()"
-                                                                                           ng-show="node.expandedInBody"
-                                                                                           src="images/icons/MenuSectionArrow_blue.png"/>
-                    <img class="colland"
-                         ng-click="node.expandInBody()" ng-show="!node.expandedInBody"
-                         src="images/icons/MenuSectionArrow.png"/></td>
-
-                <!-- if group with no sub groups-->
-                <td ng-if="node.hasSubGroups" style="width: 12%;padding-right: 3px;"><img class="colland"
-                                                                                          ng-click="node.collapseInBody()"
-                                                                                          ng-show="node.expandedInBody"
-                                                                                          src="images/icons/minus_blue.png"/>
-                    <img class="colland"
-                         ng-click="node.expandInBody()" ng-show="!node.expandedInBody"
-                         src="images/icons/plus_grey.png"/></td>
-            </tr>
-
-            <!-- Sub-group display-->
-            <tr ng-if="node.type === 'subgroup'" class="{{node.type}}" ng-show="node.parent.expandedInBody">
-                <!--<td><img id="separator" src="images/icons/dot.png"/></td>-->
-                <td colspan="2" ng-click="node.toggleExpand()"><img id="separator" src="images/icons/dot.png"/>&nbsp;&nbsp;{{node.data.name[mainctrl.userLanguage].label}}&nbsp;&nbsp;
-                </td>
-                <td><img ng-show="node.expandedInBody" src="images/icons/MenuSectionArrow_blue.png"
-                         ng-click="node.collapseInBody()"/><img
-                        ng-show="!node.expandedInBody" src="images/icons/MenuSectionArrow.png"
-                        ng-click="node.expandInBody()"/></td>
-            </tr>
-
-
-            <!-- Product display-->
-            <tr ng-if="node.type === 'product'" class="{{node.type}}" ng-class="node.class"
-                ng-show="node.parent.expandedInBody" ng-repeat-end>
-                <td style="width: 100%" colspan="3">
-                    <table width="100%">
-                        <tr ng-click="node.toggleExpand()">
-                            <td style="width: 76%; padding-left: 1em ;padding-top: 1.5em; padding-bottom: 1.5em"
-                                class="prodDescription">
-                                <p class="productTitle">{{node.data.igapakId}}.
-                                    {{node.data.name[mainctrl.userLanguage].label}}</p>
-
-                                <div>{{node.data.description[mainctrl.userLanguage].label}}</div>
-                                <div class="productNotification">{{node.data.notification}}</div>
-                            </td>
-                            <td class="price" style="width: 18%; padding-right: 0.5em">{{node.data.price | currency}}
-                            </td>
-                            <td style="width: 6%;"><img class="updownArrow" ng-show="!node.expandedInBody"
-                                                        src="images/icons/arrow_down.png"><img
-                                    ng-show="node.expandedInBody"
-                                    src="images/icons/arrow_up.png" class="updownArrow"></td>
-                        </tr>
-                        <tr class="userOptions" ng-show="node.expandedInBody">
-                            <td colspan="3" style="padding: 0.3em">
-                                <table style="width: 100%">
-                                    <tr style="width: 100%">
-                                        <td style="width:25%; text-align: center;border-style: solid; border-width: 0 1px 0 0">
-                                            <img class="uoptionImg" src="images/icons/microphone_grey.png"><br>Listen
-                                        </td>
-                                        <td style="width:25%; text-align: center;border-style: solid; border-width: 0 1px 0 0" ng-click="node.addToCart(1)" class="addCart" >
-                                            <div>
-                                                <img class="uoptionImg" src="images/icons/select.png"><br>Order
-                                            </div>
-                                        </td>
-                                        <td style="width:25%; text-align: center;border-style: solid; border-width: 0 1px 0 0">
-                                            <div ng-show="!node.liked" ng-click="node.toggleLike()">
-                                                <img class="uoptionImg" src="images/icons/like_grey.png"><br>Like
-                                            </div>
-                                            <div ng-show="node.liked" ng-click="node.toggleLike()">
-                                                <img class="uoptionImg" src="images/icons/like.png"><br>Un-like
-                                            </div>
-                                        </td>
-                                        <td style="width:25%; padding-left:1em; padding-top:1em;text-align: center"
-                                            ng-click="mainctrl.displayInAltLanguage(node.data.igapakId)">
-                                            <div class="wrapper"><img src="images/Flags/usa.png"></div>
-                                            &nbsp;&nbsp;</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr class="group"></tr>
-        </table>
-    </div>
-
-    <!-- Cloak for main body when either menu is displayed-->
-    <div ng-show="mainctrl.ui.menudisplayed !== ''" class="scrollable scrollable-content menubackground"
-         ng-click="mainctrl.selectMenu('{{mainctrl.ui.menudisplayed}}')"></div>
-
-    <right-menu></right-menu>
-    <left-menu></left-menu>
-    <banner-footer ng-show="mainctrl.ui.loaded"></banner-footer>
-
-    <!-- Specials screen display-->
-    <div fullscreen ng-show="mainctrl.ui.showSpecials">
-        <div style="padding-top: 0.6em; padding-right: 0.5em;">
-            <div>
-                <div>
-
-                </div>
-                <div>
-                    <img src="images/icons/close_lightgrey.png" ng-click="mainctrl.ui.showSpecials = false"/>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Yelp Rating screen display-->
-    <div fullscreen background="#f1f5f7" ng-show="mainctrl.ui.showYelp">
-        <div class="navbar navbar-app navbar-absolute-top yelp-navbar" style="padding-left: 0.6em;">
-            <div class="btn-group pull-left" style="padding-top: 0.4em;">
-                <img src="images/icons/yelp.png" style="height: 40px;"/>
-            </div>
-            <div ng-if="yelp" class="navbar-brand-center">
-                <img src="{{yelp.rating_img_url}}"/>
-
-                <p>{{yelp.review_count}} Ratings</p>
-            </div>
-            <div class="btn-group pull-right" style="padding-top: 0.6em; padding-right: 0.5em;">
-                <img src="images/icons/close_lightgrey.png" ng-click="mainctrl.ui.showYelp = false"
-                     style="height: 35px;"/>
-            </div>
-        </div>
-        <div class="menuFiller">&nbsp;</div>
-        <div class="logo">
-            <img src="images/logos/{{mainctrl.ui.orgId}}.png"/>
-
-            <p>Lorem Ipsum whatever whatever and more whatever whatever!!</p>
-        </div>
-        <div>
-            {{org.street}} <br> {{org.city}} {{org.postCode}}, {{org.country}}
-        </div>
-        <div class="scrollable scrollable-content reviews">
-            <div ng-if="yelp" class="reviewItem" ng-repeat="review in yelp.reviews"> {{review.excerpt}}<br>
-                <b>{{review.user.name}}</b> <img src="{{review.rating_image_small_url}}"/>
-            </div>
-        </div>
-    </div>
-
-    <div fullscreen ng-repeat="node in mainctrl.ui.productNodes" ng-show="mainctrl.langNode==node.data.igapakId">
-        <div class="productPopup">
-            <div class="prodPopCaption">{{node.data.igapakId}}</div>
-            <div class="prodPopHeader"><b>{{node.data.name[mainctrl.langIndex].label}}</b></div>
-            <div class="prodPopDesc">{{node.data.description[mainctrl.langIndex].label}}</div>
-            <div class="prodPopPrice">{{node.data.price | currency}}</div>
-        </div>
-        <!--<table class="productPopup">-->
-        <!--<caption>{{node.data.igapakId}}</caption>-->
-        <!--<tr><td><b>{{node.data.name[mainctrl.langIndex].label}}</b></td></tr>-->
-        <!--<tr><td>{{node.data.description[mainctrl.langIndex].label}}</td></tr>-->
-        <!--<tr><td>{{node.data.price | currency}}</td></tr>-->
-        <!--</table>-->
-        <div style="margin-left: 45%; padding-top: 1.3em;"><img src="images/icons/close_lightgrey.png"
-                                                                ng-click="mainctrl.hideDisplayInAltLanguage()"/></div>
+    <div class="navbar-absolute-bottom">
+        <img style="height: 70px" class="pull-left" src="images/LogoColorNoText.jpeg"/>
     </div>
 </div>
 
+<navigation-bar></navigation-bar>
+
+<!-- display group - subgroup - product -->
+<div class="product-display scrollable scrollable-content {{mainctrl.ui.groupdisplayInactive}}">
+
+    <table style="width: 100%;">
+        <!-- Anchor for anchorscroll-->
+        <tr id="anchornode" ng-repeat-start="node in mainctrl.ui.flatlist">
+            <td>
+                <a ng-if="node.type !== 'product'"
+                   class="anchor"
+                   id="{{'anchor'+node.data.igapakId}}"></a>
+            </td>
+        </tr>
+
+        <!-- Group Display-->
+        <tr ng-if="node.type === 'group'" class="{{node.type}}" ng-class="node.class">
+            <!--<td style="width: 12%;padding-left: 3px;"><img src="images/icons/exit-door-icon.png"-->
+            <!--ng-click="mainctrl.selectMenu('L')"-->
+            <!--ng-show="node.expandedInBody"/>-->
+
+            <!--</td>-->
+            <td ng-click="node.toggleExpand()" style="width: 76%"><p>&nbsp;&nbsp;{{node.data.name[mainctrl.userLanguage].label}}&nbsp;&nbsp;</p>
+            </td>
+            <td style="width: 12%;padding-left: 3px;">&nbsp;</td>
+
+            <!-- if group with sub groups-->
+            <td ng-if="!node.hasSubGroups" style="width: 12%;padding-right: 3px;"><img class="colland"
+                                                                                       ng-click="node.collapseInBody()"
+                                                                                       ng-show="node.expandedInBody"
+                                                                                       src="images/icons/MenuSectionArrow_blue.png"/>
+                <img class="colland"
+                     ng-click="node.expandInBody()" ng-show="!node.expandedInBody"
+                     src="images/icons/MenuSectionArrow.png"/></td>
+
+            <!-- if group with no sub groups-->
+            <td ng-if="node.hasSubGroups" style="width: 12%;padding-right: 3px;"><img class="colland"
+                                                                                      ng-click="node.collapseInBody()"
+                                                                                      ng-show="node.expandedInBody"
+                                                                                      src="images/icons/minus_blue.png"/>
+                <img class="colland"
+                     ng-click="node.expandInBody()" ng-show="!node.expandedInBody"
+                     src="images/icons/plus_grey.png"/></td>
+        </tr>
+
+        <!-- Sub-group display-->
+        <tr ng-if="node.type === 'subgroup'" class="{{node.type}}" ng-show="node.parent.expandedInBody">
+            <!--<td><img id="separator" src="images/icons/dot.png"/></td>-->
+            <td colspan="2" ng-click="node.toggleExpand()"><img id="separator" src="images/icons/dot.png"/>&nbsp;&nbsp;{{node.data.name[mainctrl.userLanguage].label}}&nbsp;&nbsp;
+            </td>
+            <td><img ng-show="node.expandedInBody" src="images/icons/MenuSectionArrow_blue.png"
+                     ng-click="node.collapseInBody()"/><img
+                    ng-show="!node.expandedInBody" src="images/icons/MenuSectionArrow.png"
+                    ng-click="node.expandInBody()"/></td>
+        </tr>
+
+
+        <!-- Product display-->
+        <tr ng-if="node.type === 'product'" class="{{node.type}}" ng-class="node.class"
+            ng-show="node.parent.expandedInBody" ng-repeat-end>
+            <td style="width: 100%" colspan="3">
+                <table width="100%">
+                    <tr ng-click="node.toggleExpand()">
+                        <td style="width: 76%; padding-left: 1em ;padding-top: 1.5em; padding-bottom: 1.5em"
+                            class="prodDescription">
+                            <p class="productTitle">{{node.data.igapakId}}.
+                                {{node.data.name[mainctrl.userLanguage].label}}</p>
+
+                            <div>{{node.data.description[mainctrl.userLanguage].label}}</div>
+                            <div class="productNotification">{{node.data.notification}}</div>
+                        </td>
+                        <td class="price" style="width: 18%; padding-right: 0.5em">{{node.data.price | currency}}
+                        </td>
+                        <td style="width: 6%;"><img class="updownArrow" ng-show="!node.expandedInBody"
+                                                    src="images/icons/arrow_down.png"><img
+                                ng-show="node.expandedInBody"
+                                src="images/icons/arrow_up.png" class="updownArrow"></td>
+                    </tr>
+                    <tr class="userOptions" ng-show="node.expandedInBody">
+                        <td colspan="3" style="padding: 0.3em">
+                            <table style="width: 100%">
+                                <tr style="width: 100%">
+                                    <td style="width:25%; text-align: center;border-style: solid; border-width: 0 1px 0 0">
+                                        <img class="uoptionImg" src="images/icons/microphone_grey.png"><br>Listen
+                                    </td>
+                                    <td style="width:25%; text-align: center;border-style: solid; border-width: 0 1px 0 0"
+                                        ng-click="node.addToCart(1)" class="addCart">
+                                        <div>
+                                            <img class="uoptionImg" src="images/icons/select.png"><br>Order
+                                        </div>
+                                    </td>
+                                    <td style="width:25%; text-align: center;border-style: solid; border-width: 0 1px 0 0">
+                                        <div ng-show="!node.liked" ng-click="node.toggleLike()">
+                                            <img class="uoptionImg" src="images/icons/like_grey.png"><br>Like
+                                        </div>
+                                        <div ng-show="node.liked" ng-click="node.toggleLike()">
+                                            <img class="uoptionImg" src="images/icons/like.png"><br>Un-like
+                                        </div>
+                                    </td>
+                                    <td style="width:25%; padding-left:1em; padding-top:1em;text-align: center"
+                                        ng-click="mainctrl.displayInAltLanguage(node.data.igapakId)">
+                                        <div class="wrapper"><img src="images/Flags/usa.png"></div>
+                                        &nbsp;&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr class="group"></tr>
+    </table>
+</div>
+
+<!-- Shopping cart screen-->
+<div class="cart" ng-controller="CartCtrl as cartctrl" ng-show="mainctrl.ui.showCart" style="width:100%">
+    <div class="product-display scrollable scrollable-content" style="width: 100%">
+        <div style="margin: 0.5em; background: #ffffff; width: 100%">
+            <div class="cartHeader" style="width: 100%; min-height: 4em; vertical-align: middle">
+                <ul style="width:100%">
+                    <li style="width: 75%;">
+                        <div class="pull-left border-right"
+                             style="text-align: right; padding-right: 0.3em; padding-left: 0.4em; padding-top: 0.3em">
+                            <img class="pull-left" src="images/icons/shoppingBag.png"/> <h6>GRAND TOTAL</h6> ALL
+                            INCLUSIVE, NO HIDDEN COST
+                        </div>
+                    </li>
+                    <li style="width: 20%;">
+                        <div class="pull-right"><h4>{{mainctrl.total | currency}}</h4></div>
+                    </li>
+                </ul>
+
+            </div>
+            <div style="border-style: solid;border-width: 1px 0 1px 0; min-height: 3.5em; padding-bottom: 0.2em; padding-top: 0.2em;">
+                <div class="btn pull-left" ng-click="mainctrl.ui.showCart=false;mainctrl.toggleMenu()"
+                     style="vertical-align: middle;">
+                    <img src="images/icons/plus_grey.png" style="width: 25px;height: 25px"> Add more Items
+                </div>
+                <div class="btn pull-right" style="background: #e38802; margin-right:0.8em; " ng-click="">
+                    Send Order
+                </div>
+            </div>
+            <table style="width: 100%">
+                <tr ng-repeat="cartItem in cartctrl.cart.values()" style="width: 100%;" class="cartItem">
+                    <td class="cartItemSeq"><div>{{cartItem.item.data.igapakId}}</div></td>
+                    <td class="cartItemLabel>"><div>{{cartItem.item.data.name[1].label}}</div></td>
+                    <td class="cartItemQty"><div><input type="text" ng-model="cartItem.quantity" size="2"
+                                                        ng-blur="cartItem.item.updateCart(cartItem.quantity);mainctrl.getTotal()"/></div></td>
+                    <td class="cartItemRemove" ng-click="cartItem.item.removeFromCart();mainctrl.getTotal();"><div><img src="images/icons/close_darkGrey.png"></div></td>
+                </tr>
+            </table>
+
+            <!--<div class="cartItem" ng-repeat="cartItem in cartctrl.cart.values()">-->
+                <!--<ul style="width: 100%; background: inherit">-->
+                    <!--<li class="cartItemSeq">-->
+                        <!--<div>{{cartItem.item.data.igapakId}}</div>-->
+                    <!--</li>-->
+                    <!--<li class="cartItemLabel">-->
+                        <!--<div>{{cartItem.item.data.name[1].label}}</div>-->
+                    <!--</li>-->
+                    <!--<li class="cartItemQty">-->
+                        <!--<div><input type="text" ng-model="cartItem.quantity" size="2"-->
+                                    <!--ng-blur="cartItem.item.updateCart(cartItem.quantity);mainctrl.getTotal()"/></div>-->
+                    <!--</li>-->
+                    <!--<li class="cartItemRemove" ng-click="cartItem.item.removeFromCart();mainctrl.getTotal();">-->
+                        <!--<div><img src="images/icons/close_darkGrey.png"></div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+<!-- Cloak for main body when either menu is displayed-->
+<div ng-show="mainctrl.ui.menudisplayed !== ''" class="scrollable scrollable-content menubackground"
+     ng-click="mainctrl.selectMenu('{{mainctrl.ui.menudisplayed}}')"></div>
+
+<right-menu></right-menu>
+<left-menu></left-menu>
+<banner-footer ng-show="mainctrl.ui.loaded"></banner-footer>
+
+<!-- Specials screen display-->
+<div fullscreen ng-show="mainctrl.ui.showSpecials">
+    <div style="padding-top: 0.6em; padding-right: 0.5em;">
+        <div>
+            <div>
+
+            </div>
+            <div>
+                <img src="images/icons/close_lightgrey.png" ng-click="mainctrl.ui.showSpecials = false"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Yelp Rating screen display-->
+<div fullscreen background="#f1f5f7" ng-show="mainctrl.ui.showYelp">
+    <div class="navbar navbar-app navbar-absolute-top yelp-navbar" style="padding-left: 0.6em;">
+        <div class="btn-group pull-left" style="padding-top: 0.4em;">
+            <img src="images/icons/yelp.png" style="height: 40px;"/>
+        </div>
+        <div ng-if="yelp" class="navbar-brand-center">
+            <img src="{{yelp.rating_img_url}}"/>
+
+            <p>{{yelp.review_count}} Ratings</p>
+        </div>
+        <div class="btn-group pull-right" style="padding-top: 0.6em; padding-right: 0.5em;">
+            <img src="images/icons/close_lightgrey.png" ng-click="mainctrl.ui.showYelp = false"
+                 style="height: 35px;"/>
+        </div>
+    </div>
+    <div class="menuFiller">&nbsp;</div>
+    <div class="logo">
+        <img src="images/logos/{{mainctrl.ui.orgId}}.png"/>
+
+        <p>Lorem Ipsum whatever whatever and more whatever whatever!!</p>
+    </div>
+    <div>
+        {{org.street}} <br> {{org.city}} {{org.postCode}}, {{org.country}}
+    </div>
+    <div class="scrollable scrollable-content reviews">
+        <div ng-if="yelp" class="reviewItem" ng-repeat="review in yelp.reviews"> {{review.excerpt}}<br>
+            <b>{{review.user.name}}</b> <img src="{{review.rating_image_small_url}}"/>
+        </div>
+    </div>
+</div>
+
+<!-- Product details popoups-->
+<div fullscreen ng-repeat="node in mainctrl.ui.productNodes" ng-show="mainctrl.langNode==node.data.igapakId">
+    <div class="productPopup">
+        <div class="prodPopCaption">{{node.data.igapakId}}</div>
+        <div class="prodPopHeader"><b>{{node.data.name[mainctrl.langIndex].label}}</b></div>
+        <div class="prodPopDesc">{{node.data.description[mainctrl.langIndex].label}}</div>
+        <div class="prodPopPrice">{{node.data.price | currency}}</div>
+    </div>
+    <!--<table class="productPopup">-->
+    <!--<caption>{{node.data.igapakId}}</caption>-->
+    <!--<tr><td><b>{{node.data.name[mainctrl.langIndex].label}}</b></td></tr>-->
+    <!--<tr><td>{{node.data.description[mainctrl.langIndex].label}}</td></tr>-->
+    <!--<tr><td>{{node.data.price | currency}}</td></tr>-->
+    <!--</table>-->
+    <div style="margin-left: 45%; padding-top: 1.3em;"><img src="images/icons/close_lightgrey.png"
+                                                            ng-click="mainctrl.hideDisplayInAltLanguage()"/></div>
+</div>
+
+</div>
