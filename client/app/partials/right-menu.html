@@ -1,180 +1,95 @@
-<div class="animate-show sidebar sidebar-right" parent-active-class="sidebar-right-in" ng-show="mainctrl.ui.menudisplayed==='R'">
+<div class="animate-show sidebar sidebar-right" parent-active-class="sidebar-right-in"
+     ng-show="mainctrl.ui.menudisplayed==='R'">
     <div class="scrollable scrollable-content">
         <!-- Blank DIVs to push actual menu down -->
         <div class="menuFiller">&nbsp;</div>
         <div class="rightMenu">
-            <!--<div class="menuOption">-->
-                <!--<div>-->
-                    <!--<p>-->
-                        <!--<img src="images/icons/keypad.png"/> &nbsp; &nbsp; Grid View-->
-                    <!--</p>-->
-                <!--</div>-->
-            <!--</div>-->
-            <div class="menuOption" ng-click="mainctrl.ui.showCart=false; mainctrl.toggleMenu()">
-                <div>
-                    <p>
-                        <img src="images/icons/note.png"/> &nbsp; &nbsp; Menu Sections
-                    </p>
-                </div>
-            </div>
-            <div class="menuOption">
-                <div>
-                    <p>
-                        <img src="images/icons/ribbon.png"/> &nbsp; &nbsp; Recommended
-                    </p>
-                </div>
-            </div>
-            <div class="menuOption">
-                <div>
-                    <p>
-                        <img src="images/icons/like_grey.png"/> &nbsp; &nbsp; Liked
-                    </p>
-                </div>
-            </div>
-            <div class="menuOption" ng-click="mainctrl.showCartDetails(); mainctrl.toggleMenu()">
-                <div>
-                    <p>
-                        <img src="images/icons/shoppingBag.png"/> &nbsp; &nbsp; Shopping Bag
-                    </p>
-                </div>
-            </div>
-            <!--<div class="menuOption">-->
-                <!--<div>-->
-                    <!--<p>-->
-                        <!--<img src="images/icons/gear.png"/> &nbsp; &nbsp; Settings-->
-                    <!--</p>-->
-                <!--</div>-->
-            <!--</div>-->
-            <div class="menuOption">
-                <div>
-                    <p>
-                        <img src="images/icons/refresh_orange.png"/> &nbsp; &nbsp; Change Language
-                    </p>
-                </div>
-                <table style="width: 100%">
-                    <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(0)">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/portugal.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">Portuguese</td>
-                    </tr>
-                    <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(1)">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/USA.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">English</td>
-                    </tr>
-                    <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(2)">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/spain.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">Spanish</td>
-                    </tr>
-                    <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(3)">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/germany.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">German</td>
-                    </tr>
-                    <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(4)">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/france.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">French</td>
-                    </tr>
-                    <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(5)">
-                        <td>
-                            <div class="wrapperMenu">
-                                <img src="images/round-flags/italy.png"/>
-                            </div>
-                        </td>
-                        <td style="text-align: center">Italian</td>
-                    </tr>
-                    <!--<tr class="menuSubItem">-->
-                        <!--<td>-->
-                            <!--<div class="wrapperMenu">-->
-                                <!--<img src="images/round-flags/korea.png"/>-->
-                            <!--</div>-->
-                        <!--</td>-->
-                        <!--<td style="text-align: center">Korean</td>-->
-                    <!--</tr>-->
-                    <!--<tr class="menuSubItem">-->
-                        <!--<td>-->
-                            <!--<div class="wrapperMenu">-->
-                                <!--<img src="images/round-flags/china.png"/>-->
-                            <!--</div>-->
-
-                        <!--</td>-->
-                        <!--<td style="text-align: center">Chinese</td>-->
-                    <!--</tr>-->
-                    <!--<tr class="menuSubItem">-->
-                        <!--<td>-->
-                            <!--<div class="wrapperMenu">-->
-                                <!--<img src="images/round-flags/japan.png"/>-->
-                            <!--</div>-->
-                        <!--</td>-->
-                        <!--<td style="text-align: center">Japanese</td>-->
-                    <!--</tr>-->
-                    <!--<tr class="menuSubItem">-->
-                        <!--<td>-->
-                            <!--<div class="wrapperMenu">-->
-                                <!--<img src="images/round-flags/russia.png"/>-->
-                            <!--</div>-->
-                        <!--</td>-->
-                        <!--<td style="text-align: center">Russian</td>-->
-                    <!--</tr>-->
-                    <!--<tr class="menuSubItem">-->
-                        <!--<td>-->
-                            <!--<div class="wrapperMenu">-->
-                                <!--<img src="images/round-flags/iran.png"/>-->
-                            <!--</div>-->
-                        <!--</td>-->
-                        <!--<td style="text-align: center">Farsi</td>-->
-                    <!--</tr>-->
-                    <!--<tr class="menuSubItem">-->
-                        <!--<td>-->
-                            <!--<div class="wrapperMenu">-->
-                                <!--<img src="images/round-flags/poland.png"/>-->
-                            <!--</div>-->
-                        <!--</td>-->
-                        <!--<td style="text-align: center">Polish</td>-->
-                    <!--</tr>-->
-                    <!--<tr class="menuSubItem">-->
-                        <!--<td>-->
-                            <!--<div class="wrapperMenu">-->
-                                <!--<img src="images/round-flags/saudi-arabia.png"/>-->
-                            <!--</div>-->
-                        <!--</td>-->
-                        <!--<td style="text-align: center">Arabian</td>-->
-                    <!--</tr>-->
-                    <!--<tr class="menuSubItem">-->
-                        <!--<td>-->
-                            <!--<div class="wrapperMenu">-->
-                                <!--<img src="images/round-flags/vietnam.png"/>-->
-                            <!--</div>-->
-                        <!--</td>-->
-                        <!--<td style="text-align: center">Vietnamese</td>-->
-                    <!--</tr>-->
-                    <!--<tr class="menuSubItem">-->
-                        <!--<td>-->
-                            <!--<div class="wrapperMenu">-->
-                                <!--<img src="images/round-flags/india.png"/>-->
-                            <!--</div>-->
-                        <!--</td>-->
-                        <!--<td style="text-align: center">Hindi</td>-->
-                    <!--</tr>-->
-                </table>
-            </div>
+            <table style="width: 100%;">
+                <tr class="menuOption" ng-click="mainctrl.ui.showCart=false; mainctrl.toggleMenu()">
+                    <td style="width: 20%"><img src="images/icons/note.png"/></td>
+                    <td style="width: 80%">Menu Sections</td>
+                </tr>
+                <tr class="menuOption">
+                    <td><img src="images/icons/ribbon.png"/></td>
+                    <td>Recommended</td>
+                </tr>
+                <tr class="menuOption">
+                    <td><img src="images/icons/like_grey.png"/></td>
+                    <td>Liked</td>
+                </tr>
+                <tr class="menuOption" ng-show="mainctrl.cart.count()>0" ng-click="mainctrl.showCartDetails(); mainctrl.toggleMenu()">
+                    <td>
+                        <div class="cartImg"><img src="images/icons/shoppingBag.png"/>{{mainctrl.cart.count()}}</div>
+                    </td>
+                    <td>Shopping Bag</td>
+                </tr>
+                <tr class="menuOption" ng-show="mainctrl.cart.count()=== 0" ng-click="mainctrl.showCartDetails(); mainctrl.toggleMenu()">
+                    <td>
+                        <img src="images/icons/shoppingBag.png"/>
+                    </td>
+                    <td>Shopping Bag</td>
+                </tr>
+                <tr class="menuOption">
+                    <td><img src="images/icons/refresh_orange.png"/></td>
+                    <td>Menu Sections</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table style="width: 100%">
+                            <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(0)">
+                                <td>
+                                    <div class="wrapperMenu">
+                                        <img src="images/round-flags/portugal.png"/>
+                                    </div>
+                                </td>
+                                <td style="text-align: center">Portuguese</td>
+                            </tr>
+                            <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(1)">
+                                <td>
+                                    <div class="wrapperMenu">
+                                        <img src="images/round-flags/USA.png"/>
+                                    </div>
+                                </td>
+                                <td style="text-align: center">English</td>
+                            </tr>
+                            <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(2)">
+                                <td>
+                                    <div class="wrapperMenu">
+                                        <img src="images/round-flags/spain.png"/>
+                                    </div>
+                                </td>
+                                <td style="text-align: center">Spanish</td>
+                            </tr>
+                            <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(3)">
+                                <td>
+                                    <div class="wrapperMenu">
+                                        <img src="images/round-flags/germany.png"/>
+                                    </div>
+                                </td>
+                                <td style="text-align: center">German</td>
+                            </tr>
+                            <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(4)">
+                                <td>
+                                    <div class="wrapperMenu">
+                                        <img src="images/round-flags/france.png"/>
+                                    </div>
+                                </td>
+                                <td style="text-align: center">French</td>
+                            </tr>
+                            <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(5)">
+                                <td>
+                                    <div class="wrapperMenu">
+                                        <img src="images/round-flags/italy.png"/>
+                                    </div>
+                                </td>
+                                <td style="text-align: center">Italian</td>
+                            </tr>
+                            </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
         </div>
         <div class="menuFiller">&nbsp;</div>
     </div>

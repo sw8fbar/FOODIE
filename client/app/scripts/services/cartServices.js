@@ -44,11 +44,16 @@
             return total;
         }
 
+        var getCount = function() {
+            return count;
+        }
+
         return {
             addToCart: addToCart,
             getCart: getCart,
             removeFromCart: removeFromCart,
-            getTotal: getTotal
+            getTotal: getTotal,
+            getCount: getCount
         };
     }]);
 

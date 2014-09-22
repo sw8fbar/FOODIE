@@ -30,6 +30,7 @@
         this.langNode = null;
         this.langIndex = 0;
         this.total = 0;
+        this.cart = CartService.getCart();
 
 
 

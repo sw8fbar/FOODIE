@@ -4,11 +4,18 @@
         <!-- Blank DIVs to push actual menu down -->
         <div class="menuFiller">&nbsp;</div>
         <div class="rightMenu">
-            <div class="menuOption" ng-click="mainctrl.showSpecials()"><p>Specials</p></div>
-            <div class="menuOption" ng-click="mainctrl.showYelp()" ng-if="org && org.yelpId"><p>Yelp Ratings</p></div>
-            <div class="menuOption" ng-repeat="group in mainctrl.ui.nodes" ng-click="mainctrl.displayGroup(group)">
-                <p>{{group.data.name[mainctrl.userLanguage].label}}<img class="pull-right" src="images/icons/MenuSectionArrow.png"/></p>
-            </div>
+            <table style="width: 100%;">
+                <tr class="menuOption" ng-click="mainctrl.showSpecials()">
+                    <td colspan="2">Specials</td>
+                </tr>
+                <tr class="menuOption" ng-click="mainctrl.showYelp()" ng-if="org && org.yelpId">
+                    <td colspan="2">Yelp Ratings</td>
+                </tr>
+                <tr class="menuOption" ng-repeat="group in mainctrl.ui.nodes" ng-click="mainctrl.displayGroup(group)">
+                    <td>{{group.data.name[mainctrl.userLanguage].label}}</td>
+                    <td><img class="pull-right" src="images/icons/MenuSectionArrow.png"/></td>
+                </tr>
+            </table>
         </div>
         <div class="menuFiller">&nbsp;</div>
     </div>

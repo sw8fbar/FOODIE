@@ -14,7 +14,7 @@
 <navigation-bar></navigation-bar>
 
 <!-- display group - subgroup - product -->
-<div class="product-display scrollable scrollable-content {{mainctrl.ui.groupdisplayInactive}}">
+<div ng-cloak class="product-display scrollable scrollable-content {{mainctrl.ui.groupdisplayInactive}}">
 
     <table style="width: 100%;">
         <!-- Anchor for anchorscroll-->
@@ -126,7 +126,7 @@
 </div>
 
 <!-- Shopping cart screen-->
-<div class="cart" ng-controller="CartCtrl as cartctrl" ng-show="mainctrl.ui.showCart" style="width:100%">
+<div ng-cloak class="cart" ng-controller="CartCtrl as cartctrl" ng-show="mainctrl.ui.showCart" style="width:100%">
     <div class="product-display scrollable scrollable-content" style="width: 100%">
         <div style="margin: 0.5em; background: #ffffff; width: 100%">
             <div class="cartHeader" style="width: 100%; min-height: 4em; vertical-align: middle">
@@ -162,24 +162,6 @@
                     <td class="cartItemRemove" ng-click="cartItem.item.removeFromCart();mainctrl.getTotal();"><div><img src="images/icons/close_darkGrey.png"></div></td>
                 </tr>
             </table>
-
-            <!--<div class="cartItem" ng-repeat="cartItem in cartctrl.cart.values()">-->
-                <!--<ul style="width: 100%; background: inherit">-->
-                    <!--<li class="cartItemSeq">-->
-                        <!--<div>{{cartItem.item.data.igapakId}}</div>-->
-                    <!--</li>-->
-                    <!--<li class="cartItemLabel">-->
-                        <!--<div>{{cartItem.item.data.name[1].label}}</div>-->
-                    <!--</li>-->
-                    <!--<li class="cartItemQty">-->
-                        <!--<div><input type="text" ng-model="cartItem.quantity" size="2"-->
-                                    <!--ng-blur="cartItem.item.updateCart(cartItem.quantity);mainctrl.getTotal()"/></div>-->
-                    <!--</li>-->
-                    <!--<li class="cartItemRemove" ng-click="cartItem.item.removeFromCart();mainctrl.getTotal();">-->
-                        <!--<div><img src="images/icons/close_darkGrey.png"></div>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
         </div>
     </div>
 </div>
@@ -188,8 +170,8 @@
 <div ng-show="mainctrl.ui.menudisplayed !== ''" class="scrollable scrollable-content menubackground"
      ng-click="mainctrl.selectMenu('{{mainctrl.ui.menudisplayed}}')"></div>
 
-<right-menu></right-menu>
-<left-menu></left-menu>
+<right-menu ng-cloak></right-menu>
+<left-menu ng-cloak></left-menu>
 <banner-footer ng-show="mainctrl.ui.loaded"></banner-footer>
 
 <!-- Specials screen display-->
@@ -207,7 +189,7 @@
 </div>
 
 <!-- Yelp Rating screen display-->
-<div fullscreen background="#f1f5f7" ng-show="mainctrl.ui.showYelp">
+<div ng-cloak fullscreen background="#f1f5f7" ng-show="mainctrl.ui.showYelp">
     <div class="navbar navbar-app navbar-absolute-top yelp-navbar" style="padding-left: 0.6em;">
         <div class="btn-group pull-left" style="padding-top: 0.4em;">
             <img src="images/icons/yelp.png" style="height: 40px;"/>
@@ -228,11 +210,11 @@
 
         <p>Lorem Ipsum whatever whatever and more whatever whatever!!</p>
     </div>
-    <div>
-        {{org.street}} <br> {{org.city}} {{org.postCode}}, {{org.country}}
+    <div ng-show="yelp" class="yelpAddress">
+        {{yelp.location.display_address.join(', ')}}
     </div>
     <div class="scrollable scrollable-content reviews">
-        <div ng-if="yelp" class="reviewItem" ng-repeat="review in yelp.reviews"> {{review.excerpt}}<br>
+        <div ng-show="yelp" class="reviewItem" ng-repeat="review in yelp.reviews"> {{review.excerpt}}<br>
             <b>{{review.user.name}}</b> <img src="{{review.rating_image_small_url}}"/>
         </div>
     </div>
