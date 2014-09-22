@@ -31,10 +31,38 @@ router.use(function(req, res, next) {
     next(); // make sure we go to the next routes and don't stop here
 });
 
+app.use('/',router);
+app.use('/api',orgRoutes);
+app.use('/api',facilityRoutes);
+app.use('/api',yelpRoutes);
+
+/**
+ * Production Settings
+ */
+if (app.get('env') == 'production' || app.get('env') == 'prod') {
+
+    // changes it to use the optimized version for production
+    app.use(express.static(path.join(__dirname, '/dist')));
+
+    //connect to development db
+    mongoose.connect(ProdDB);
+
+    // production error handler
+    // no stacktraces leaked to user
+    app.use(function(err, req, res, next) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: {}
+        });
+    });
+}
+
 /**
  * Development Settings
  */
-if (app.get('env') === 'development' || app.get('env') === 'dev') {
+if (app.get('env') == 'development' || app.get('env') == 'dev') {
+
     // This will change in production since we'll be using the dist folder
     app.use(express.static(path.join(__dirname, '../client')));
     // This covers serving up the index page
@@ -54,30 +82,4 @@ if (app.get('env') === 'development' || app.get('env') === 'dev') {
     });
 }
 
-/**
- * Production Settings
- */
-if (app.get('env') === 'production' || app.get('env') === 'prod') {
-
-    // changes it to use the optimized version for production
-    app.use(express.static(path.join(__dirname, '/dist')));
-
-    //connect to development db
-    mongoose.connect(ProdDB);
-
-    // production error handler
-    // no stacktraces leaked to user
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: {}
-        });
-    });
-}
-
-app.use('/',router);
-app.use('/api',orgRoutes);
-app.use('/api',facilityRoutes);
-app.use('/api',yelpRoutes);
 module.exports = app;
