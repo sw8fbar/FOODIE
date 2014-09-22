@@ -156,7 +156,7 @@
             <table style="width: 100%">
                 <tr ng-repeat="cartItem in cartctrl.cart.values()" style="width: 100%;" class="cartItem">
                     <td class="cartItemSeq"><div>{{cartItem.item.data.igapakId}}</div></td>
-                    <td class="cartItemLabel>"><div>{{cartItem.item.data.name[1].label}}</div></td>
+                    <td class="cartItemLabel>"><div>{{cartItem.item.data.name[mainctrl.userLanguage].label}}</div></td>
                     <td class="cartItemQty"><div><input type="text" ng-model="cartItem.quantity" size="2"
                                                         ng-blur="cartItem.item.updateCart(cartItem.quantity);mainctrl.getTotal()"/></div></td>
                     <td class="cartItemRemove" ng-click="cartItem.item.removeFromCart();mainctrl.getTotal();"><div><img src="images/icons/close_darkGrey.png"></div></td>
