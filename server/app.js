@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var app = express();
+var morgan = require('morgan');
+
 
 var orgRoutes = require("./routes/orgs");
 var facilityRoutes = require("./routes/facilities");
@@ -20,14 +22,15 @@ app.use(logger('dev'));
 app.use(bodyParser.json({limit: '500kb'}));
 app.use(bodyParser.urlencoded({ limit: '500kb',extended: false }));
 app.use(cookieParser());
+app.use(morgan('combined'));
 
 var router = express.Router();
 
 // middleware to use for all requests
 router.use(function(req, res, next) {
     // do logging
-    console.log(req.headers);
-    console.log(req.body);
+    //console.log(req.headers);
+    //console.log(req.body);
     next(); // make sure we go to the next routes and don't stop here
 });
 
