@@ -51,7 +51,7 @@
                     if(this.children[i].liked)
                        likedChildren++;
                 }
-                if(likedChildren = 0 && this.liked) {
+                if(likedChildren == 0 && this.liked) {
                     this.liked = false;
                 } else {
                     this.liked = true;
