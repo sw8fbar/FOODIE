@@ -45,7 +45,22 @@
         };
 
         Node.prototype.toggleLike = function () {
-            this.liked = !this.liked;
+            if(this.children.length > 0) {
+                var likedChildren = 0;
+                for (var i=0;i<this.children.length ;i++) {
+                    if(this.children[i].liked)
+                       likedChildren++;
+                }
+                if(likedChildren = 0 && this.liked) {
+                    this.liked = false;
+                } else {
+                    this.liked = true;
+                }
+            } else {
+                this.liked = !this.liked;
+            }
+
+            alert("Liked "+ this.data.name[1].label);
             if (this.parent != this) {
                 this.parent.toggleLike();
             }

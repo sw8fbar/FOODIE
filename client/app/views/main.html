@@ -126,7 +126,7 @@
         <table style="width: 100%;">
 
             <!-- Anchor for anchorscroll-->
-            <tr id="anchornode" ng-repeat-start="node in mainctrl.ui.flatlist" ng-show="node.liked">
+            <tr id="anchornode" ng-repeat-start="node in mainctrl.ui.flatlist | matchLiked">
                 <td>
                     <a ng-if="node.type !== 'product'"
                        class="anchor"
@@ -135,7 +135,7 @@
             </tr>
 
             <!-- Group Display-->
-            <tr ng-if="node.type === 'group'" class="{{node.type}}" ng-class="node.class" ng-show="node.liked">
+            <tr ng-if="node.type === 'group'" class="{{node.type}}" ng-class="node.class">
 
                 <td ng-click="node.toggleExpand()" style="width: 76%"><p>&nbsp;&nbsp;{{node.data.name[mainctrl.userLanguage].label}}&nbsp;&nbsp;</p>
                 </td>
@@ -161,7 +161,7 @@
             </tr>
 
             <!-- Sub-group display-->
-            <tr ng-if="node.type === 'subgroup'" class="{{node.type}}" ng-show="node.parent.expandedInBody && node.liked" ng-show="node.liked">
+            <tr ng-if="node.type === 'subgroup'" class="{{node.type}}" ng-show="node.parent.expandedInBody">
                 <td colspan="2" ng-click="node.toggleExpand()"><img id="separator" src="images/icons/dot.png"/>&nbsp;&nbsp;{{node.data.name[mainctrl.userLanguage].label}}&nbsp;&nbsp;
                 </td>
                 <td><img ng-show="node.expandedInBody" src="images/icons/MenuSectionArrow_blue.png"
@@ -173,7 +173,7 @@
 
             <!-- Product display-->
             <tr ng-if="node.type === 'product'" class="{{node.type}}" ng-class="node.class"
-                ng-show="node.parent.expandedInBody && node.liked" ng-repeat-end>
+                ng-show="node.parent.expandedInBody" ng-repeat-end>
                 <td style="width: 100%" colspan="3">
                     <table width="100%">
                         <tr ng-click="node.toggleExpand()">
