@@ -5,10 +5,10 @@
         <div class="menuFiller">&nbsp;</div>
         <div class="rightMenu">
             <table style="width: 100%;">
-                <tr class="menuOption" ng-click="mainctrl.showSpecials()">
+                <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showSpecials)">
                     <td colspan="2">Specials</td>
                 </tr>
-                <tr class="menuOption" ng-click="mainctrl.showYelp()" ng-if="org && org.yelpId">
+                <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showYelp)" ng-if="org && org.yelpId">
                     <td colspan="2">Yelp Ratings</td>
                 </tr>
                 <tr class="menuOption" ng-repeat="group in mainctrl.ui.nodes" ng-click="mainctrl.displayGroup(group)">

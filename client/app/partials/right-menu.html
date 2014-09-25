@@ -5,7 +5,7 @@
         <div class="menuFiller">&nbsp;</div>
         <div class="rightMenu">
             <table style="width: 100%;">
-                <tr class="menuOption" ng-click="mainctrl.ui.showCart=false; mainctrl.toggleMenu()">
+                <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showmain)">
                     <td style="width: 20%"><img src="images/icons/note.png"/></td>
                     <td style="width: 80%">Menu Sections</td>
                 </tr>
@@ -13,17 +13,17 @@
                     <!--<td><img src="images/icons/ribbon.png"/></td>-->
                     <!--<td>Recommended</td>-->
                 <!--</tr>-->
-                <tr class="menuOption">
+                <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showliked)">
                     <td><img src="images/icons/like_grey.png"/></td>
                     <td>Liked</td>
                 </tr>
-                <tr class="menuOption" ng-show="mainctrl.cart.count()>0" ng-click="mainctrl.showCartDetails(); mainctrl.toggleMenu()">
+                <tr class="menuOption" ng-show="mainctrl.cart.count()>0" ng-click="mainctrl.showCartDetails()">
                     <td>
                         <div class="cartImg"><img src="images/icons/shoppingBag.png"/>{{mainctrl.cart.count()}}</div>
                     </td>
                     <td>Shopping Bag</td>
                 </tr>
-                <tr class="menuOption" ng-show="mainctrl.cart.count()=== 0" ng-click="mainctrl.showCartDetails(); mainctrl.toggleMenu()">
+                <tr class="menuOption" ng-show="mainctrl.cart.count()=== 0" ng-click="mainctrl.showCartDetails()">
                     <td>
                         <img src="images/icons/shoppingBag.png"/>
                     </td>

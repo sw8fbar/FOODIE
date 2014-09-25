@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var app = express();
 var morgan = require('morgan');
+var session = require('express-session');
 
 
 var orgRoutes = require("./routes/orgs");
@@ -28,9 +29,7 @@ var router = express.Router();
 
 // middleware to use for all requests
 router.use(function(req, res, next) {
-    // do logging
-    //console.log(req.headers);
-    //console.log(req.body);
+    //add other code if necessary - logging currently done by morgan
     next(); // make sure we go to the next routes and don't stop here
 });
 
@@ -38,6 +37,11 @@ app.use('/',router);
 app.use('/api',orgRoutes);
 app.use('/api',facilityRoutes);
 app.use('/api',yelpRoutes);
+
+app.use(session({
+    secret: 'mouse catwoman',
+    cookie: { secure: true }
+}));
 
 /**
  * Production Settings

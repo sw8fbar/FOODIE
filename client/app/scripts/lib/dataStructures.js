@@ -9,7 +9,7 @@
 
     app.factory("Node", function () {
 
-        function Node(type, Obj, parent, cartService) {
+        function Node(type, Obj, parent, cartService, userService) {
             this.type = type;
             this.parent = this;
             this.liked = false;
@@ -21,6 +21,7 @@
             this.hasSubGroups = false;
             this.data = Obj;
             this.cartService = cartService;
+            this.userService = userService;
         };
 
         Node.prototype.expandInBody = function () {

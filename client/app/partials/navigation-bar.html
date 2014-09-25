@@ -9,8 +9,9 @@
 
   <!-- Page title -->
   <div ng-click="mainctrl.selectMenu('{{mainctrl.ui.menudisplayed}}')" class="navbar-brand-center">
-    <h3 ng-show="!mainctrl.ui.showCart">{{mainctrl.ui.pagetitle}}</h3>
-    <h3 ng-show="mainctrl.ui.showCart">{{mainctrl.ui.cartTitle}}</h3>
+    <h3 ng-show="mainctrl.ui.screenSwitch[mainctrl.ui.showmain]">{{mainctrl.ui.pagetitle}}</h3>
+    <h3 ng-show="mainctrl.ui.screenSwitch[mainctrl.ui.showCart]">{{mainctrl.ui.cartTitle}}</h3>
+    <h3 ng-show="mainctrl.ui.screenSwitch[mainctrl.ui.showliked]">{{mainctrl.ui.likeTitle}}</h3>
   </div>
   
   <!-- Right nav-bar button -->
