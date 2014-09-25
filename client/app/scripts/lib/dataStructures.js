@@ -60,7 +60,7 @@
                 this.liked = !this.liked;
             }
 
-            alert("Liked "+ this.data.name[1].label);
+            //alert("Liked "+ this.data.name[1].label);
             if (this.parent != this) {
                 this.parent.toggleLike();
             }
