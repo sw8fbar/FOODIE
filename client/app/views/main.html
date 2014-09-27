@@ -1,12 +1,13 @@
 <div ng-controller="MainCtrl as mainctrl">
 
     <!-- Initial load screen-->
-    <div fullscreen background="#f3f3f3" ng-show="!mainctrl.ui.loaded">
+    <div fullscreen background="#f3f3f3">
         <div class="logo">
             <p ng-if="err">{{err}}</p>
             <img src="images/logos/{{mainctrl.ui.orgId}}.png" ng-if="err != null">
         </div>
         <div class="navbar-absolute-bottom">
+            <slide-selector items="mainctrl.ui.languages"></slide-selector>
             <img style="height: 70px" class="pull-left" src="images/app-logos/LogoColorNoText.jpeg"/>
         </div>
     </div>

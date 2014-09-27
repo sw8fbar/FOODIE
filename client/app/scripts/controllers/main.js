@@ -41,12 +41,22 @@
                 this.ui.groupdisplayInactive = '';
 
                 //display home screen by default
-                this.ui.screenSwitch = [true, false, false, false, false];
+                this.ui.screenSwitch = [false, false, false, false, false, false];
+                this.ui.showhome = 0;
                 this.ui.showmain = 0;
                 this.ui.showSpecials = 1;
                 this.ui.showliked = 2;
                 this.ui.showYelp = 3;
                 this.ui.showCart = 4;
+
+                this.ui.languages = [
+                    {label: 'Portuguese', flag:'Flags/portugal.png', round:'round-flags/portugal.png' }
+                    ,{label: 'English', flag:'Flags/USA.png', round:'round-flags/USA.png' }
+                    ,{label: 'Spanish', flag:'Flags/spain.png', round:'round-flags/spain.png' }
+                    ,{label: 'German', flag:'Flags/germany.png', round:'round-flags/germany.png' }
+                    ,{label: 'French', flag:'Flags/france.png', round:'round-flags/france.png' }
+                    ,{label: 'Italian', flag:'Flags/italy.png', round:'round-flags/italy.png' }
+                ];
 
                 this.userLanguage = 1;
                 this.langNode = null;
