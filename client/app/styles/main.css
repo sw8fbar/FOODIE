@@ -334,8 +334,9 @@ body {
 .logo {
     text-align: center;
     width: 80%;
-    padding-top: 1em;
+    padding-top: 5em;
     padding-left: 15%;
+    padding-bottom: 5em;
     border-bottom: 1px;
 }
 
@@ -478,4 +479,59 @@ body {
 .border-right {
     border-width: 0 1px 0 0;
     border-style: solid;
+}
+
+.slider {
+    white-space: nowrap;
+    list-style-type: none;
+    width: 100%;
+    padding-left: 0.5em;
+    height: 75px;
+}
+
+.slider li {
+    display: inline-block;
+}
+
+.slide,
+.slide-selected {
+    padding: 3px;
+    text-align: center;
+}
+
+.slide img,
+.slide-selected img{
+    height: 40px;
+    width: 55px;
+}
+
+.slide-selected {
+    background: #ffffff;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.slide-selector {
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+}
+
+.arrowLeft, .arrowRight {
+    vertical-align: middle;
+    padding-bottom: 4em;
+}
+.arrowLeft img,
+.arrowRight img {
+    height: 25px;
+}
+
+.arrowLeft {
+    padding-right: 0px;
+}
+
+.arrowRight {
+    padding-left: 2px;
 }

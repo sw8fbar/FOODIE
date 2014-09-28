@@ -41,13 +41,13 @@
                 this.ui.groupdisplayInactive = '';
 
                 //display home screen by default
-                this.ui.screenSwitch = [false, false, false, false, false, false];
+                this.ui.screenSwitch = [true, false, false, false, false, false];
                 this.ui.showhome = 0;
-                this.ui.showmain = 0;
-                this.ui.showSpecials = 1;
-                this.ui.showliked = 2;
-                this.ui.showYelp = 3;
-                this.ui.showCart = 4;
+                this.ui.showmain = 1;
+                this.ui.showSpecials = 2;
+                this.ui.showliked = 3;
+                this.ui.showYelp = 4;
+                this.ui.showCart = 5;
 
                 this.ui.languages = [
                     {label: 'Portuguese', flag:'Flags/portugal.png', round:'round-flags/portugal.png' }
@@ -213,6 +213,7 @@
                 this.changeLanguage = function (LanguageId) {
                     this.userLanguage = LanguageId;
                     this.toggleMenu();
+                    //alert(this.userLanguage);
                 }
 
                 this.displayInAltLanguage = function (nodeId) {
@@ -235,12 +236,16 @@
                     this.ui.screenSwitch[screenId] = true;
                 }
 
+                $scope.changeLang = function(languageId){
+                    $scope.mainctrl.changeLanguage(languageId);
+                    $scope.mainctrl.switchScreen($scope.mainctrl.ui.showmain);
+                }
+
                 this.showCartDetails = function () {
                     this.switchScreen(this.ui.showCart);
                     this.getTotal();
 
                 }
-
             }]);
 
 })();

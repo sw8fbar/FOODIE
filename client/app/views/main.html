@@ -1,13 +1,18 @@
 <div ng-controller="MainCtrl as mainctrl">
 
     <!-- Initial load screen-->
-    <div fullscreen background="#f3f3f3">
+    <div fullscreen background="#f3f3f3" ng-show="mainctrl.ui.screenSwitch[mainctrl.ui.showhome]">
         <div class="logo">
-            <p ng-if="err">{{err}}</p>
-            <img src="images/logos/{{mainctrl.ui.orgId}}.png" ng-if="err != null">
+            <img src="images/logos/{{mainctrl.ui.orgId}}.png">
+            <div style="width: 100%; text-align: center">
+                <p><img src="images/icons/phoneIcon.png" style="height: 25px;"/> 1-234-5678{{org.phone}}</p>
+            </div>
         </div>
-        <div class="navbar-absolute-bottom">
-            <slide-selector items="mainctrl.ui.languages"></slide-selector>
+        <div style="padding-bottom: 3em; width: 100%">
+            <div style="width: 100%; text-align: center"><p>Select Language</p></div>
+            <slide-selector items="mainctrl.ui.languages" on-node-click="changeLang(select)" current-index='1'></slide-selector>
+        </div>
+        <div class="navbar-absolute-bottom" style="padding-bottom: 3em;">
             <img style="height: 70px" class="pull-left" src="images/app-logos/LogoColorNoText.jpeg"/>
         </div>
     </div>

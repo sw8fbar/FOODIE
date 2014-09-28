@@ -36,54 +36,54 @@
                 <tr>
                     <td colspan="2">
                         <table style="width: 100%">
-                            <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(0)">
+                            <tr class="menuSubItem" ng-repeat="lang in mainctrl.ui.languages" ng-click="mainctrl.changeLanguage($index)">
                                 <td>
                                     <div class="wrapperMenu">
-                                        <img src="images/round-flags/portugal.png"/>
+                                        <img src="images/{{lang.round}}"/>
                                     </div>
                                 </td>
-                                <td style="text-align: center">Portuguese</td>
+                                <td style="text-align: center">{{lang.label}}</td>
                             </tr>
-                            <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(1)">
-                                <td>
-                                    <div class="wrapperMenu">
-                                        <img src="images/round-flags/USA.png"/>
-                                    </div>
-                                </td>
-                                <td style="text-align: center">English</td>
-                            </tr>
-                            <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(2)">
-                                <td>
-                                    <div class="wrapperMenu">
-                                        <img src="images/round-flags/spain.png"/>
-                                    </div>
-                                </td>
-                                <td style="text-align: center">Spanish</td>
-                            </tr>
-                            <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(3)">
-                                <td>
-                                    <div class="wrapperMenu">
-                                        <img src="images/round-flags/germany.png"/>
-                                    </div>
-                                </td>
-                                <td style="text-align: center">German</td>
-                            </tr>
-                            <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(4)">
-                                <td>
-                                    <div class="wrapperMenu">
-                                        <img src="images/round-flags/france.png"/>
-                                    </div>
-                                </td>
-                                <td style="text-align: center">French</td>
-                            </tr>
-                            <tr class="menuSubItem" ng-click="mainctrl.changeLanguage(5)">
-                                <td>
-                                    <div class="wrapperMenu">
-                                        <img src="images/round-flags/italy.png"/>
-                                    </div>
-                                </td>
-                                <td style="text-align: center">Italian</td>
-                            </tr>
+                            <!--<tr class="menuSubItem" ng-click="mainctrl.changeLanguage(1)">-->
+                                <!--<td>-->
+                                    <!--<div class="wrapperMenu">-->
+                                        <!--<img src="images/round-flags/USA.png"/>-->
+                                    <!--</div>-->
+                                <!--</td>-->
+                                <!--<td style="text-align: center">English</td>-->
+                            <!--</tr>-->
+                            <!--<tr class="menuSubItem" ng-click="mainctrl.changeLanguage(2)">-->
+                                <!--<td>-->
+                                    <!--<div class="wrapperMenu">-->
+                                        <!--<img src="images/round-flags/spain.png"/>-->
+                                    <!--</div>-->
+                                <!--</td>-->
+                                <!--<td style="text-align: center">Spanish</td>-->
+                            <!--</tr>-->
+                            <!--<tr class="menuSubItem" ng-click="mainctrl.changeLanguage(3)">-->
+                                <!--<td>-->
+                                    <!--<div class="wrapperMenu">-->
+                                        <!--<img src="images/round-flags/germany.png"/>-->
+                                    <!--</div>-->
+                                <!--</td>-->
+                                <!--<td style="text-align: center">German</td>-->
+                            <!--</tr>-->
+                            <!--<tr class="menuSubItem" ng-click="mainctrl.changeLanguage(4)">-->
+                                <!--<td>-->
+                                    <!--<div class="wrapperMenu">-->
+                                        <!--<img src="images/round-flags/france.png"/>-->
+                                    <!--</div>-->
+                                <!--</td>-->
+                                <!--<td style="text-align: center">French</td>-->
+                            <!--</tr>-->
+                            <!--<tr class="menuSubItem" ng-click="mainctrl.changeLanguage(5)">-->
+                                <!--<td>-->
+                                    <!--<div class="wrapperMenu">-->
+                                        <!--<img src="images/round-flags/italy.png"/>-->
+                                    <!--</div>-->
+                                <!--</td>-->
+                                <!--<td style="text-align: center">Italian</td>-->
+                            <!--</tr>-->
                             </td>
                             </tr>
                         </table>

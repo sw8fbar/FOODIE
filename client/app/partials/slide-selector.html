@@ -1,5 +1,10 @@
-<ul>
-    <li ng-repeat="item in items">
-        <div class="slide {{item.selected}}"><img src="{{item.flag}}" /></div>
-    </li>
-</ul>
+<div class="scrollable scrollable-content slide-selector">
+    <ul class="slider">
+        <li ng-repeat="item in items">
+            <div class="slide" style="text-align: center">
+                <img src="images/{{item.flag}}"/>
+                <p>{{item.label}}</p>
+            </div>
+        </li>
+    </ul>
+</div>
