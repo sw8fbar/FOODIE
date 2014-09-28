@@ -51,7 +51,7 @@
 
                 this.ui.languages = [
                     {label: 'Portuguese', flag:'Flags/portugal.png', round:'round-flags/portugal.png' }
-                    ,{label: 'English', flag:'Flags/USA.png', round:'round-flags/USA.png' }
+                    ,{label: 'English', flag:'Flags/usa.png', round:'round-flags/USA.png' }
                     ,{label: 'Spanish', flag:'Flags/spain.png', round:'round-flags/spain.png' }
                     ,{label: 'German', flag:'Flags/germany.png', round:'round-flags/germany.png' }
                     ,{label: 'French', flag:'Flags/france.png', round:'round-flags/france.png' }
