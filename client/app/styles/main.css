@@ -535,3 +535,16 @@ body {
 .arrowRight {
     padding-left: 2px;
 }
+.igapakFooter{
+    vertical-align: text-bottom;
+    padding-top: .5em;
+    width: 100%;
+}
+.igapakFooter tr td{
+    font-size: 1.5em;
+    text-align: left;
+    vertical-align: bottom;
+    width: 50%;
+    border-width: 0 1px 0 0;
+    border-style: solid;
+}
