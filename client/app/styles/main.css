@@ -38,6 +38,7 @@ body {
 
 .navbar-absolute-bottom img {
     display: block;
+    height: 50px;
     margin-left: auto;
     margin-right: auto;
 }
