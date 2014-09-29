@@ -321,7 +321,7 @@ body {
 .reviews {
     position: relative;
     padding: 0.2em;
-    padding-top: 0;
+    padding-top: 0em;
     background: #b8bcc0;
     width: 90%;
     margin-left: 5%;

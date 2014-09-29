@@ -26,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/views/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5" vertical-offset="390" max-vertical-offset="1020">
-              <caret line="333" column="46" selection-start-line="333" selection-start-column="35" selection-end-line="333" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.5459272" vertical-offset="390" max-vertical-offset="1020">
+              <caret line="334" column="39" selection-start-line="334" selection-start-column="39" selection-end-line="334" selection-end-column="39" />
               <folding>
                 <element signature="tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#0" expanded="false" />
@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/styles/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80173916" vertical-offset="4624" max-vertical-offset="8415">
-              <caret line="339" column="20" selection-start-line="339" selection-start-column="20" selection-end-line="339" selection-end-column="20" />
+            <state vertical-scroll-proportion="-8.5" vertical-offset="4624" max-vertical-offset="8415">
+              <caret line="323" column="20" selection-start-line="323" selection-start-column="20" selection-end-line="323" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -774,10 +774,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5" vertical-offset="4624" max-vertical-offset="8415">
+          <caret line="323" column="20" selection-start-line="323" selection-start-column="20" selection-end-line="323" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5" vertical-offset="390" max-vertical-offset="1020">
-          <caret line="333" column="46" selection-start-line="333" selection-start-column="35" selection-end-line="333" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.5459272" vertical-offset="390" max-vertical-offset="1020">
+          <caret line="334" column="39" selection-start-line="334" selection-start-column="39" selection-end-line="334" selection-end-column="39" />
           <folding>
             <element signature="tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#0" expanded="false" />
@@ -787,14 +795,6 @@
             <element signature="tag#div#5;tag#div#0" expanded="false" />
             <element signature="tag#div#7;tag#div#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/styles/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80173916" vertical-offset="4624" max-vertical-offset="8415">
-          <caret line="339" column="20" selection-start-line="339" selection-start-column="20" selection-end-line="339" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
