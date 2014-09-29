@@ -10,6 +10,7 @@ var Org = mongoose.model('Org', orgSchema);
 
 router.route('/orgs')
     .get(function (req, res) {
+        console.log(req.headers.clientid);
         //var query  = Org.where({ "igapakId": req.params.orgId});
         Org.find(function (err, orgs) {
             if (err) return console.error(err);

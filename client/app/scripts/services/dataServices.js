@@ -12,6 +12,7 @@
 
     app.factory('OrgData', ['$http','$log',function ($http, $log) {
         var urlBase = '/api/orgs';
+        $http.defaults.headers.common.clientId = 'webApp';
 
         return {
             getOrgs: function (orgID) {
@@ -27,6 +28,7 @@
 
     app.factory('FacilityData', ['$http','$log',function ($http, $log) {
         var urlBase = '/api/facilities/' ;
+        $http.defaults.headers.common.clientId = 'webApp';
 
         return {
             getFacilities: function (facilityId,articleId) {
@@ -41,6 +43,7 @@
 
     app.factory('YelpData', ['$http','$log',function ($http, $log) {
         var urlBase = 'api/yelpbusiness/' ;
+        $http.defaults.headers.common.clientId = 'webApp';
 
         return {
             getYelpData: function (yelpBusinessId) {

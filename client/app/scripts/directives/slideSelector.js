@@ -18,6 +18,7 @@
             templateUrl: 'partials/slide-selector.html',
             link: function(scope, element, attribute) {
                 for (var i = 0; i < scope.items.length; i++) {
+                    scope.items[i].index=i;
                     if (i !== scope.items.length - 1) {
                         scope.items[i].next = scope.items[i + 1];
                     } else {

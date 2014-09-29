@@ -23,13 +23,13 @@ app.use(logger('dev'));
 app.use(bodyParser.json({limit: '500kb'}));
 app.use(bodyParser.urlencoded({ limit: '500kb',extended: false }));
 app.use(cookieParser());
-app.use(morgan('combined'));
 
 var router = express.Router();
 
 // middleware to use for all requests
 router.use(function(req, res, next) {
     //add other code if necessary - logging currently done by morgan
+    //console.log(req.headers);
     next(); // make sure we go to the next routes and don't stop here
 });
 
@@ -48,6 +48,7 @@ app.use(session({
  */
 if (app.get('env') == 'production' || app.get('env') == 'prod') {
 
+    app.use(morgan('combined'));
     // changes it to use the optimized version for production
     app.use(express.static(path.join(__dirname, '/dist')));
 
