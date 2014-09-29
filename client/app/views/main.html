@@ -331,10 +331,11 @@
         <img src="images/logos/{{mainctrl.ui.orgId}}.png"/>
 
         <p>Lorem Ipsum whatever whatever and more whatever whatever!!</p>
+        <div ng-show="yelp" class="yelpAddress">
+            {{yelp.location.display_address.join(', ')}}
+        </div>
     </div>
-    <div ng-show="yelp" class="yelpAddress">
-        {{yelp.location.display_address.join(', ')}}
-    </div>
+
     <div class="scrollable scrollable-content reviews">
         <div ng-show="yelp" class="reviewItem" ng-repeat="review in yelp.reviews"> {{review.excerpt}}<br>
             <b>{{review.user.name}}</b> <img src="{{review.rating_image_small_url}}"/>
