@@ -116,12 +116,14 @@
                             $scope.org = payload.data;
                             if (!$scope.org.phone) $scope.org.phone = '+1-317-456-2564';
 
-                            //if yelp Id present for Org
-                            if ($scope.org.yelpId) {
+                            if($scope.org){
                                 //get facility and article data
                                 obj.getFacilityData($scope.facilities, obj, CartService, UserService);
-                                // get Yelp data for org
-                                obj.getYelpData();
+                                //if yelp Id present for Org
+                                if ($scope.org.yelpId) {
+                                    // get Yelp data for org
+                                    obj.getYelpData();
+                                }
                             } else {
                                 $scope.err = "Business not found"
                             }

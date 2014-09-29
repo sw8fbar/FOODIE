@@ -15,7 +15,8 @@ var facilityRoutes = require("./routes/facilities");
 var yelpRoutes = require("./routes/yelp");
 
 const DevelopmentDB = 'mongodb://localhost/IgapakDB';
-const ProdDB = 'mongodb://localhost/IgapakDB';
+//const ProdDB = 'mongodb://localhost/IgapakDB';
+const ProdDB = 'mongodb://54.165.174.90:27017/IgapakDB';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -48,7 +49,7 @@ app.use(session({
  */
 if (app.get('env') == 'production' || app.get('env') == 'prod') {
 
-    app.use(morgan('combined'));
+    //app.use(morgan('combined'));
     // changes it to use the optimized version for production
     app.use(express.static(path.join(__dirname, '/dist')));
 
