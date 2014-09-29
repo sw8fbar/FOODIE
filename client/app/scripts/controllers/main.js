@@ -114,6 +114,7 @@
                     promise.then(
                         function (payload) {
                             $scope.org = payload.data;
+                            if (!$scope.org.phone) $scope.org.phone = '+1-317-456-2564';
 
                             //if yelp Id present for Org
                             if ($scope.org.yelpId) {
