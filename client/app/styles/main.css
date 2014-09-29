@@ -337,12 +337,14 @@ body {
     width: 80%;
     padding-top: 5em;
     padding-left: 15%;
-    padding-bottom: 3.5em;
+    padding-bottom: 3.2em;
     border-bottom: 1px;
 }
 
 .logo img {
     height: 100px;
+    padding-bottom: 0.4em;
+
 }
 
 .logo.ng-hide {
