@@ -32,7 +32,7 @@
                 this.ui.menudisplayed = '';
                 this.ui.pagetitle = 'Menu';
                 this.ui.cartTitle = 'Cart';
-                this.ui.likeTitle = 'Liked';
+                this.ui.likeTitle = 'Favorites';
                 this.ui.flatlist = [];
                 this.ui.nodes = [];
                 this.ui.productNodes = [];
