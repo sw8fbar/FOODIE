@@ -62,6 +62,7 @@
                 this.ui.labels = LanguageService.getLabels();
 
                 this.userLanguage = 1;
+                this.langIndex = 1;
                 this.langNode = null;
                 this.total = 0;
                 this.cart = CartService.getCart();
@@ -146,6 +147,7 @@
                             //$scope.facilities = payload.data;
                             //alert(JSON.stringify(payload));
                             var articles = payload.data.articles;
+                            $scope.mainctrl.langIndex = payload.data.defaultLanguage;
                             for (var i = 0; i < articles.length; i++) {
                                 if (articles[i].igapakId == $routeParams.articleId) {
                                     //alert(JSON.stringify(articles[i]));
