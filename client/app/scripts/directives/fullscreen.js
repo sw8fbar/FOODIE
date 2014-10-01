@@ -12,7 +12,7 @@
             scope: {
                 background: '@'
             },
-            template: '<div class="Overlay scrollable-content" style="background: {{background}}" ng-transclude=""></div>'
+            template: '<div class="Overlay" style="background: {{background}}" ng-transclude=""></div>'
         };
 
     });

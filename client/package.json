@@ -19,6 +19,7 @@
     "grunt-ec2": "^0.9.0",
     "grunt-filerev": "^0.2.1",
     "grunt-google-cdn": "^0.4.0",
+    "grunt-jenkins": "^0.5.0",
     "grunt-karma": "^0.8.3",
     "grunt-newer": "^0.7.0",
     "grunt-ngmin": "^0.0.3",

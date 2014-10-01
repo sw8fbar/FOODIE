@@ -365,7 +365,12 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
-    }
+    },
+
+    jenkins: {
+        serverAddress: 'http://localhost:8080'
+        , pipelineDirectory: 'jenkins-pipeline'  // optional, default: 'pipeline'
+     }
   });
 
 
@@ -420,5 +425,6 @@ module.exports = function (grunt) {
     'build'
   ]);
 
+    grunt.loadNpmTasks('grunt-jenkins');
     grunt.loadNpmTasks('grunt-ec2');
 };
