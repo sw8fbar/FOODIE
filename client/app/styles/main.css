@@ -352,6 +352,15 @@ body {
     z-index: 0;
 }
 
+.logo.special {
+    padding-top: 1.5em;
+}
+
+.logo.special img{
+    padding-top: 1.5em;
+    height: 80px;
+}
+
 .productPopup {
     min-width: 80%;
     margin-top: 20%;

@@ -104,6 +104,14 @@
                 {id: 4, label: 'Send Order'},
                 {id: 5, label: 'Envoyer order'},
                 {id: 6, label: 'Invia ordine'}
+            ],
+            skipToMenu: [
+                {id: 1, label: 'Saltar para o menu'},
+                {id: 2, label: 'Skip to menu'},
+                {id: 3, label: 'Ir al menú'},
+                {id: 4, label: 'Direkt zum Menü'},
+                {id: 5, label: 'Aller au menu'},
+                {id: 6, label: 'Salta al menu'}
             ]
         };
 
