@@ -25,7 +25,8 @@
             'CartItem',
             'CartService',
             'UserService',
-            function ($scope, $routeParams, $log, $cookieStore, $location, $anchorScroll, $window, FacilityData, OrgData, YelpData, Node, CartItem, CartService, UserService) {
+            'LanguageService',
+            function ($scope, $routeParams, $log, $cookieStore, $location, $anchorScroll, $window, FacilityData, OrgData, YelpData, Node, CartItem, CartService, UserService, LanguageService) {
 
                 this.ui = {};
                 this.ui.loaded = false;
@@ -50,17 +51,18 @@
                 this.ui.showCart = 5;
 
                 this.ui.languages = [
-                    {label: 'Portuguese', flag:'Flags/portugal.png', round:'round-flags/portugal.png' }
+                    {label: 'Português', flag:'Flags/portugal.png', round:'round-flags/portugal.png' }
                     ,{label: 'English', flag:'Flags/usa.png', round:'round-flags/USA.png' }
-                    ,{label: 'Spanish', flag:'Flags/spain.png', round:'round-flags/spain.png' }
-                    ,{label: 'German', flag:'Flags/germany.png', round:'round-flags/germany.png' }
-                    ,{label: 'French', flag:'Flags/france.png', round:'round-flags/france.png' }
-                    ,{label: 'Italian', flag:'Flags/italy.png', round:'round-flags/italy.png' }
+                    ,{label: 'Español', flag:'Flags/spain.png', round:'round-flags/spain.png' }
+                    ,{label: 'Deutsch', flag:'Flags/germany.png', round:'round-flags/germany.png' }
+                    ,{label: 'Français', flag:'Flags/france.png', round:'round-flags/france.png' }
+                    ,{label: 'Italiano', flag:'Flags/italy.png', round:'round-flags/italy.png' }
                 ];
+
+                this.ui.labels = LanguageService.getLabels();
 
                 this.userLanguage = 1;
                 this.langNode = null;
-                this.langIndex = 0;
                 this.total = 0;
                 this.cart = CartService.getCart();
 

@@ -6,13 +6,13 @@
         <div class="rightMenu">
             <table style="width: 100%;">
                 <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showhome)">
-                    <td colspan="2">Home</td>
+                    <td colspan="2">{{mainctrl.ui.labels.home[mainctrl.userLanguage].label}}</td>
                 </tr>
                 <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showSpecials)">
-                    <td colspan="2">Specials</td>
+                    <td colspan="2">{{mainctrl.ui.labels.specials[mainctrl.userLanguage].label}}</td>
                 </tr>
                 <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showYelp)" ng-if="org && org.yelpId">
-                    <td colspan="2">Yelp Ratings</td>
+                    <td colspan="2">{{mainctrl.ui.labels.yelpRatings[mainctrl.userLanguage].label}}</td>
                 </tr>
                 <tr class="menuOption" ng-repeat="group in mainctrl.ui.nodes" ng-click="mainctrl.displayGroup(group)">
                     <td>{{group.data.name[mainctrl.userLanguage].label}}</td>

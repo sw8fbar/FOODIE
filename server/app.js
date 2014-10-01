@@ -15,7 +15,6 @@ var facilityRoutes = require("./routes/facilities");
 var yelpRoutes = require("./routes/yelp");
 
 const DevelopmentDB = 'mongodb://localhost/IgapakDB';
-//const ProdDB = 'mongodb://localhost/IgapakDB';
 const ProdDB = 'mongodb://54.165.174.90:27017/IgapakDB';
 
 // uncomment after placing your favicon in /public
