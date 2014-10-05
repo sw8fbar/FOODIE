@@ -24,6 +24,14 @@ router.route('/orgs')
         org.logo = req.body.org.logo;
         org.igapakId = req.body.org.igapakId;
         org.facilities = req.body.org.facilities;
+        org.street = req.body.org.street;
+        org.city = req.body.org.city;
+        org.state = req.body.org.state;
+        org.zip = req.body.org.zip;
+        org.country = req.body.org.country;
+        org.phone = req.body.org.phone;
+        org.sendOrder = req.body.org.sendOrder;
+        org.active = req.body.org.active;
         org.save(function (err) {
             if (err) console.log(err);
             res.json(org);
