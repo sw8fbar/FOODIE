@@ -60,6 +60,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="left-menu.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/app/partials/left-menu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.46028882" vertical-offset="0" max-vertical-offset="554">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+              <folding>
+                <element signature="n#style#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/styles/main.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -75,16 +87,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="1515">
               <caret line="9" column="107" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="107" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.076923" vertical-offset="2051" max-vertical-offset="3960">
-              <caret line="149" column="84" selection-start-line="149" selection-start-column="69" selection-end-line="149" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -122,10 +124,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orgs.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="orgs.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/routes/orgs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6243655" vertical-offset="126" max-vertical-offset="930">
+            <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="930">
               <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
               <folding />
             </state>
@@ -196,7 +198,6 @@
         <option value="$PROJECT_DIR$/client/app/scripts/services/i18n.js" />
         <option value="$PROJECT_DIR$/client/app/partials/right-menu.html" />
         <option value="$PROJECT_DIR$/client/app/index.html" />
-        <option value="$PROJECT_DIR$/client/app/partials/left-menu.html" />
         <option value="$PROJECT_DIR$/client/app/partials/navigation-bar.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/server/prod-data/org.json" />
@@ -213,6 +214,7 @@
         <option value="$PROJECT_DIR$/client/app/views/main.html" />
         <option value="$PROJECT_DIR$/server/models/orgs.js" />
         <option value="$PROJECT_DIR$/server/routes/orgs.js" />
+        <option value="$PROJECT_DIR$/client/app/partials/left-menu.html" />
       </list>
     </option>
   </component>
@@ -474,6 +476,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MEANAPP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FOODIE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -859,14 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/partials/left-menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="450">
-          <caret line="0" column="19" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/images/ASSETS/Colors/colors.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1055,9 +1071,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/orgs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6243655" vertical-offset="126" max-vertical-offset="930">
+        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="930">
           <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/left-menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46028882" vertical-offset="0" max-vertical-offset="554">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
