@@ -9,12 +9,13 @@ var mongoose = require("mongoose"),
 // selecting facility will get all articles corresponding to that facility
 
 var nameSchema = new mongoose.Schema({
-    igapakId: {type: Number},
+    langId: {type: String},
     label: {type: String}
 });
 
 var productSchema = new mongoose.Schema({
     igapakId: { type: Number },
+    seqNum: { type: Number },
     name: [nameSchema],
     description: [nameSchema],
     servingSize:{type: Number},
@@ -37,6 +38,7 @@ var articleSchema = new mongoose.Schema({
 var facilitySchema = new mongoose.Schema({
     igapakId: {type: Number},
     name: {type: String},
+    defaultLanguage: {type: Number},
     articles: [articleSchema]
 });
 

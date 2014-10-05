@@ -112,6 +112,30 @@
                 {id: 4, label: 'Direkt zum Menü'},
                 {id: 5, label: 'Aller au menu'},
                 {id: 6, label: 'Salta al menu'}
+            ],
+            for: [
+                {id: 1, label: 'Para'},
+                {id: 2, label: 'For'},
+                {id: 3, label: 'Para'},
+                {id: 4, label: 'Für'},
+                {id: 5, label: 'Pour'},
+                {id: 6, label: 'Per'}
+            ],
+            persons: [
+                {id: 1, label: 'Pessoa'},
+                {id: 2, label: 'Persons'},
+                {id: 3, label: 'Persona'},
+                {id: 4, label: 'Person'},
+                {id: 5, label: 'Personne'},
+                {id: 6, label: 'Persona'}
+            ],
+            person: [
+                {id: 1, label: 'Pessoa'},
+                {id: 2, label: 'Person'},
+                {id: 3, label: 'Persona'},
+                {id: 4, label: 'Person'},
+                {id: 5, label: 'Personne'},
+                {id: 6, label: 'Persona'}
             ]
         };
 

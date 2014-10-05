@@ -20,8 +20,8 @@ const ProdDB = 'mongodb://54.165.174.90:27017/IgapakDB';
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
-app.use(bodyParser.json({limit: '500kb'}));
-app.use(bodyParser.urlencoded({ limit: '500kb',extended: false }));
+app.use(bodyParser.json({limit: '1mb'}));
+app.use(bodyParser.urlencoded({ limit: '1mb',extended: false }));
 app.use(cookieParser());
 
 var router = express.Router();
