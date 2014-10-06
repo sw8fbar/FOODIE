@@ -14,7 +14,10 @@
         var addToCart = function(quantity, nodeObj) {
             if (cart.has(nodeObj.data.igapakId)) {
                 var cartItem = cart.get(nodeObj.data.igapakId);
-                cartItem.quantity = quantity;
+                if(cartItem.quantity == 0)
+                    cartItem.quantity = quantity;
+                else
+                    cartItem.quantity = cartItem.quantity + quantity;
             } else {
                 cart.set(nodeObj.data.igapakId, new CartItem(quantity, nodeObj));
             }

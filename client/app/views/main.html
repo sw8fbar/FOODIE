@@ -75,7 +75,7 @@
 
 
         <!-- Product display-->
-        <tr ng-if="node.type === 'product'" class="{{node.type}}" ng-class="node.class"
+        <tr ng-if="node.type === 'product'" class="{{node.type}}" ng-class="node.getClass()"
             ng-show="node.parent.expandedInBody" ng-repeat-end>
             <td style="width: 100%" colspan="3">
                 <table width="100%">
@@ -105,7 +105,7 @@
                                         <img class="uoptionImg" src="images/icons/microphone_grey.png"><br>Listen
                                     </td>
                                     <td style="width:25%; text-align: center;border-style: solid; border-width: 0 1px 0 0"
-                                        ng-click="node.addToCart(1)" class="addCart">
+                                        ng-click="node.addToCart();mainctrl.showCartDetails()" class="addCart">
                                         <div>
                                             <img class="uoptionImg" src="images/icons/select.png"><br>Order
                                         </div>

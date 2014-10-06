@@ -17,6 +17,7 @@
             this.expandedInMenu = false;
             this.expandedInBody = false;
             this.class = '';
+            this.addedToCart = '';
             this.children = [];
             this.hasSubGroups = false;
             this.data = Obj;
@@ -66,18 +67,24 @@
             }
         };
 
-        Node.prototype.addToCart = function (quantity) {
-            this.cartService.addToCart(quantity, this);
+        Node.prototype.addToCart = function () {
+            this.cartService.addToCart(1, this);
+            this.addedToCart = 'addedToCart';
         };
 
         Node.prototype.removeFromCart = function () {
             this.cartService.removeFromCart(this);
+            this.addedToCart = '';
         };
 
         Node.prototype.updateCart = function (quantity) {
             if(quantity < 1)
                 this.cartService.removeFromCart(this);
         };
+
+        Node.prototype.getClass = function() {
+            return this.class+' '+this.addedToCart;
+        }
 
         return( Node );
     });

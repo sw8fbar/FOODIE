@@ -164,6 +164,7 @@ body {
     color: #3d5e85;
 }
 
+
 .product {
     background: #f1f5f7;
     color: #3d5e85;
@@ -172,6 +173,11 @@ body {
 
 .product.expanded {
     background: #ffffff;
+    width: 100%;
+}
+
+.product.addedToCart {
+    background: #b8bcc0;
     width: 100%;
 }
 
