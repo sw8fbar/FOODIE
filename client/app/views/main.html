@@ -29,18 +29,22 @@
     <table style="width: 100%;">
 
         <!-- Anchor for anchorscroll-->
-        <tr id="anchornode" ng-repeat-start="node in mainctrl.ui.flatlist">
-            <td>
-                <a ng-if="node.type !== 'product'"
-                   class="anchor"
-                   id="{{'anchor'+node.data.igapakId}}"></a>
-            </td>
-        </tr>
+        <!--<tr id="anchornode" ng-repeat-start="node in mainctrl.ui.flatlist">-->
+            <!--<td>-->
+                <!--<a ng-if="node.type !== 'product'"-->
+                   <!--class="anchor"-->
+                   <!--id="{{'anchor'+node.data.igapakId}}"></a>-->
+            <!--</td>-->
+        <!--</tr>-->
 
         <!-- Group Display-->
-        <tr ng-if="node.type === 'group'" class="{{node.type}}" ng-class="node.class">
+        <tr ng-if="node.type === 'group'" class="{{node.type}}" ng-class="node.class" ng-repeat-start="node in mainctrl.ui.flatlist">
 
-            <td ng-click="node.toggleExpand()" style="width: 76%"><p>&nbsp;&nbsp;{{node.data.name[mainctrl.userLanguage].label}}&nbsp;&nbsp;</p>
+            <td ng-click="node.toggleExpand()" style="width: 76%">
+                <div class="anchornode"><a ng-if="node.type !== 'product'"
+                        class="anchor"
+                        id="{{'anchor'+node.data.igapakId}}"> </a></div>
+                <p>&nbsp;&nbsp;{{node.data.name[mainctrl.userLanguage].label}}&nbsp;&nbsp;</p>
             </td>
             <td style="width: 12%;padding-left: 3px;">&nbsp;</td>
 

@@ -142,12 +142,13 @@ body {
     border-width: 0 0 1px 0
 }
 
-#anchornode {
+.anchornode {
     visibility: hidden;
     border-style: none;
     height: 0;
     width: 100%;
 }
+
 
 .inactive {
     opacity: 0.1;
@@ -345,6 +346,7 @@ body {
 
 .logo img {
     max-width: 500px;
+    max-height: 120px;
     padding-bottom: 0.3em;
 
 }
