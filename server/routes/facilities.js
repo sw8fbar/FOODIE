@@ -32,15 +32,24 @@ router.route('/facilities')
     })
     .put(function (req, res) {
 
+    });
+
+router.route('/facilities/:igapakId')
+    .get(function (req, res) {
+        var query = Facility.where({ "igapakId": req.params.igapakId });
+        query.findOne(function (err, facilities) {
+            if (err) console.error({"message": "facility " + req.params.igapakId + " not found "+ err});
+            if (facilities) res.json(facilities);
+            else res.json({"message": "facility " + req.params.igapakId + " not found"});
+        })
     })
     .delete(function (req, res) {
-        var query  = Facility.where({ "igapakId": req.params.facilityId });
+        var query = Facility.where({ "igapakId": req.params.igapakId });
         query.findOneAndRemove(function (err, facilities) {
-            if (err) return console.error(err);
-            if (facilities) res.json(facilities);
-            else console.error({"message":"facility "+req.params.facilityId+"not found"});
+            if (err) console.error({"message": "facility " + req.params.igapakId + " not found "+ err});
+            if (facilities) res.json({"message": "facility " + req.params.igapakId + " deleted"});
+            else res.json({"message": "facility " + req.params.igapakId + " not found"});
         })
-
     });
 
 router.route('/facilities/:facilityId/articles/:articleId')
@@ -54,6 +63,6 @@ router.route('/facilities/:facilityId/articles/:articleId')
             }
             else console.error({"message":"No facilities found"});
         })
-    })
+    });
 
 module.exports = router;
