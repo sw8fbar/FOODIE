@@ -18,6 +18,14 @@
                     "facilityId": "3",
                     "name": "Chicago"
                 }
+            ],
+            "languages": [
+                {"label": "Português", "flag":"Flags/portugal.png", "round":"round-flags/portugal.png" }
+                ,{"label": "English", "flag":"Flags/usa.png", "round":"round-flags/USA.png" }
+                ,{"label": "Español", "flag":"Flags/spain.png", "round":"round-flags/spain.png" }
+                ,{"label": "Deutsch", "flag":"Flags/germany.png", "round":"round-flags/germany.png" }
+                ,{"label": "Français", "flag":"Flags/france.png", "round":"round-flags/france.png" }
+                ,{"label": "Italiano", "flag":"Flags/italy.png", "round":"round-flags/italy.png" }
             ]
 
         }
@@ -47,7 +55,16 @@
                     "facilityId": "7",
                     "name": "Milwaukee"
                 }
+            ],
+            "languages": [
+                {"label": "Português", "flag":"Flags/portugal.png", "round":"round-flags/portugal.png" }
+                ,{"label": "English", "flag":"Flags/usa.png", "round":"round-flags/USA.png" }
+                ,{"label": "Español", "flag":"Flags/spain.png", "round":"round-flags/spain.png" }
+                ,{"label": "Deutsch", "flag":"Flags/germany.png", "round":"round-flags/germany.png" }
+                ,{"label": "Français", "flag":"Flags/france.png", "round":"round-flags/france.png" }
+                ,{"label": "Italiano", "flag":"Flags/italy.png", "round":"round-flags/italy.png" }
             ]
+
 
         }
     },
@@ -75,6 +92,14 @@
                     "facilityId": "11",
                     "name": "Lima"
                 }
+            ],
+            "languages": [
+                {"label": "Português", "flag":"Flags/portugal.png", "round":"round-flags/portugal.png" }
+                ,{"label": "English", "flag":"Flags/usa.png", "round":"round-flags/USA.png" }
+                ,{"label": "Español", "flag":"Flags/spain.png", "round":"round-flags/spain.png" }
+                ,{"label": "Deutsch", "flag":"Flags/germany.png", "round":"round-flags/germany.png" }
+                ,{"label": "Français", "flag":"Flags/france.png", "round":"round-flags/france.png" }
+                ,{"label": "Italiano", "flag":"Flags/italy.png", "round":"round-flags/italy.png" }
             ]
 
         }

@@ -50,14 +50,7 @@
                 this.ui.showYelp = 4;
                 this.ui.showCart = 5;
 
-                this.ui.languages = [
-                    {label: 'Português', flag:'Flags/portugal.png', round:'round-flags/portugal.png' }
-                    ,{label: 'English', flag:'Flags/usa.png', round:'round-flags/USA.png' }
-                    ,{label: 'Español', flag:'Flags/spain.png', round:'round-flags/spain.png' }
-                    ,{label: 'Deutsch', flag:'Flags/germany.png', round:'round-flags/germany.png' }
-                    ,{label: 'Français', flag:'Flags/france.png', round:'round-flags/france.png' }
-                    ,{label: 'Italiano', flag:'Flags/italy.png', round:'round-flags/italy.png' }
-                ];
+                this.ui.languages = null;
 
                 this.ui.labels = LanguageService.getLabels();
 
@@ -117,7 +110,7 @@
                     promise.then(
                         function (payload) {
                             $scope.org = payload.data;
-                            if (!$scope.org.phone) $scope.org.phone = '+1-317-456-2564';
+                            if (!$scope.org.phone) $scope.org.phone = '+1-111-111-1111';
 
                             if($scope.org){
                                 //get facility and article data

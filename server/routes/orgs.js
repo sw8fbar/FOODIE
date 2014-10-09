@@ -32,6 +32,7 @@ router.route('/orgs')
         org.phone = req.body.org.phone;
         org.sendOrder = req.body.org.sendOrder;
         org.active = req.body.org.active;
+        org.languages = req.body.org.languages;
         org.save(function (err) {
             if (err) console.log(err);
             res.json(org);
@@ -44,13 +45,21 @@ router.route('/orgs')
 
     });
 
-router.route('/orgs/:orgId')
+router.route('/orgs/:igapakId')
     .get(function (req, res) {
-        var query  = Org.where({ "igapakId": req.params.orgId});
+        var query  = Org.where({ "igapakId": req.params.igapakId});
         query.findOne(function (err, orgs) {
             if (err) return console.error(err);
             if (orgs) res.json(orgs);
-            else console.error({"message":"No facilities found"});
+            else console.error({"message":"No Orgs found"});
+        })
+    })
+    .delete(function(req, res){
+        var query  = Org.where({ "igapakId": req.params.igapakId});
+        query.findOneAndRemove(function (err, orgs) {
+            if (err) return console.error(err);
+            if (orgs) res.json(orgs);
+            else console.error({"message":"No Orgs found"});
         })
     });
 

@@ -10,9 +10,14 @@ var mongoose = require("mongoose"),
     facilitySchema = require('./facilities');
 
 
+var langSchema = new mongoose.Schema({
+    label: {type: String},
+    flag: {type: String},
+    round: {type: String}
+});
+
 // User will select org (comes with facility) and then facility
 // selecting facility will get all articles corresponding to that facility
-
 var orgSchema = new mongoose.Schema({
     _aID: { type: Schema.ObjectId },
     igapakId: {type: Number},
@@ -27,7 +32,8 @@ var orgSchema = new mongoose.Schema({
     active: {type: Boolean},
     facilities: [facilitySchema],
     logo: {type: String},
-    yelpId: {type: String}
+    yelpId: {type: String},
+    languages: [langSchema]
 });
 
 module.exports = orgSchema;
