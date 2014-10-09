@@ -27,7 +27,6 @@
             'UserService',
             'LanguageService',
             function ($scope, $routeParams, $log, $cookieStore, $location, $anchorScroll, $window, FacilityData, OrgData, YelpData, Node, CartItem, CartService, UserService, LanguageService) {
-
                 this.ui = {};
                 this.ui.loaded = false;
                 this.ui.menudisplayed = '';
@@ -90,7 +89,6 @@
                             node.children.push(product);
                         }
                     }
-//          console.log(node.data.igapakId);
                     return node;
                 };
 
