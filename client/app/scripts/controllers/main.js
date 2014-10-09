@@ -55,7 +55,6 @@
                 this.ui.labels = LanguageService.getLabels();
 
                 this.userLanguage = 1;
-                this.langIndex = 1;
                 this.langNode = null;
                 this.total = 0;
                 this.cart = CartService.getCart();
@@ -140,9 +139,10 @@
                         function (payload) {
                             //$scope.facilities = payload.data;
                             //alert(JSON.stringify(payload));
-                            $scope.currencyId = payload.data.currencyId;
-                            var articles = payload.data.articles;
-                            $scope.mainctrl.langIndex = payload.data.defaultLanguage;
+
+                            $scope.facility = payload.data;
+                            $scope.currencyId = $scope.facility.currencyId;
+                            var articles = $scope.facility.articles;
                             for (var i = 0; i < articles.length; i++) {
                                 if (articles[i].igapakId == $routeParams.articleId) {
                                     //alert(JSON.stringify(articles[i]));

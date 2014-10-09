@@ -375,17 +375,17 @@
 <div fullscreen ng-repeat="node in mainctrl.ui.productNodes" ng-show="mainctrl.langNode==node.data.igapakId">
     <div class="productPopup">
         <div class="prodPopCaption">{{node.data.seqNum}}</div>
-        <div class="prodPopHeader"><b>{{node.data.name[mainctrl.langIndex].label}}</b></div>
-        <div class="prodPopDesc">{{node.data.description[mainctrl.langIndex].label}}</div>
-        <div class="prodPopDesc" ng-if="node.data.servingSize > 0">{{mainctrl.ui.labels.for[mainctrl.langIndex].label}}
-            {{node.data.servingSize}} {{mainctrl.ui.labels.persons[mainctrl.langIndex].label}}
+        <div class="prodPopHeader"><b>{{node.data.name[facility.defaultLanguage].label}}</b></div>
+        <div class="prodPopDesc">{{node.data.description[facility.defaultLanguage].label}}</div>
+        <div class="prodPopDesc" ng-if="node.data.servingSize > 0">{{mainctrl.ui.labels.for[facility.defaultLanguage].label}}
+            {{node.data.servingSize}} {{mainctrl.ui.labels.persons[facility.defaultLanguage].label}}
         </div>
         <div class="prodPopPrice" ng-if="node.data.price > 0">{{node.data.price | currency: currencyId}}</div>
     </div>
     <!--<table class="productPopup">-->
     <!--<caption>{{node.data.igapakId}}</caption>-->
-    <!--<tr><td><b>{{node.data.name[mainctrl.langIndex].label}}</b></td></tr>-->
-    <!--<tr><td>{{node.data.description[mainctrl.langIndex].label}}</td></tr>-->
+    <!--<tr><td><b>{{node.data.name[facility.defaultLanguage].label}}</b></td></tr>-->
+    <!--<tr><td>{{node.data.description[facility.defaultLanguage].label}}</td></tr>-->
     <!--<tr><td>{{node.data.price | currency}}</td></tr>-->
     <!--</table>-->
     <div style="margin-left: 45%; padding-top: 1.3em;"><img src="images/icons/close_lightgrey.png"

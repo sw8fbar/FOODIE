@@ -7,7 +7,7 @@
 
     var app = angular.module('igapakApp');
 
-    app.directive('slideSelector', function () {
+    app.directive('slideSelector', function ($timeout) {
         return {
             restrict: 'E',
             scope: {
@@ -17,28 +17,30 @@
             },
             templateUrl: 'partials/slide-selector.html',
             link: function(scope, element, attribute) {
-                for (var i = 0; i < scope.items.length; i++) {
-                    scope.items[i].index=i;
-                    if (i !== scope.items.length - 1) {
-                        scope.items[i].next = scope.items[i + 1];
-                    } else {
-                        scope.items[i].next = scope.items[0];
+                $timeout(function(){
+                    for (var i = 0; i < scope.items.length; i++) {
+                        scope.items[i].index = i;
+                        if (i !== scope.items.length - 1) {
+                            scope.items[i].next = scope.items[i + 1];
+                        } else {
+                            scope.items[i].next = scope.items[0];
+                        }
+                        if (i !== 0) {
+                            scope.items[i].prev = scope.items[i - 1];
+                        } else {
+                            scope.items[i].prev = scope.items[scope.items.length - 1];
+                        }
                     }
-                    if (i !== 0) {
-                        scope.items[i].prev = scope.items[i - 1];
-                    } else {
-                        scope.items[i].prev = scope.items[scope.items.length - 1];
-                    }
-                }
-                scope.currentIndex = 0; // Initially the index is at the first item
+                    scope.currentIndex = 0; // Initially the index is at the first item
 
-                scope.next = function () {
-                    scope.currentIndex < scope.items.length - 1 ? scope.currentIndex++ : scope.currentIndex = 0;
-                };
+                    scope.next = function () {
+                        scope.currentIndex < scope.items.length - 1 ? scope.currentIndex++ : scope.currentIndex = 0;
+                    };
 
-                scope.prev = function () {
-                    scope.currentIndex > 0 ? scope.currentIndex-- : scope.currentIndex = scope.items.length - 1;
-                };
+                    scope.prev = function () {
+                        scope.currentIndex > 0 ? scope.currentIndex-- : scope.currentIndex = scope.items.length - 1;
+                    };
+                }, 100)
             }
         };
 
