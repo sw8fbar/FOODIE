@@ -66,6 +66,7 @@
                 $scope.org = null;
                 $scope.yelp = null;
                 $scope.err = null;
+                $scope.currencyId = null;
 
                 //$scope.cart = new HashMap();
                 $scope.go = function (path) {
@@ -139,6 +140,7 @@
                         function (payload) {
                             //$scope.facilities = payload.data;
                             //alert(JSON.stringify(payload));
+                            $scope.currencyId = payload.data.currencyId;
                             var articles = payload.data.articles;
                             $scope.mainctrl.langIndex = payload.data.defaultLanguage;
                             for (var i = 0; i < articles.length; i++) {

@@ -82,7 +82,7 @@
                             <div class="productNotification">{{node.data.notification}}</div>
                         </td>
                         <td ng-show="node.data.price > 0" class="price" style="width: 18%; padding-right: 0.5em">
-                            {{node.data.price | currency}}
+                            {{node.data.price | currency : currencyId}}
                         </td>
                         <td style="width: 6%;"><img class="updownArrow" ng-show="!node.expandedInBody"
                                                     src="images/icons/arrow_down.png"><img
@@ -201,7 +201,7 @@
                             <div class="productNotification">{{node.data.notification}}</div>
                         </td>
                         <td ng-show="node.data.price > 0" class="price" style="width: 18%; padding-right: 0.5em">
-                            {{node.data.price | currency}}
+                            {{node.data.price | currency : currencyId}}
                         </td>
                         <td style="width: 6%;"><img class="updownArrow" ng-show="!node.expandedInBody"
                                                     src="images/icons/arrow_down.png"><img
@@ -260,7 +260,7 @@
                         </div>
                     </li>
                     <li style="width: 20%;">
-                        <div class="pull-right"><h4>{{mainctrl.total | currency}}</h4></div>
+                        <div class="pull-right"><h4>{{mainctrl.total | currency : currencyId}}</h4></div>
                     </li>
                 </ul>
 
@@ -380,7 +380,7 @@
         <div class="prodPopDesc" ng-if="node.data.servingSize > 0">{{mainctrl.ui.labels.for[mainctrl.langIndex].label}}
             {{node.data.servingSize}} {{mainctrl.ui.labels.persons[mainctrl.langIndex].label}}
         </div>
-        <div class="prodPopPrice" ng-if="node.data.price > 0">{{node.data.price | currency: node.data.currencyId}}</div>
+        <div class="prodPopPrice" ng-if="node.data.price > 0">{{node.data.price | currency: currencyId}}</div>
     </div>
     <!--<table class="productPopup">-->
     <!--<caption>{{node.data.igapakId}}</caption>-->

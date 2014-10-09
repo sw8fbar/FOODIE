@@ -39,7 +39,8 @@ var facilitySchema = new mongoose.Schema({
     igapakId: {type: Number},
     name: {type: String},
     defaultLanguage: {type: Number},
-    articles: [articleSchema]
+    articles: [articleSchema],
+    currencyId: {type: String}
 });
 
 module.exports = facilitySchema;

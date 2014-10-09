@@ -24,6 +24,7 @@ router.route('/facilities')
         facility.igapakId = req.body.facility.igapakId;
         facility.articles = req.body.facility.articles;
         facility.defaultLanguage = req.body.facility.defaultLanguage;
+        facility.currencyId = req.body.facility.currencyId;
         facility.save(function (err) {
             if (err) console.log(err);
             res.json(facility);
