@@ -23,6 +23,7 @@ router.route('/orgs')
         org.name = req.body.org.name;
         org.logo = req.body.org.logo;
         org.igapakId = req.body.org.igapakId;
+        org.yelpId = req.body.org.yelpId;
         org.facilities = req.body.org.facilities;
         org.street = req.body.org.street;
         org.city = req.body.org.city;

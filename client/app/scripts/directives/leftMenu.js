@@ -8,11 +8,10 @@
 
 (function () {
 
-    angular.module('igapakApp').directive('leftMenu', function () {
+    angular.module('igapakApp').directive('leftMenu', function ($timeout) {
         return {
             restrict: 'E',
             templateUrl: 'partials/left-menu.html'
-
         };
 
     });

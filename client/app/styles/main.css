@@ -313,7 +313,7 @@ body {
 
 .yelpAddress {
     width: 100%;
-    padding-top: .2em;
+    padding-top: .1em;
     text-align: center;
     font-size: 0.9em;
     border-width: 1px 0 0 0;
@@ -327,6 +327,7 @@ body {
     background: #b8bcc0;
     width: 90%;
     margin-left: 5%;
+    font-size: 0.9em;
 }
 
 .yelp-navbar {
@@ -337,10 +338,10 @@ body {
 .logo {
     text-align: center;
     width: 100%;
-    padding-top: 3.5em;
+    padding-top: 2.5em;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 1.7em;
+    padding-bottom: 1.5em;
     border-bottom: 1px;
 }
 

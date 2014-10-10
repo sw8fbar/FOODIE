@@ -11,7 +11,7 @@
                 <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showSpecials)">
                     <td colspan="2">{{mainctrl.ui.labels.specials[mainctrl.userLanguage].label}}</td>
                 </tr>
-                <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showYelp)" ng-if="org && org.yelpId">
+                <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showYelp)" ng-if="org.yelpId">
                     <td colspan="2">{{mainctrl.ui.labels.yelpRatings[mainctrl.userLanguage].label}}</td>
                 </tr>
                 <tr class="menuOption" ng-repeat="group in mainctrl.ui.nodes" ng-click="mainctrl.displayGroup(group)">
