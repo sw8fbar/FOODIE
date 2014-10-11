@@ -23,12 +23,12 @@ angular
 //        templateUrl: 'views/main.html',
 //        controller: 'MainCtrl'
 //      })
-      .when('/org/:orgId/facilities/:facilityId/articles/:articleId', {
+       .when('/%23/org/:orgId/facilities/:facilityId/articles/:articleId', {
+                redirectTo: '/org/:orgId/facilities/:facilityId/articles/:articleId'
+        })
+       .when('/org/:orgId/facilities/:facilityId/articles/:articleId', {
             templateUrl: 'views/main.html',
             controller: 'MainCtrl'
-        })
-       .when('/%23/org/:orgId/facilities/:facilityId/articles/:articleId', {
-            redirectTo: 'org/:orgId/facilities/:facilityId/articles/:articleId'
         })
       .otherwise({
         redirectTo: '/org/100/facilities/101/articles/102'

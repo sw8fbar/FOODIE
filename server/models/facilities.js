@@ -25,6 +25,7 @@ var productSchema = new mongoose.Schema({
 var groupSchema = mongoose.Schema({
     igapakId: { type: Number },
     name: [nameSchema],
+    description: [nameSchema],
     groups: [groupSchema],
     products: [productSchema]
 });

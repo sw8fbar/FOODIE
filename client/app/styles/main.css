@@ -161,6 +161,12 @@ body {
     font-size: 1.2em;
 }
 
+.groupDescription {
+    margin-left: 0.5em;
+    font-size: 0.7em;
+    font-style: italic;
+}
+
 .group.expanded {
     color: #3d5e85;
 }
