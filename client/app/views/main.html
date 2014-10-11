@@ -72,15 +72,15 @@
                                 {{node.data.name[mainctrl.userLanguage].label}}</p>
 
                             <div ng-if="node.data.servingSize > 1">
-                                {{node.data.description[mainctrl.userLanguage].label}} <br>{{mainctrl.ui.labels.for[mainctrl.userLanguage].label}}
+                                <p ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[mainctrl.userLanguage].label}} <p>{{mainctrl.ui.labels.for[mainctrl.userLanguage].label}}
                                 {{node.data.servingSize}} {{mainctrl.ui.labels.persons[mainctrl.userLanguage].label}}
                             </div>
                             <div ng-if="node.data.servingSize == 1">
-                                {{node.data.description[mainctrl.userLanguage].label}} <br>{{mainctrl.ui.labels.for[mainctrl.userLanguage].label}}
+                                <p ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[mainctrl.userLanguage].label}} <p>{{mainctrl.ui.labels.for[mainctrl.userLanguage].label}}
                                 {{node.data.servingSize}} {{mainctrl.ui.labels.person[mainctrl.userLanguage].label}}
                             </div>
                             <div ng-if="node.data.servingSize < 1">
-                                {{node.data.description[mainctrl.userLanguage].label}}
+                                <p ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[mainctrl.userLanguage].label}} <p>
                             </div>
                             <div class="productNotification">{{node.data.notification}}</div>
                         </td>
@@ -186,15 +186,15 @@
                                 {{node.data.name[mainctrl.userLanguage].label}}</p>
 
                             <div ng-if="node.data.servingSize > 1">
-                                {{node.data.description[mainctrl.userLanguage].label}} <br>{{mainctrl.ui.labels.for[mainctrl.userLanguage].label}}
+                                <p ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[mainctrl.userLanguage].label}} <p>{{mainctrl.ui.labels.for[mainctrl.userLanguage].label}}
                                 {{node.data.servingSize}} {{mainctrl.ui.labels.persons[mainctrl.userLanguage].label}}
                             </div>
                             <div ng-if="node.data.servingSize == 1">
-                                {{node.data.description[mainctrl.userLanguage].label}} <br>{{mainctrl.ui.labels.for[mainctrl.userLanguage].label}}
+                                <p ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[mainctrl.userLanguage].label}} <p>{{mainctrl.ui.labels.for[mainctrl.userLanguage].label}}
                                 {{node.data.servingSize}} {{mainctrl.ui.labels.person[mainctrl.userLanguage].label}}
                             </div>
                             <div ng-if="node.data.servingSize < 1">
-                                {{node.data.description[mainctrl.userLanguage].label}}
+                                <p ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[mainctrl.userLanguage].label}} <p>
                             </div>
                             <div class="productNotification">{{node.data.notification}}</div>
                         </td>
@@ -375,7 +375,7 @@
     <div class="productPopup">
         <div class="prodPopCaption">{{node.data.seqNum}}</div>
         <div class="prodPopHeader"><b>{{node.data.name[facility.defaultLanguage].label}}</b></div>
-        <div class="prodPopDesc">{{node.data.description[facility.defaultLanguage].label}}</div>
+        <div class="prodPopDesc" ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[facility.defaultLanguage].label}}</div>
         <div class="prodPopDesc" ng-if="node.data.servingSize > 0">{{mainctrl.ui.labels.for[facility.defaultLanguage].label}}
             {{node.data.servingSize}} {{mainctrl.ui.labels.persons[facility.defaultLanguage].label}}
         </div>
