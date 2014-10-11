@@ -26,23 +26,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="flor-do-caribe-org.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/prod-data/flor-do-caribe-org.json">
+      <file leaf-file-name="main.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/app/views/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="525">
-              <caret line="28" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="flor-do-caribe-facility.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/prod-data/flor-do-caribe-facility.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.027985075" vertical-offset="0" max-vertical-offset="536">
-              <caret line="2528" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="2528" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.49220103" vertical-offset="466" max-vertical-offset="1380">
+              <caret line="283" column="91" selection-start-line="283" selection-start-column="91" selection-end-line="283" selection-end-column="91" />
               <folding>
-                <element signature="e#6#129799#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#tr#2;tag#table#0;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#0" expanded="false" />
+                <element signature="tag#tr#1;tag#table#0;tag#td#0;tag#tr#2;tag#table#0;tag#div#1;tag#div#0" expanded="false" />
+                <element signature="tag#div#4;tag#div#0" expanded="false" />
+                <element signature="tag#div#5;tag#div#0" expanded="false" />
+                <element signature="tag#div#6;tag#div#0" expanded="false" />
+                <element signature="tag#div#7;tag#div#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -103,12 +100,12 @@
         <option value="$PROJECT_DIR$/server/prod-data/tacos-and-wraps-org.json" />
         <option value="$PROJECT_DIR$/server/models/facilities.js" />
         <option value="$PROJECT_DIR$/client/app/styles/main.css" />
-        <option value="$PROJECT_DIR$/client/app/views/main.html" />
         <option value="$PROJECT_DIR$/client/app/index.html" />
         <option value="$PROJECT_DIR$/client/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/server/prod-data/tacos-and-wraps-facility.json" />
-        <option value="$PROJECT_DIR$/server/prod-data/flor-do-caribe-facility.json" />
         <option value="$PROJECT_DIR$/server/prod-data/flor-do-caribe-org.json" />
+        <option value="$PROJECT_DIR$/server/prod-data/flor-do-caribe-facility.json" />
+        <option value="$PROJECT_DIR$/client/app/views/main.html" />
       </list>
     </option>
   </component>
@@ -173,7 +170,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -187,11 +184,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prod-data" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MEANAPP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FOODIE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -647,24 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52859616" vertical-offset="160" max-vertical-offset="945">
-          <caret line="131" column="105" selection-start-line="131" selection-start-column="105" selection-end-line="131" selection-end-column="105" />
-          <folding>
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="tag#tr#2;tag#table#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#tr#1;tag#table#0;tag#td#0;tag#tr#2;tag#table#0;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#2;tag#div#0" expanded="false" />
-            <element signature="tag#div#4;tag#div#0" expanded="false" />
-            <element signature="tag#div#5;tag#div#0" expanded="false" />
-            <element signature="tag#div#6;tag#div#0" expanded="false" />
-            <element signature="tag#div#7;tag#div#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.54908484" vertical-offset="2130" max-vertical-offset="8670">
@@ -757,20 +758,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/prod-data/flor-do-caribe-facility.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05597015" vertical-offset="0" max-vertical-offset="536">
+          <caret line="3265" column="1" selection-start-line="3265" selection-start-column="1" selection-end-line="3265" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#168539#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/prod-data/flor-do-caribe-org.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="525">
+        <state vertical-scroll-proportion="0.7118644" vertical-offset="0" max-vertical-offset="590">
           <caret line="28" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/prod-data/flor-do-caribe-facility.json">
+    <entry file="file://$PROJECT_DIR$/client/app/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.027985075" vertical-offset="0" max-vertical-offset="536">
-          <caret line="2528" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="2528" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.49220103" vertical-offset="466" max-vertical-offset="1380">
+          <caret line="283" column="91" selection-start-line="283" selection-start-column="91" selection-end-line="283" selection-end-column="91" />
           <folding>
-            <element signature="e#6#129799#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#tr#2;tag#table#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#tr#1;tag#table#0;tag#td#0;tag#tr#2;tag#table#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#4;tag#div#0" expanded="false" />
+            <element signature="tag#div#5;tag#div#0" expanded="false" />
+            <element signature="tag#div#6;tag#div#0" expanded="false" />
+            <element signature="tag#div#7;tag#div#0" expanded="false" />
           </folding>
         </state>
       </provider>

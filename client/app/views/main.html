@@ -280,7 +280,8 @@
                         <div>{{cartItem.item.data.seqNum}}</div>
                     </td>
                     <td class="cartItemLabel">
-                        <div>{{cartItem.item.data.description[mainctrl.userLanguage].label}}</div>
+                        <div ng-show="cartItem.item.data.name[mainctrl.userLanguage].label!=cartItem.item.data.description[mainctrl.userLanguage].label">{{cartItem.item.data.name[mainctrl.userLanguage].label}} <br> {{cartItem.item.data.description[mainctrl.userLanguage].label}}</div>
+                        <div ng-show="cartItem.item.data.name[mainctrl.userLanguage].label==cartItem.item.data.description[mainctrl.userLanguage].label">{{cartItem.item.data.description[mainctrl.userLanguage].label}}</div>
                     </td>
                     <td class="cartItemQty">
                         <div><input type="text" ng-model="cartItem.quantity" style="width: 40px;"
