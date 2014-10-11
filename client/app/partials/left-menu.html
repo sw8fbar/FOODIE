@@ -8,7 +8,7 @@
                 <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showhome)">
                     <td colspan="2">{{mainctrl.ui.labels.home[mainctrl.userLanguage].label}}</td>
                 </tr>
-                <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showSpecials)">
+                <tr class="menuOption" ng-if="facility.hasSpecials" ng-click="mainctrl.switchScreen(mainctrl.ui.showSpecials)">
                     <td colspan="2">{{mainctrl.ui.labels.specials[mainctrl.userLanguage].label}}</td>
                 </tr>
                 <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showYelp)" ng-if="org.yelpId">
