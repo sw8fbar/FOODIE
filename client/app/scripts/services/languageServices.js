@@ -74,20 +74,20 @@
                 {id: 6, label: 'Yelp avaliações'}
             ],
             grandTotal: [
-                {id: 1, label: 'TOTAL GERAL'},
-                {id: 2, label: 'GRAND TOTAL'},
-                {id: 3, label: 'GRAN TOTAL'},
-                {id: 4, label: 'GESAMTSUMME'},
-                {id: 5, label: 'TOTAL'},
-                {id: 6, label: 'SOMMA TOTALE'}
+                {id: 1, label: 'TOTAL DA ENCOMENDA'},
+                {id: 2, label: 'ORDER TOTAL'},
+                {id: 3, label: 'TOTAL DEL PEDIDO'},
+                {id: 4, label: 'BESTELLEN TOTAL'},
+                {id: 5, label: 'TOTAL COMMANDE'},
+                {id: 6, label: 'TOTALE ORDINE'}
             ],
             allInclusive: [
-                {id: 1, label: 'ALL INCLUSIVE, NO HIDDEN COST'},
-                {id: 2, label: 'ALL INCLUSIVE, NO HIDDEN COST'},
-                {id: 3, label: 'ALL INCLUSIVE COSTO, NO OCULTO'},
-                {id: 4, label: 'KEINE VESRSTECKTEN KOSTEN'},
-                {id: 5, label: 'ALL INCLUSIVE, SANS FRAIS CACHÉ'},
-                {id: 6, label: 'NESSUN COSTO NASCOSTO'}
+                {id: 1, label: 'Outros encargos e gratuidade excluídos'},
+                {id: 2, label: 'Other charges and gratuity excluded'},
+                {id: 3, label: 'Otros cargos y propinas excluidos'},
+                {id: 4, label: 'Anderen Gebühren und Trinkgeld ausgeschlossen'},
+                {id: 5, label: 'Autres charges et pourboire exclus'},
+                {id: 6, label: 'Altri oneri e mancia escluse'}
             ],
             addItems: [
                 {id: 1, label: 'Adicionar mais itens'},
