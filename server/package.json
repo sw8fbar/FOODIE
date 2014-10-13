@@ -16,6 +16,7 @@
     "mongoose": "latest"
   },
   "devDependencies": {
+    "express-session": "^1.8.2",
     "grunt": "^0.4.5",
     "grunt-ec2": "^0.9.0",
     "yelp": "https://github.com/sw8fbar/node-yelp/tarball/master"
