@@ -541,6 +541,13 @@ body {
     width: 100%;
 }
 
+.slide-selector-noslide {
+    position: relative;
+    margin-left: 18%;
+    margin-right: 0px;
+    width: 82%;
+}
+
 .arrowLeft, .arrowRight {
     vertical-align: middle;
     padding-bottom: 4em;

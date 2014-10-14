@@ -1,30 +1,63 @@
-<div class="slide-selector" ng-swipe-left="next()" ng-swipe-right="prev()">
+<div class="slide-selector" ng-swipe-left="next()" ng-swipe-right="prev()" ng-show="items.length > 3">
     <ul class="slider">
-        <li class="arrowLeft" ng-click="prev()"><div><img src="images/icons/leftArrow.png"/></div></li>
+        <li class="arrowLeft" ng-click="prev()">
+            <div><img src="images/icons/leftArrow.png"/></div>
+        </li>
         <li>
             <div class="slide" ng-click="onNodeClick({select: items[currentIndex].prev.index})">
                 <img src="images/{{items[currentIndex].prev.flag}}"/>
+
                 <p>{{items[currentIndex].prev.label}}</p>
-                </div>
-            </li>
+            </div>
+        </li>
         <li>
-            <div class="slide"  ng-click="onNodeClick({select: currentIndex})">
+            <div class="slide" ng-click="onNodeClick({select: currentIndex})">
                 <img src="images/{{items[currentIndex].flag}}"/>
+
                 <p>{{items[currentIndex].label}}</p>
-                </div>
-            </li>
+            </div>
+        </li>
         <li>
-            <div class="slide"  ng-click="onNodeClick({select: items[currentIndex].next.index})">
+            <div class="slide" ng-click="onNodeClick({select: items[currentIndex].next.index})">
                 <img src="images/{{items[currentIndex].next.flag}}"/>
+
                 <p>{{items[currentIndex].next.label}}</p>
-                </div>
-            </li>
+            </div>
+        </li>
         <li>
-            <div class="slide"  ng-click="onNodeClick({select: items[currentIndex].next.next.index})">
+            <div class="slide" ng-click="onNodeClick({select: items[currentIndex].next.next.index})">
                 <img src="images/{{items[currentIndex].next.next.flag}}"/>
+
                 <p>{{items[currentIndex].next.next.label}}</p>
-                </div>
-            </li>
-        <li class="arrowRight" ng-click="next()"><div><img src="images/icons/rightArrow.png"/></div></li>
-        </ul>
-    </div>
+            </div>
+        </li>
+        <li class="arrowRight" ng-click="next()">
+            <div><img src="images/icons/rightArrow.png"/></div>
+        </li>
+    </ul>
+</div>
+<div class="slide-selector-noslide" ng-show="items.length <= 3">
+    <ul class="slider">
+        <li>
+            <div class="slide" ng-click="onNodeClick({select: items[currentIndex].prev.index})">
+                <img src="images/{{items[currentIndex].prev.flag}}"/>
+
+                <p>{{items[currentIndex].prev.label}}</p>
+            </div>
+        </li>
+        <li>
+            <div class="slide" ng-click="onNodeClick({select: currentIndex})">
+                <img src="images/{{items[currentIndex].flag}}"/>
+
+                <p>{{items[currentIndex].label}}</p>
+            </div>
+        </li>
+        <li>
+            <div class="slide" ng-click="onNodeClick({select: items[currentIndex].next.index})">
+                <img src="images/{{items[currentIndex].next.flag}}"/>
+
+                <p>{{items[currentIndex].next.label}}</p>
+            </div>
+        </li>
+    </ul>
+</div>
