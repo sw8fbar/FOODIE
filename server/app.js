@@ -48,7 +48,7 @@ app.use(session({
  */
 if (app.get('env') == 'production' || app.get('env') == 'prod') {
 
-    //app.use(morgan('combined'));
+    app.use(morgan('combined'));
     // changes it to use the optimized version for production
     app.use(express.static(path.join(__dirname, '/dist')));
 
@@ -78,6 +78,7 @@ if (app.get('env') == 'development' || app.get('env') == 'dev') {
     app.use(express.static(path.join(__dirname, '../client/app')));
 
     //connect to development db
+    app.use(morgan('combined'));
     mongoose.connect(DevelopmentDB);
 
     // Error Handling
