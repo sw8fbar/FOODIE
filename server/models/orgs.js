@@ -11,9 +11,10 @@ var mongoose = require("mongoose"),
 
 
 var langSchema = new mongoose.Schema({
-    label: {type: String},
-    flag: {type: String},
-    round: {type: String}
+  id: {type: String},
+  label: {type: String},
+  flag: {type: String},
+  round: {type: String}
 });
 
 // User will select org (comes with facility) and then facility

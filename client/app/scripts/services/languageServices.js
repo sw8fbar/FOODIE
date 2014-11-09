@@ -9,133 +9,117 @@
 
     app.service('LanguageService', [ function () {
         var uiLabels = {
+            LangIndex: [
+              {id: 'DE', label: 'Deutsch'},
+              {id: 'EN', label: 'English'},
+              {id: 'FR', label: 'Français'},
+              {id: 'IT', label: 'Italiano'},
+              {id: 'PR', label: 'Português'},
+              {id: 'SP', label: 'Español'}
+            ],
             menuSections: [
-                {id: 1, label: 'Secções do menu'},
-                {id: 2, label: 'Menu Sections'},
-                {id: 3, label: 'Menu Secciones'},
-                {id: 4, label: 'Menü-Abschnitte'},
-                {id: 5, label: 'Menu Sections'},
-                {id: 6, label: 'Sezioni del menu'}
+              {id: 'DE', label: 'Menü-Abschnitte'},
+              {id: 'EN', label: 'Menu Sections'},
+              {id: 'FR', label: 'Menu Sections'},
+              {id: 'IT', label: 'Sezioni del menu'},
+              {id: 'PR', label: 'Secções do menu'},
+              {id: 'SP', label: 'Menu Secciones'}
             ],
             menu: [
-                {id: 1, label: 'Menu'},
-                {id: 2, label: 'Menu'},
-                {id: 3, label: 'Menu'},
-                {id: 4, label: 'Menü'},
-                {id: 5, label: 'Menu'},
-                {id: 6, label: 'Menu'}
+              {id: 'DE', label: 'Menü'},
+              {id: 'EN', label: 'Menu'},
+              {id: 'FR', label: 'Menu'},
+              {id: 'IT', label: 'Menu'},
+              {id: 'PR', label: 'Menu'},
+              {id: 'SP', label: 'Menu'}
             ],
             favorites: [
-                {id: 1, label: 'Favoritos'},
-                {id: 2, label: 'Favorites'},
-                {id: 3, label: 'Favoritos'},
-                {id: 4, label: 'Favoriten'},
-                {id: 5, label: 'Favoris'},
-                {id: 6, label: 'Preferiti'}
+              {id: 'DE', label: 'Favoriten'},
+              {id: 'EN', label: 'Favorites'},
+              {id: 'FR', label: 'Favoris'},
+              {id: 'IT', label: 'Preferiti'},
+              {id: 'PR', label: 'Favoritos'},
+              {id: 'SP', label: 'Favoritos'}
             ],
             cart: [
-                {id: 1, label: 'Carrinho'},
-                {id: 2, label: 'Cart'},
-                {id: 3, label: 'Carro'},
-                {id: 4, label: 'Karren'},
-                {id: 5, label: 'Chariot'},
-                {id: 6, label: 'Carrello'}
+              {id: 'DE', label: 'Karren'},
+              {id: 'EN', label: 'Cart'},
+              {id: 'FR', label: 'Chariot'},
+              {id: 'IT', label: 'Carrello'},
+              {id: 'PR', label: 'Carrinho'},
+              {id: 'SP', label: 'Carro'}
             ],
             changeLang: [
-                {id: 1, label: 'Alterar Idioma'},
-                {id: 2, label: 'Change Language'},
-                {id: 3, label: 'Cambiar Idioma'},
-                {id: 4, label: 'Sprache ändern'},
-                {id: 5, label: 'Changer de langue'},
-                {id: 6, label: 'Cambia lingua'}
+              {id: 'DE', label: 'Sprache ändern'},
+              {id: 'EN', label: 'Change Language'},
+              {id: 'FR', label: 'Changer de langue'},
+              {id: 'IT', label: 'Cambia lingua'},
+              {id: 'PR', label: 'Alterar Idioma'},
+              {id: 'SP', label: 'Cambiar Idioma'}
             ],
             home: [
-                {id: 1, label: 'Início'},
-                {id: 2, label: 'Home'},
-                {id: 3, label: 'Inicio'},
-                {id: 4, label: 'Zuhause'},
-                {id: 5, label: 'Maison'},
-                {id: 6, label: 'Casa'}
+              {id: 'DE', label: 'Zuhause'},
+              {id: 'EN', label: 'Home'},
+              {id: 'FR', label: 'Maison'},
+              {id: 'IT', label: 'Casa'},
+              {id: 'PR', label: 'Início'},
+              {id: 'SP', label: 'Inicio'}
             ],
             specials: [
-                {id: 1, label: 'Especiais'},
-                {id: 2, label: 'Specials'},
-                {id: 3, label: 'Especiales'},
-                {id: 4, label: 'Specials'},
-                {id: 5, label: 'Promotions'},
-                {id: 6, label: 'Speciali'}
+                {id: 'PR', label: 'Especiais'},
+                {id: 'EN', label: 'Specials'},
+                {id: 'SP', label: 'Especiales'},
+                {id: 'DE', label: 'Specials'},
+                {id: 'FR', label: 'Promotions'},
+                {id: 'IT', label: 'Speciali'}
             ],
             yelpRatings: [
-                {id: 1, label: 'Yelp avaliações'},
-                {id: 2, label: 'Yelp Ratings'},
-                {id: 3, label: 'Yelp Clasificaciones'},
-                {id: 4, label: 'Yelp Bewertungen'},
-                {id: 5, label: 'Yelp évaluations'},
-                {id: 6, label: 'Yelp avaliações'}
+              {id: 'DE', label: 'Yelp Bewertungen'},
+              {id: 'EN', label: 'Yelp Ratings'},
+              {id: 'FR', label: 'Yelp évaluations'},
+              {id: 'IT', label: 'Yelp avaliações'},
+              {id: 'PR', label: 'Yelp avaliações'},
+              {id: 'SP', label: 'Yelp Clasificaciones'}
             ],
             grandTotal: [
-                {id: 1, label: 'TOTAL DA ENCOMENDA'},
-                {id: 2, label: 'ORDER TOTAL'},
-                {id: 3, label: 'TOTAL DEL PEDIDO'},
-                {id: 4, label: 'BESTELLEN TOTAL'},
-                {id: 5, label: 'TOTAL COMMANDE'},
-                {id: 6, label: 'TOTALE ORDINE'}
+              {id: 'DE', label: 'BESTELLEN TOTAL'},
+              {id: 'EN', label: 'ORDER TOTAL'},
+              {id: 'FR', label: 'TOTAL COMMANDE'},
+              {id: 'IT', label: 'TOTALE ORDINE'},
+              {id: 'PR', label: 'TOTAL DA ENCOMENDA'},
+              {id: 'SP', label: 'TOTAL DEL PEDIDO'}
             ],
             allInclusive: [
-                {id: 1, label: 'Outros encargos e gratuidade excluídos'},
-                {id: 2, label: 'Other charges and gratuity excluded'},
-                {id: 3, label: 'Otros cargos y propinas excluidos'},
-                {id: 4, label: 'Anderen Gebühren und Trinkgeld ausgeschlossen'},
-                {id: 5, label: 'Autres charges et pourboire exclus'},
-                {id: 6, label: 'Altri oneri e mancia escluse'}
+              {id: 'DE', label: 'Anderen Gebühren und Trinkgeld ausgeschlossen'},
+              {id: 'EN', label: 'Other charges and gratuity excluded'},
+              {id: 'FR', label: 'Autres charges et pourboire exclus'},
+              {id: 'IT', label: 'Altri oneri e mancia escluse'},
+              {id: 'PR', label: 'Outros encargos e gratuidade excluídos'},
+              {id: 'SP', label: 'Otros cargos y propinas excluidos'}
             ],
             addItems: [
-                {id: 1, label: 'Adicionar mais itens'},
-                {id: 2, label: 'Add more items'},
-                {id: 3, label: 'Añadir más artículos'},
-                {id: 4, label: 'Fügen weitere Artikel'},
-                {id: 5, label: 'Ajouter d\'autres articles'},
-                {id: 6, label: 'Aggiungi altri articoli'}
+              {id: 'DE', label: 'Fügen weitere Artikel'},
+              {id: 'EN', label: 'Add more items'},
+              {id: 'FR', label: 'Ajouter d\'autres articles'},
+              {id: 'IT', label: 'Aggiungi altri articoli'},
+              {id: 'PR', label: 'Adicionar mais itens'},
+              {id: 'SP', label: 'Añadir más artículos'}
             ],
             sendOrder: [
-                {id: 1, label: 'Enviar Order'},
-                {id: 2, label: 'Send Order'},
-                {id: 3, label: 'Enviar pedido'},
-                {id: 4, label: 'Send Order'},
-                {id: 5, label: 'Envoyer order'},
-                {id: 6, label: 'Invia ordine'}
+              {id: 'DE', label: 'Send Order'},
+              {id: 'EN', label: 'Send Order'},
+              {id: 'FR', label: 'Envoyer order'},
+              {id: 'IT', label: 'Invia ordine'},
+              {id: 'PR', label: 'Enviar Order'},
+              {id: 'SP', label: 'Enviar pedido'}
             ],
             skipToMenu: [
-                {id: 1, label: 'Saltar para o menu'},
-                {id: 2, label: 'Skip to menu'},
-                {id: 3, label: 'Ir al menú'},
-                {id: 4, label: 'Direkt zum Menü'},
-                {id: 5, label: 'Aller au menu'},
-                {id: 6, label: 'Salta al menu'}
-            ],
-            for: [
-                {id: 1, label: 'Para'},
-                {id: 2, label: 'For'},
-                {id: 3, label: 'Para'},
-                {id: 4, label: 'Für'},
-                {id: 5, label: 'Pour'},
-                {id: 6, label: 'Per'}
-            ],
-            persons: [
-                {id: 1, label: 'Pessoa'},
-                {id: 2, label: 'Persons'},
-                {id: 3, label: 'Persona'},
-                {id: 4, label: 'Person'},
-                {id: 5, label: 'Personne'},
-                {id: 6, label: 'Persona'}
-            ],
-            person: [
-                {id: 1, label: 'Pessoa'},
-                {id: 2, label: 'Person'},
-                {id: 3, label: 'Persona'},
-                {id: 4, label: 'Person'},
-                {id: 5, label: 'Personne'},
-                {id: 6, label: 'Persona'}
+              {id: 'DE', label: 'Direkt zum Menü'},
+              {id: 'EN', label: 'Skip to menu'},
+              {id: 'FR', label: 'Aller au menu'},
+              {id: 'IT', label: 'Salta al menu'},
+              {id: 'PR', label: 'Saltar para o menu'},
+              {id: 'SP', label: 'Ir al menú'}
             ]
         };
 

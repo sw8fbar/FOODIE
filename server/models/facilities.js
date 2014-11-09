@@ -15,10 +15,10 @@ var nameSchema = new mongoose.Schema({
 
 var productSchema = new mongoose.Schema({
     igapakId: { type: Number },
-    seqNum: { type: Number },
+    seqNum: { type: String },
     name: [nameSchema],
     description: [nameSchema],
-    servingSize:{type: Number},
+    servingSize:{type: String},
     price: {type: Number}
 });
 

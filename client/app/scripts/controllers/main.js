@@ -54,6 +54,7 @@
                 this.ui.labels = LanguageService.getLabels();
 
                 this.userLanguage = 1;
+                this.userUILanguage = 1;
                 this.langNode = null;
                 this.total = 0;
                 this.cart = CartService.getCart();
@@ -212,6 +213,14 @@
                 //method to switch between languages
                 this.changeLanguage = function (LanguageId) {
                     this.userLanguage = LanguageId;
+                    for(var i=0;i<this.ui.labels.LangIndex.length;i++){
+                        //alert("from Org Service = "+ $scope.org.languages[LanguageId].id);
+                        //alert("from Language Service = "+ this.ui.labels.LangIndex[i].id);
+                        if($scope.org.languages[LanguageId].id.toUpperCase() == this.ui.labels.LangIndex[i].id.toUpperCase()){
+                           this.userUILanguage = i;
+                        }
+                    }
+
                     this.toggleMenu();
                     //alert(this.userLanguage);
                 }

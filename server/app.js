@@ -29,7 +29,7 @@ var router = express.Router();
 // middleware to use for all requests
 router.use(function(req, res, next) {
     //add other code if necessary - logging currently done by morgan
-    //console.log(req.headers);
+    console.log(req.body);
     next(); // make sure we go to the next routes and don't stop here
 });
 
