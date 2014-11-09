@@ -68,8 +68,9 @@
                     <tr ng-click="node.toggleExpand()">
                         <td style="width: 76%; padding-left: 1em ;padding-top: 1.5em; padding-bottom: 1.5em"
                             class="prodDescription">
-                            <p class="productTitle">{{node.data.seqNum}}.
+                            <p class="productTitle" ng-if="node.data.seqNum.length > 0">{{node.data.seqNum}}.
                                 {{node.data.name[mainctrl.userLanguage].label}}</p>
+                            <p class="productTitle" ng-if="!node.data.seqNum">{{node.data.name[mainctrl.userLanguage].label}}</p>
 
                             <div>
                                 <p ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[mainctrl.userLanguage].label}} <p>{{mainctrl.ui.labels.for[mainctrl.userLanguage].label}}
