@@ -76,13 +76,7 @@
                                 <p ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[mainctrl.userLanguage].label}} <p>{{mainctrl.ui.labels.for[mainctrl.userLanguage].label}}
                                 {{node.data.servingSize}} {{mainctrl.ui.labels.persons[mainctrl.userLanguage].label}}
                             </div>
-                            <!--<div ng-if="node.data.servingSize == 1">-->
-                                <!--<p ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[mainctrl.userLanguage].label}} <p>{{mainctrl.ui.labels.for[mainctrl.userLanguage].label}}-->
-                                <!--{{node.data.servingSize}} {{mainctrl.ui.labels.person[mainctrl.userLanguage].label}}-->
-                            <!--</div>-->
-                            <!--<div ng-if="node.data.servingSize < 1">-->
-                                <!--<p ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[mainctrl.userLanguage].label}} <p>-->
-                            <!--</div>-->
+
                             <div class="productNotification">{{node.data.notification}}</div>
                         </td>
                         <td ng-show="node.data.price > 0" class="price" style="width: 18%; padding-right: 0.5em">
@@ -183,20 +177,15 @@
                     <tr ng-click="node.toggleExpand()">
                         <td style="width: 76%; padding-left: 1em ;padding-top: 1.5em; padding-bottom: 1.5em"
                             class="prodDescription">
-                            <p class="productTitle">{{node.data.seqNum}}.
-                                {{node.data.name[mainctrl.userLanguage].label}}</p>
+                            <p class="productTitle" ng-if="node.data.seqNum.length > 0">{{node.data.seqNum}}.
+                              {{node.data.name[mainctrl.userLanguage].label}}</p>
+                            <p class="productTitle" ng-if="!node.data.seqNum">{{node.data.name[mainctrl.userLanguage].label}}</p>
 
-                            <div ng-if="node.data.servingSize > 1">
+                            <div>
                                 <p ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[mainctrl.userLanguage].label}} <p>{{mainctrl.ui.labels.for[mainctrl.userLanguage].label}}
                                 {{node.data.servingSize}} {{mainctrl.ui.labels.persons[mainctrl.userLanguage].label}}
                             </div>
-                            <div ng-if="node.data.servingSize == 1">
-                                <p ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[mainctrl.userLanguage].label}} <p>{{mainctrl.ui.labels.for[mainctrl.userLanguage].label}}
-                                {{node.data.servingSize}} {{mainctrl.ui.labels.person[mainctrl.userLanguage].label}}
-                            </div>
-                            <div ng-if="node.data.servingSize < 1">
-                                <p ng-if="node.data.description[mainctrl.userLanguage].label != node.data.name[mainctrl.userLanguage].label">{{node.data.description[mainctrl.userLanguage].label}} <p>
-                            </div>
+                            
                             <div class="productNotification">{{node.data.notification}}</div>
                         </td>
                         <td ng-show="node.data.price > 0" class="price" style="width: 18%; padding-right: 0.5em">
@@ -254,8 +243,8 @@
                         <div class="pull-left border-right"
                              style="text-align: right; padding-right: 0.3em; padding-left: 0.4em; padding-top: 0.3em">
                             <img class="pull-left" src="images/icons/shoppingBag.png"/> <h6>
-                            {{mainctrl.ui.labels.grandTotal[mainctrl.userLanguage].label}}</h6>
-                            {{mainctrl.ui.labels.allInclusive[mainctrl.userLanguage].label}}
+                            {{mainctrl.ui.labels.grandTotal[mainctrl.userUILanguage].label}}</h6>
+                            {{mainctrl.ui.labels.allInclusive[mainctrl.userUILanguage].label}}
                         </div>
                     </li>
                     <li style="width: 20%;">
@@ -268,11 +257,11 @@
                 <div class="btn pull-left" ng-click="mainctrl.switchScreen(mainctrl.ui.showmain)"
                      style="vertical-align: middle;">
                     <img src="images/icons/plus_grey.png" style="width: 25px;height: 25px">
-                    {{mainctrl.ui.labels.addItems[mainctrl.userLanguage].label}}
+                    {{mainctrl.ui.labels.addItems[mainctrl.userUILanguage].label}}
                 </div>
                 <div class="btn pull-right" style="background: #e38802; margin-right:0.8em; " ng-click=""
                      ng-if="org.sendOrder">
-                    {{mainctrl.ui.labels.sendOrder[mainctrl.userLanguage].label}}
+                    {{mainctrl.ui.labels.sendOrder[mainctrl.userUILanguage].label}}
                 </div>
             </div>
             <table style="width: 100%">
