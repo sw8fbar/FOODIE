@@ -13,7 +13,8 @@
     "morgan": "~1.2.3",
     "serve-favicon": "~2.0.1",
     "debug": "~1.0.4",
-    "mongoose": "latest",
+    "mongoose": "~3.8.17",
+    "express-session": "~1.8.2",
     "yelp": "https://github.com/sw8fbar/node-yelp/tarball/master"
   },
   "devDependencies": {
