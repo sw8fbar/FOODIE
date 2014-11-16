@@ -8,6 +8,7 @@
                 <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showmain)">
                     <td style="width: 20%"><img src="images/icons/note.png"/></td>
                     <td style="width: 80%">{{mainctrl.ui.labels.menuSections[mainctrl.userUILanguage].label}}</td>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp; </td>
                 </tr>
                 <!--<tr class="menuOption">-->
                     <!--<td><img src="images/icons/ribbon.png"/></td>-->
@@ -16,33 +17,42 @@
                 <tr class="menuOption" ng-click="mainctrl.switchScreen(mainctrl.ui.showliked)" ng-show="false">
                     <td><img src="images/icons/like_grey.png"/></td>
                     <td>{{mainctrl.ui.labels.favorites[mainctrl.userUILanguage].label}}</td>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp; </td>
                 </tr>
                 <tr class="menuOption" ng-show="mainctrl.cart.count()>0" ng-click="mainctrl.showCartDetails()">
                     <td>
-                        <div class="cartImg"><img src="images/icons/shoppingBag.png"/>{{mainctrl.cart.count()}}</div>
+                        <!--<div class="cartImg"><img src="images/icons/shoppingBag.png"/>{{mainctrl.cart.count()}}</div>-->
+                      <img src="images/icons/shoppingBag.png"/>
                     </td>
-                    <td>{{mainctrl.ui.labels.cart[mainctrl.userUILanguage].label}}</td>
+                    <td>{{mainctrl.ui.labels.cart[mainctrl.userUILanguage].label}} : {{mainctrl.cart.count()}} Item(s)</td>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp; </td>
                 </tr>
                 <tr class="menuOption" ng-show="mainctrl.cart.count()=== 0" ng-click="mainctrl.showCartDetails()">
                     <td>
                         <img src="images/icons/shoppingBag.png"/>
                     </td>
                     <td>{{mainctrl.ui.labels.cart[mainctrl.userUILanguage].label}}</td>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp; </td>
                 </tr>
                 <tr class="menuOption">
                     <td><img src="images/icons/refresh_orange.png"/></td>
                     <td>{{mainctrl.ui.labels.changeLang[mainctrl.userUILanguage].label}}</td>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp; </td>
                 </tr>
                 <tr>
-                    <td colspan="2">
+                    <td colspan="3">
                         <table style="width: 100%">
                             <tr class="menuSubItem" ng-repeat="lang in org.languages" ng-click="mainctrl.changeLanguage($index)">
-                                <td>
+                              <td>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              </td>
+                              <td>
                                     <div class="wrapperMenu">
                                         <img src="images/{{lang.round}}"/>
                                     </div>
                                 </td>
-                                <td style="text-align: center">{{lang.label}}</td>
+                                <td style="text-align: left">{{lang.label}}</td>
+                                <td> &nbsp;&nbsp;&nbsp;&nbsp; </td>
                             </tr>
                             <!--<tr class="menuSubItem" ng-click="mainctrl.changeLanguage(1)">-->
                                 <!--<td>-->

@@ -1,5 +1,5 @@
 <div class="navbar navbar-app navbar-absolute-top" id="navbar">
-  
+
   <!-- Left nav-bar button -->
   <div class="btn-group pull-left" style="z-index: 1001" ng-click="mainctrl.selectMenu('L')">
     <div class="btn btn-navbar">
@@ -9,15 +9,15 @@
 
   <!-- Page title -->
   <div ng-click="mainctrl.selectMenu('{{mainctrl.ui.menudisplayed}}')" class="navbar-brand-center">
-    <h3 ng-show="mainctrl.ui.screenSwitch[mainctrl.ui.showmain]">{{mainctrl.ui.labels.menu[mainctrl.userLanguage].label}}</h3>
-    <h3 ng-show="mainctrl.ui.screenSwitch[mainctrl.ui.showCart]">{{mainctrl.ui.labels.cart[mainctrl.userLanguage].label}}</h3>
-    <h3 ng-show="mainctrl.ui.screenSwitch[mainctrl.ui.showliked]">{{mainctrl.ui.labels.favorites[mainctrl.userLanguage].label}}</h3>
+    <h3 ng-show="mainctrl.ui.screenSwitch[mainctrl.ui.showmain]">{{mainctrl.ui.labels.menu[mainctrl.userUILanguage].label}} <img src="images/{{org.languages[mainctrl.userLanguage].flag}}" height="15px" /></h3>
+    <h3 ng-show="mainctrl.ui.screenSwitch[mainctrl.ui.showCart]">{{mainctrl.ui.labels.cart[mainctrl.userUILanguage].label}}  <img src="images/{{org.languages[mainctrl.userLanguage].flag}}" height="15px" /> </h3>
+    <h3 ng-show="mainctrl.ui.screenSwitch[mainctrl.ui.showliked]">{{mainctrl.ui.labels.favorites[mainctrl.userUILanguage].label}} <img src="images/{{org.languages[mainctrl.userLanguage].flag}}" height="15px" /></h3>
   </div>
-  
+
   <!-- Right nav-bar button -->
   <div class="btn-group pull-right" ng-click="mainctrl.selectMenu('R')">
     <div class="btn btn-navbar">
-      <img src="images/app-logos/logo.png" height="30px"/>
+      <img src="images/app-logos/logo.png" height="30px"/> &nbsp;&nbsp;
     </div>
   </div>
 

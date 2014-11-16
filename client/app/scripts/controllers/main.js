@@ -147,7 +147,7 @@
                                     //alert(JSON.stringify(articles[i]));
                                     obj.buildNodes(articles[i].groups, obj.ui.nodes, obj.ui.flatlist, obj.ui.productNodes, cartService, userService);
                                     //Expand first node
-                                    obj.ui.flatlist[0].expandInBody();
+                                    //obj.ui.flatlist[0].expandInBody();
                                 }
                             }
                             //for(var j=0;j<1000000;j++);{i;//simulate wait for data to load on local}
